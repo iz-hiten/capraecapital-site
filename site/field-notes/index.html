@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — Caprae Capital</title>
+<meta name="description" content="Essays, press, and signals from Caprae Capital — the strategy notes for wartime founders and operators.">
+<link rel="canonical" href="https://capraecapitalpartners.com/field-notes/#field-notes">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" type="image/png" href="/assets/logo/caprae-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Field Notes — Caprae Capital">
+<meta property="og:description" content="Essays, press, and signals from Caprae Capital.">
+<meta property="og:url" content="https://capraecapitalpartners.com/field-notes/#field-notes">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:#B0B0B0;background:#0A0A0A;line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:10;background:#0A0A0A;border-bottom:1px solid #1F1F1F}
+.nav-in{max-width:1180px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;gap:12px}
+.nav-in img{width:30px;height:30px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:2px;color:#fff}
+.hd{max-width:1180px;margin:0 auto;padding:64px 40px 24px}
+.hd .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;color:#F9D360;text-transform:uppercase;margin-bottom:14px}
+.hd h1{font-family:'Cormorant Garamond',serif;font-weight:500;color:#fff;font-size:52px;line-height:1.1}
+.hd p{margin-top:14px;max-width:640px;color:#9a9a9a}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 40px 90px}
+.sec{margin-top:44px}
+.sec h2{font-family:'Cormorant Garamond',serif;font-weight:500;color:#fff;font-size:26px;margin-bottom:20px;border-bottom:1px solid #1F1F1F;padding-bottom:12px}
+.sec h2 span{color:#F9D360;font-size:15px;font-family:'Inter',sans-serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.c{display:block;background:#141414;border:1px solid #232323;transition:border-color .2s,transform .2s}
+.c:hover{border-color:#F9D360;transform:translateY(-2px)}
+.c-img{height:150px;background:#1A1A1A center/cover no-repeat;border-bottom:1px solid #232323}
+.c-noimg{background:#161616}
+.c-b{padding:16px 18px}
+.c-meta{font-size:10px;font-weight:700;letter-spacing:1px;color:#F9D360;text-transform:uppercase;margin-bottom:8px}
+.c h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:#fff;font-size:19px;line-height:1.25;margin-bottom:8px}
+.c p{font-size:13px;color:#9a9a9a}
+footer{border-top:1px solid #1F1F1F;padding:30px 40px;text-align:center;font-size:12px;color:#555}
+@media(max-width:600px){.hd{padding:44px 20px 16px}.hd h1{font-size:36px}.wrap{padding:16px 20px 60px}.nav-in{padding:16px 20px}}
+.book-pill{position:fixed;right:22px;bottom:22px;z-index:1500;padding:12px 18px;background:#F9D360;color:#0A0A0A;border:0;border-radius:999px;font:700 13px Inter,sans-serif;letter-spacing:.3px;box-shadow:0 16px 40px rgba(0,0,0,.35);cursor:pointer}
+.book-pill:hover{background:#fff}
+.book-modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:24px}
+.book-modal.open{display:flex}
+.book-bd{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
+.book-panel{position:relative;width:100%;max-width:1000px;max-height:88vh;overflow:auto;background:#0A0A0A;border:1px solid #2A2A2A;display:grid;grid-template-columns:1.1fr 1fr}
+.book-x{position:absolute;top:8px;right:14px;background:0;border:0;color:#999;font-size:26px;cursor:pointer;z-index:2}
+.book-l{padding:28px;border-right:1px solid #1F1F1F}
+.book-l .ey{font-size:10px;font-weight:700;letter-spacing:2px;color:#F9D360;margin-bottom:10px}
+.book-l h2{font-family:'Cormorant Garamond',serif;color:#fff;font-size:26px;margin-bottom:6px}
+.book-l .sub{color:#888;font-size:13px;margin-bottom:18px}
+.book-f{display:flex;flex-direction:column;gap:12px}
+.book-f label{color:#E0E0E0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px}
+.book-f input,.book-f textarea{background:#1A1A1A;border:1px solid #2A2A2A;padding:10px 12px;color:#fff;font:14px Inter,sans-serif;width:100%;box-sizing:border-box}
+.book-f button{background:#F9D360;color:#0A0A0A;border:0;padding:13px;font-weight:700;cursor:pointer;margin-top:4px}
+.book-st{font-size:13px;margin-top:6px}.book-st.ok{color:#7FD37F}.book-st.err{color:#FF6B6B}
+.book-r{padding:28px;background:#0F0F0F}
+.book-r .ey{font-size:10px;font-weight:700;letter-spacing:2px;color:#F9D360;margin-bottom:12px}
+.bn{display:block;padding:14px 16px;background:#161616;border:1px solid #232323;border-left:3px solid #F9D360;margin-bottom:12px}
+.bn:hover{background:#1A1A1A}.bn .t{font-size:10px;font-weight:700;letter-spacing:1px;color:#F9D360;margin-bottom:6px}
+.bn h4{font-family:'Cormorant Garamond',serif;color:#fff;font-size:16px;margin-bottom:6px;line-height:1.25}.bn p{font-size:12px;color:#B0B0B0}
+@media(max-width:820px){.book-panel{grid-template-columns:1fr}.book-r{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="nav-in"><a class="brand" href="/field-notes/"><img src="/assets/logo/caprae-logo.png" alt="Caprae Capital"> CAPRAE CAPITAL</a></div></nav>
+<header class="hd">
+  <div class="eyebrow">Caprae Capital · Field Notes</div>
+  <h1>Field Notes</h1>
+  <p>Essays, press, and signals from the desk — 53 entries, fully indexed.</p>
+</header>
+<main class="wrap">
+  <section class="sec"><h2>Essays <span>20</span></h2><div class="grid"><a class="c" href="/field-notes/post/sponsor-s-shield-why-lenders-let-pe-bend-the-rules">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-1.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · May 15, 2026</div>
+      <h3>Sponsor&#39;s Shield: Why Lenders Let PE Bend the Rules</h3>
+      <p>Aspiring analysts learn that a loan covenant is a tripwire. Cross it and you default. The real world operates differently. In private equity</p>
+    </div></a><a class="c" href="/field-notes/post/synergy-is-a-lie-integration-debt-always-comes-due">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-2.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · Apr 30, 2026</div>
+      <h3>Synergy Is a Lie: Integration Debt Always Comes Due</h3>
+      <p>The $2 Trillion Illusion Every year, corporations spend over $2 trillion on acquisitions, chasing the elusive promise of synergy. 1 M&amp;A deck</p>
+    </div></a><a class="c" href="/field-notes/post/unlearning-school-in-20-weeks-caprae-internship">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-3.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Apr 23, 2026</div>
+      <h3>Unlearning School In 20 Weeks Caprae Internship</h3>
+      <p>Three weeks in, I got the question that split my internship into before and after: “Why is your writing this bad?” I went back and read my u</p>
+    </div></a><a class="c" href="/field-notes/post/the-goldman-bet-why-full-service-banks-are-buying-vcs">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-4.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Search Funds &amp; ETA · Apr 8, 2026</div>
+      <h3>The Goldman Bet: Why Full-Service Banks Are Buying VCs</h3>
+      <p>The acquisition of Industry Ventures by Goldman Sachs is not merely an asset-gathering exercise; it is the purchase of a time machine. Full-</p>
+    </div></a><a class="c" href="/field-notes/post/alternative-financing-hybrids-when-credit-looks-like-equity-">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-5.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · Feb 16, 2026</div>
+      <h3>Alternative Financing Hybrids: When Credit Looks Like Equity and Equity Looks Like Credit</h3>
+      <p>The problem hybrids were built to solve Let’s start from the beginning: why did hybrids gain so much popularity in recent years? Multiple st</p>
+    </div></a><a class="c" href="/field-notes/post/when-fundraising-slows-proof-speaks-louder-than-pitch-decks">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-6.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Feb 6, 2026</div>
+      <h3>When Fundraising Slows, Proof Speaks Louder Than Pitch Decks.</h3>
+      <p>If 2021 taught GPs how to collect capital, 2025 is teaching them how to deserve it. The sugar rush is gone. LPs are rationing attention, cal</p>
+    </div></a><a class="c" href="/field-notes/post/why-i-stopped-trying-to-be-liked-my-first-big-lesson-in-writ">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-7.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Jan 23, 2026</div>
+      <h3>Why I Stopped Trying to Be Liked: My First Big Lesson in Writing Cold Emails</h3>
+      <p>A few weeks after I joined Caprae, I was assigned to the email team. My job wasn’t to write the entire email, but arguably the most critical</p>
+    </div></a><a class="c" href="/field-notes/post/investor-market-quality-when-open-capital-breeds-adverse-sel">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-8.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Jan 1, 2026</div>
+      <h3>Investor Market Quality: When “Open Capital” Breeds Adverse Selection</h3>
+      <p>The past few years made raising money feel like ordering takeout: fast, easy, and often regrettable. “Open capital” promised democratized ac</p>
+    </div></a><a class="c" href="/field-notes/post/add-backs-aren-t-math-they-re-a-credibility-test">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-9.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Dec 29, 2025</div>
+      <h3>Add-Backs Aren&#39;t Math, They&#39;re a Credibility Test.</h3>
+      <p>Buyers are paid to be skeptical. In any M&amp;A deal, the add-back schedule is the first place that skepticism meets the seller’s story. We’re n</p>
+    </div></a><a class="c" href="/field-notes/post/multiplicative-risk-counting-the-bets-you-did-not-take">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-10.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · Dec 16, 2025</div>
+      <h3>Multiplicative Risk: Counting the Bets You Did Not Take</h3>
+      <p>Most firms count what they own. Few count what they omitted. In private capital, opportunity cost is the invisible risk: the deals never scr</p>
+    </div></a><a class="c" href="/field-notes/post/when-fundraising-slows-proof-speaks-louder-than-pitch-decks-2">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-11.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Dec 2, 2025</div>
+      <h3>When Fundraising Slows, Proof Speaks Louder Than Pitch Decks.</h3>
+      <p>If 2021 taught GPs how to collect capital, 2025 is teaching them how to deserve it. The sugar rush is gone. LPs are rationing attention, cal</p>
+    </div></a><a class="c" href="/field-notes/post/why-most-search-funds-fail">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-12.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Search Funds &amp; ETA · Nov 13, 2025</div>
+      <h3>Why Most Search Funds Fail</h3>
+      <p>94 new funds in 2023. 1 Acquisition rates stuck at 57% 2 since 2014, down from 66% 2 historically. More searchers, same number of quality bu</p>
+    </div></a><a class="c" href="/field-notes/post/m-a-isn-t-engineering-it-s-biology">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-13.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Nov 4, 2025</div>
+      <h3>M&amp;A Isn’t Engineering. It’s Biology.</h3>
+      <p>If you think you’re buying a machine, don’t be surprised when the gears jam. The Brutal Math of M&amp;A Failure Every year, study after study re</p>
+    </div></a><a class="c" href="/field-notes/post/the-founder-illusion-charisma-is-not-due-diligence">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-14.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · Oct 29, 2025</div>
+      <h3>The Founder Illusion: Charisma Is Not Due Diligence</h3>
+      <p>The most dangerous founder trait isn’t incompetence, it’s charm. For decades, even disciplined investors have been seduced by magnetic story</p>
+    </div></a><a class="c" href="/field-notes/post/proprietary-deals-are-a-myth-build-proprietary-systems">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-15.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Search Funds &amp; ETA · Oct 24, 2025</div>
+      <h3>Proprietary Deals Are a Myth: Build Proprietary Systems</h3>
+      <p>If you think the next billion-dollar return is hiding in someone’s “exclusive deal flow”, you’ve already lost. The Mirage of Proprietary Dea</p>
+    </div></a><a class="c" href="/field-notes/post/the-search-fund-bubble-why-the-flood-of-new-capital-is-a-war">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-16.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Search Funds &amp; ETA · Oct 17, 2025</div>
+      <h3>The Search Fund Bubble: Why the Flood of New Capital is a Warning Sign, Not a Celebration</h3>
+      <p>The search fund model is the new gold rush for the ambitious and the pedigreed. It offers a direct path from a top-tier MBA to the CEO’s cha</p>
+    </div></a><a class="c" href="/field-notes/post/the-founder-s-void-the-post-exit-depression-nobody-talks-abo">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-17.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · Oct 15, 2025</div>
+      <h3>The Founder&#39;s Void: The Post-Exit Depression Nobody Talks About</h3>
+      <p>The M&amp;A industry sells you the victory lap. They toast your valuation, celebrate your exit, and then they vanish. They conveniently omit the</p>
+    </div></a><a class="c" href="/field-notes/post/summer-at-caprae">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/caprae-dna.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Oct 14, 2025</div>
+      <h3>Summer at Caprae</h3>
+      <p>I joined Caprae as an intern not really knowing what to expect. Coming from an economics background, most of my academic and work experience</p>
+    </div></a><a class="c" href="/field-notes/post/range-safety-air-filtration-systems-industry-analysis">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-19.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · Oct 3, 2025</div>
+      <h3>Range Safety &amp; Air Filtration Systems Industry Analysis</h3>
+      <p>Investment Thesis The U.S. range safety &amp; air-filtration sector is a $3–5B compliance-driven market anchored in the ~6,000 commercial and la</p>
+    </div></a><a class="c" href="/field-notes/post/suppressor-compliance-and-trust-services-industry-analysis">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/substack-20.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · Oct 3, 2025</div>
+      <h3>Suppressor Compliance and Trust Services Industry Analysis</h3>
+      <p>Thesis: Against The suppressor compliance and trust services sector is an attractive option for private equity investors, but a risky play f</p>
+    </div></a></div></section>
+  <section class="sec"><h2>News &amp; Press <span>20</span></h2><div class="grid"><a class="c" href="/field-notes/press/discount-movie-ticket-seller-dealflicks-expands-with-carmike">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Mar 1, 2016</div>
+      <h3>Discount movie-ticket seller Dealflicks expands with Carmike Cinemas alliance</h3>
+      <p>By Ryan Faughnder Staff Writer Follow March 1, 2016 11 AM PT Share via Close extra sharing options Email Facebook X LinkedIn Threads Reddit </p>
+    </div></a><a class="c" href="/field-notes/press/why-the-movie-business-is-long-overdue-for-disruption">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Oct 26, 2015</div>
+      <h3>Why the Movie Business Is Long Overdue for Disruption</h3>
+      <p>The movie business fears a future of declining ticket sales and revenues, but these entrepreneurs are determined to flip that script.</p>
+    </div></a><a class="c" href="/field-notes/press/dealflicks-raises-1-7-million-to-offer-movie-discounts-throu">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Jul 21, 2014</div>
+      <h3>Dealflicks Raises $1.7 Million To Offer Movie Discounts Through An App | TechCrunch</h3>
+      <p>Over the past few years, movie theater chains have been struck by a slowdown in the number of seats sold. Due to escalating ticket prices, t</p>
+    </div></a><a class="c" href="/field-notes/press/dealflicks-premieres-with-1-7-million-seed-los-angeles-busin">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Jul 21, 2014</div>
+      <h3>Dealflicks Premieres with $1.7 Million Seed - Los Angeles Business Journal</h3>
+      <p>Home Technology Technology Dealflicks Premieres with $1.7 Million Seed By staff-author July 21, 2014 155 Facebook Twitter Linkedin Email Pri</p>
+    </div></a><a class="c" href="/field-notes/press/discount-movie-ticket-seller-expands-to-the-kansas-city-mark">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · May 21, 2014</div>
+      <h3>Discount movie ticket seller expands to the Kansas City market</h3>
+      <p>Dealflicks.com, which partners with movie theaters to help them fill empty seats, said it has begun offering deals for Screenland Crown Cine</p>
+    </div></a><a class="c" href="/field-notes/press/dealflicks-aims-to-put-movie-fans-in-cheaper-seats">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · May 6, 2014</div>
+      <h3>Dealflicks aims to put movie fans in cheaper seats</h3>
+      <p>Dealflicks co-founders Kevin Hong, left, and Sean Wycliffe are inside a converted minivan the company uses to travel around the country and </p>
+    </div></a><a class="c" href="/field-notes/press/4-entrepreneurs-2-vans-dealflicks-hits-up-movie-theatres-nat">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Mar 12, 2014</div>
+      <h3>4 entrepreneurs, 2 vans: Dealflicks hits up movie theatres nationwide on third &#39;Man Van&#39; trip | Built In Los Angeles</h3>
+      <p>Written by Published on Mar. 12, 2014 [ibimage==30728==Large==none==self==null] Theater prices have been quite a shock over the past few yea</p>
+    </div></a><a class="c" href="/field-notes/press/startup-dealflicks-offers-discounts-for-movie-tickets-conces">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/news-and-press.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press · Mar 16, 2013</div>
+      <h3>Startup Dealflicks Offers Discounts for Movie Tickets, Concessions</h3>
+      <p>With the cost of U.S. movie tickets rising, one startup is looking to revolutionize the market by allowing theatergoers to buy tickets for 3</p>
+    </div></a><a class="c" href="/field-notes/press/what-i-learned-from-living-in-and-working-out-of-a-van">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-what-i-learned-from-living-in-and-working-out-of-a-van.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>What I learned from living in and working out of a van</h3>
+      <p>A lifestyle change this significant can transform your mindset, says Dealflicks co-founder Kevin Hong of the &quot;Man Van&quot; campaign.</p>
+    </div></a><a class="c" href="/field-notes/press/what-it-takes-to-start-a-company-sleeping-in-a-van">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-what-it-takes-to-start-a-company-sleeping-in-a-van.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>What It Takes to Start a Company: Sleeping in a Van?</h3>
+      <p>A Priceline for movie tickets goes looking for partners.</p>
+    </div></a><a class="c" href="/field-notes/press/warner-bros-may-be-the-one-really-schooled-at-its-first-ever">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-warner-bros-may-be-the-one-really-schooled-at-its-first-ever.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Warner Bros. May Be the One Really Schooled at Its First Ever Media Camp</h3>
+      <p>The studio will incubate five companies during a 12-week program</p>
+    </div></a><a class="c" href="/field-notes/press/brooklyn-movie-theaters-discount-tickets-through-tech-startu">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-brooklyn-movie-theaters-discount-tickets-through-tech-startu.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Brooklyn movie theaters discount tickets through tech startup</h3>
+      <p>THIS could take the financial bite out of movie night.
+A Los Angeles-based tech company is billing itself as the Priceline of movie tickets</p>
+    </div></a><a class="c" href="/field-notes/press/kevin-hong-lived-in-a-van-to-grow-dealflicks-from-3-theaters">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-kevin-hong-lived-in-a-van-to-grow-dealflicks-from-3-theaters.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Kevin Hong Lived In A Van To Grow Dealflicks From 3 Theaters To Almost 300</h3>
+      <p>Dealflicks co-founder Kevin Hong is currently on a cross country odyssey they call The ManVan, meeting up with theaters in order to form par</p>
+    </div></a><a class="c" href="/field-notes/press/hot-startups-across-la-part-2-downtown">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-hot-startups-across-la-part-2-downtown.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Hot startups across LA, Part 2: Downtown</h3>
+      <p>Learn more about Hot startups across LA, Part 2: Downtown&#39;s Dealflicks.</p>
+    </div></a><a class="c" href="/field-notes/press/startup-dealflicks-offers-discounts-for-movie-tickets-conces-2">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-startup-dealflicks-offers-discounts-for-movie-tickets-conces.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Startup Dealflicks Offers Discounts for Movie Tickets, Concessions</h3>
+      <p>As movie ticket prices rise, one startup, Dealflicks, is looking to revolutionize the market by allowing theatergoers to purchase tickets fo</p>
+    </div></a><a class="c" href="/field-notes/press/the-new-york-times-breaking-news-us-news-world-news-and-vide">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-the-new-york-times-breaking-news-us-news-world-news-and-vide.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>The New York Times - Breaking News, US News, World News and Videos</h3>
+      <p>Live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world.</p>
+    </div></a><a class="c" href="/field-notes/press/consumerwatch-websites-offer-discounted-theater-tickets">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-consumerwatch-websites-offer-discounted-theater-tickets.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>ConsumerWatch: Websites Offer Discounted Theater Tickets</h3>
+      <p>A new Bay Area start-up is making it easier to save money on movie tickets. Dealflicks offers users discounts of between 15% to 37% on ticke</p>
+    </div></a><a class="c" href="/field-notes/press/dave-mcclure-s-500-startups-chooses-33-companies-for-its-fif">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-dave-mcclure-s-500-startups-chooses-33-companies-for-its-fif.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Dave McClure&#39;s 500 Startups Chooses 33 Companies For Its Fifth Accelerator Batch, Bets Big On International | TechCrunch</h3>
+      <p>Dave McClure’s 500 Startups has just announced the newest batch of companies to be accepted for its fifth accelerator class. This group is t</p>
+    </div></a><a class="c" href="/field-notes/press/web-startup-dealflicks-launches-in-santa-cruz-hopes-to-bring">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-web-startup-dealflicks-launches-in-santa-cruz-hopes-to-bring.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Web startup Dealflicks launches in Santa Cruz, hopes to bring youth back to the movies</h3>
+      <p>SANTA CRUZ – Downtown moviegoers are about to save some cash starting this summer.  Prospective savings should profit Santa Cruzans as soon </p>
+    </div></a><a class="c" href="/field-notes/press/too-cheap-for-movie-theaters-dealflicks-is-set-to-change-tha">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/press-too-cheap-for-movie-theaters-dealflicks-is-set-to-change-tha.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Too Cheap For Movie Theaters? Dealflicks Is Set To Change That</h3>
+      <p>Going to see a movie in the theater is crazy expensive. Now with DealFlicks, folks get steep discounts on movies &amp; theaters fill more seats</p>
+    </div></a></div></section>
+  <section class="sec"><h2>Video <span>2</span></h2><div class="grid"><a class="c" href="/field-notes/video/sean-wycliffe-interviewed-by-ali-velshi-of-al-jazeera-usa-fo">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/yt-6dlfT5lYBlo.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>Sean Wycliffe Interviewed by Ali Velshi of Al Jazeera USA for Dealflicks</h3>
+      <p>Video by Dan Wycliffe.</p>
+    </div></a><a class="c" href="/field-notes/video/youtube-developers-live-getting-a-movie-ticket-deal-with-dea">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/yt-3yepeIGwo0Q.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">News &amp; Press</div>
+      <h3>YouTube Developers Live: Getting a movie ticket deal with Dealflicks</h3>
+      <p>Video by Google for Developers.</p>
+    </div></a></div></section>
+  <section class="sec"><h2>LinkedIn <span>11</span></h2><div class="grid"><a class="c" href="/field-notes/post/pov-you-ve-been-on-hold-with-the-front-desk-for-20-minutes-a">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-1.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Deal Sourcing · May 27, 2026</div>
+      <h3>POV: You&#39;ve been on hold with the front desk for 20 minutes and just found the owner&#39;s direct line in a 2019 press release. #capr...</h3>
+      <p>POV: You&#39;ve been on hold with the front desk for 20 minutes and just found the owner&#39;s direct line in a 2019 press release. #capraecapital #</p>
+    </div></a><a class="c" href="/field-notes/post/don-t-get-distracted-by-the-99-noise-caprae-is-built-solely-">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-2.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Search Funds &amp; ETA · May 20, 2026</div>
+      <h3>Don&#39;t get distracted by the 99% noise. Caprae is built solely for that green slice. Let&#39;s get to work. #searchfunds #privateequity...</h3>
+      <p>Don&#39;t get distracted by the 99% noise. Caprae is built solely for that green slice. Let&#39;s get to work. #searchfunds #privateequity #b2b #cap</p>
+    </div></a><a class="c" href="/field-notes/post/this-is-massive-exciting-times-we-live-in">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/deal-sourcing.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Deal Sourcing · May 18, 2026</div>
+      <h3>This is massive!! Exciting times we live in!</h3>
+      <p>This is massive!! Exciting times we live in!</p>
+    </div></a><a class="c" href="/field-notes/post/if-the-stanford-primer-heavily-relies-on-search-ceos-to-fill">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-4.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Deal Sourcing · May 17, 2026</div>
+      <h3>If the Stanford Primer heavily relies on search CEOs to fill out the data. Who&#39;s running the data set after the CEOs are terminate...</h3>
+      <p>If the Stanford Primer heavily relies on search CEOs to fill out the data. Who&#39;s running the data set after the CEOs are terminated?</p>
+    </div></a><a class="c" href="/field-notes/post/very-well-done-newton-campos-saved-me-a-lot-of-time-reviewin">
+    <div class="c-img" style="background-image:url('/assets/field-notes/placeholders/deal-sourcing.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Deal Sourcing · May 17, 2026</div>
+      <h3>very well done Newton Campos. Saved me a lot of time reviewing how much has changed since 2021. nicely summarized and very good us...</h3>
+      <p>very well done Newton Campos . Saved me a lot of time reviewing how much has changed since 2021. nicely summarized and very good use of AI w</p>
+    </div></a><a class="c" href="/field-notes/post/breaking-a-loan-covenant-kills-a-normal-business-lenders-sei">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-6.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · May 15, 2026</div>
+      <h3>Breaking a loan covenant kills a normal business. Lenders seize assets. The lights go out. But for private equity? It is just a ne...</h3>
+      <p>Breaking a loan covenant kills a normal business. Lenders seize assets. The lights go out. But for private equity? It is just a negotiation.</p>
+    </div></a><a class="c" href="/field-notes/post/when-the-call-goes-from-i-ll-never-sell-to-a-vulture-like-yo">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-7.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Deal Sourcing · May 13, 2026</div>
+      <h3>When the call goes from &quot;I&#39;ll never sell to a vulture like you&quot; to &quot;Send me the Zoom link&quot; in 14.5 minutes. #capraecapital #sales...</h3>
+      <p>When the call goes from &quot;I&#39;ll never sell to a vulture like you&quot; to &quot;Send me the Zoom link&quot; in 14.5 minutes. #capraecapital #sales #coldcalli</p>
+    </div></a><a class="c" href="/field-notes/post/250k-cold-calls-across-4-countries-in-8-months-i-ve-never-ru">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-8.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Deal Sourcing · May 12, 2026</div>
+      <h3>250K cold calls across 4 countries in 8 months. I’ve never run a cold calling department before and there were a lot of lessons. H...</h3>
+      <p>250K cold calls across 4 countries in 8 months. I’ve never run a cold calling department before and there were a lot of lessons. Here are my</p>
+    </div></a><a class="c" href="/field-notes/post/i-m-excited-to-share-that-the-mba-search-fund-alliance-is-la">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-9.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Search Funds &amp; ETA · May 8, 2026</div>
+      <h3>I&#39;m excited to share that the MBA Search Fund Alliance is launching a WhatsApp group for searchers and MBA students. I&#39;m deeply ap...</h3>
+      <p>I&#39;m excited to share that the MBA Search Fund Alliance is launching a WhatsApp group for searchers and MBA students. I&#39;m deeply appreciative</p>
+    </div></a><a class="c" href="/field-notes/post/what-are-your-thoughts-on-non-disparagement-clauses-post-rem">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-10.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Caprae DNA · May 6, 2026</div>
+      <h3>What are your thoughts on non-disparagement clauses post removal of CEOs, founders, and executives?</h3>
+      <p>What are your thoughts on non-disparagement clauses post removal of CEOs, founders, and executives?</p>
+    </div></a><a class="c" href="/field-notes/post/the-100-day-plan-for-some-it-s-a-sprint-to-a-cliff-for-us-it">
+    <div class="c-img" style="background-image:url('/assets/field-notes/img/linkedin-11.webp')"></div>
+    <div class="c-b">
+      <div class="c-meta">Diligence · May 5, 2026</div>
+      <h3>The 100-Day Plan. For some, it&#39;s a sprint to a cliff. For us, it&#39;s the foundation for a marathon. Pushing for a 10x EBITDA in 3 mo...</h3>
+      <p>The 100-Day Plan. For some, it&#39;s a sprint to a cliff. For us, it&#39;s the foundation for a marathon. Pushing for a 10x EBITDA in 3 months witho</p>
+    </div></a></div></section>
+</main>
+<footer>© 2026 Caprae Capital. All rights reserved.</footer>
+<button class="book-pill" id="bp">&#128197; 20 min with Kevin &rarr;</button>
+<div class="book-modal" id="bm"><div class="book-bd" data-x></div>
+  <div class="book-panel"><button class="book-x" data-x aria-label="Close">&times;</button>
+    <div class="book-l"><div class="ey">REQUEST A CALL</div>
+      <h2>20 minutes with Kevin Hong</h2><div class="sub">Founder · Caprae Capital · Kevin reviews requests personally</div>
+      <form class="book-f" id="bf" novalidate>
+        <div><label>Full name *</label><input name="name" required maxlength="100" placeholder="Your name"></div>
+        <div><label>Email *</label><input name="email" type="email" required maxlength="254" placeholder="you@company.com"></div>
+        <div><label>LinkedIn URL *</label><input name="linkedin" type="url" required maxlength="200" placeholder="https://www.linkedin.com/in/..."></div>
+        <div><label>Why do you want to meet? *</label><textarea name="reason" required rows="2" maxlength="3000"></textarea></div>
+        <div><label>Your professional background *</label><textarea name="background" required rows="2" maxlength="3000"></textarea></div>
+        <button type="submit" id="bfs">Submit &amp; open booking &rarr;</button>
+        <div class="book-st" id="bst" role="status" aria-live="polite"></div>
+      </form></div>
+    <aside class="book-r"><div class="ey">KEVIN IN NEWS</div>
+      <a class="bn" href="/field-notes/press/what-i-learned-from-living-in-and-working-out-of-a-van/"><div class="t">PRESS · CNBC</div><h4>What I Learned From Living In and Working Out of a Van</h4><p>A lifestyle change this significant can transform your mindset, says Dealflicks co-founder Kevin Hong.</p></a>
+      <a class="bn" href="/field-notes/press/why-the-movie-business-is-long-overdue-for-disruption/"><div class="t">PRESS · INC</div><h4>Why the Movie Business Is Long Overdue for Disruption</h4><p>These entrepreneurs are determined to flip the script.</p></a>
+      <a class="bn" href="/field-notes/press/startup-dealflicks-offers-discounts-for-movie-tickets-conces/"><div class="t">PRESS · CNBC</div><h4>Startup Dealflicks Offers Discounts for Movie Tickets</h4><p>One startup looks to revolutionize the market.</p></a>
+    </aside></div></div>
+<script>(function(){var p=document.getElementById('bp'),m=document.getElementById('bm'),f=document.getElementById('bf'),st=document.getElementById('bst'),sb=document.getElementById('bfs');if(!p||!m||!f)return;var open=function(){m.classList.add('open')},close=function(){m.classList.remove('open')};p.addEventListener('click',open);m.querySelectorAll('[data-x]').forEach(function(e){e.addEventListener('click',close)});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});f.addEventListener('submit',function(e){e.preventDefault();var d={name:f.name.value.trim(),email:f.email.value.trim(),linkedin:f.linkedin.value.trim(),reason:f.reason.value.trim(),background:f.background.value.trim()};if(!d.name||!d.email||!d.linkedin||!d.reason||!d.background){st.className='book-st err';st.textContent='All fields are required.';return}sb.disabled=true;sb.textContent='Submitting...';st.textContent='';fetch('https://capraecapitalpartners.com/api/book-request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json().catch(function(){return{}})}).then(function(j){if(j&&j.ok&&j.bookingUrl){f.reset();st.className='book-st ok';st.textContent='Thanks — opening the booking page.';window.open(j.bookingUrl,'_blank','noopener')}else{st.className='book-st err';st.textContent=(j&&(j.error||j.message))||'Something went wrong. Please email partners@capraecapital.com.'}}).catch(function(){st.className='book-st err';st.textContent='Network error. Please email partners@capraecapital.com.'}).finally(function(){sb.disabled=false;sb.textContent='Submit & open booking →'})})})();</script>
+</body>
+</html>

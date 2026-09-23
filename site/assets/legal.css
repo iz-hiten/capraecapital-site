@@ -1,0 +1,71 @@
+/* Legal document pages (/privacy, /terms).
+   Scoped to .legal-* so nothing here can leak into the main site.
+   Palette and fonts are the site's own: #0A0A0A / #F9D360 / Cormorant + Inter.
+   Long-form legal copy is editorial content, so the line-height is deliberately
+   generous here even though the rest of the site is dense. */
+
+.legal-wrap { background: #0A0A0A; min-height: 100vh; padding: 120px 24px 80px; }
+.legal-container { max-width: 1120px; margin: 0 auto; }
+
+.legal-head { border-bottom: 1px solid #2A2A2A; padding-bottom: 24px; margin-bottom: 40px; }
+.legal-eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase; color: #F9D360; margin: 0 0 10px; }
+.legal-head h1 { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 500;
+  color: #FFFFFF; letter-spacing: 1px; margin: 0 0 8px; line-height: 1.15; }
+.legal-head .legal-sub { font-family: 'Inter', sans-serif; font-size: 14px; color: #B0B0B0; margin: 0; }
+
+.legal-layout { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; }
+
+/* sticky table of contents */
+.legal-toc { position: sticky; top: 100px; background: #141414; border: 1px solid #2A2A2A;
+  padding: 20px; max-height: calc(100vh - 140px); overflow-y: auto; }
+/* Defensive: the TOC contains a semantic <nav>. A global `nav { position:
+   fixed }` rule in a host page once turned it into a full-width overlay, so
+   pin it back explicitly. */
+.legal-toc nav { position: static; display: block; background: none; border: 0;
+  padding: 0; margin: 0; inset: auto; }
+
+.legal-toc-title { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: #F9D360; margin-bottom: 14px; }
+.legal-toc a { display: block; font-family: 'Inter', sans-serif; font-size: 12.5px; line-height: 1.45;
+  color: #B0B0B0; text-decoration: none; padding: 5px 0; border-bottom: 1px solid transparent;
+  transition: color .2s ease; }
+.legal-toc a:hover { color: #F9D360; }
+
+/* the converted document */
+.legal-doc { min-width: 0; max-width: 760px; font-family: 'Inter', sans-serif;
+  font-size: 14.5px; line-height: 1.75; color: #B0B0B0; }
+.legal-doc h1 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500;
+  color: #FFFFFF; letter-spacing: .5px; margin: 0 0 14px; }
+.legal-doc h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500;
+  color: #F9D360; letter-spacing: .5px; margin: 44px 0 14px; padding-top: 20px;
+  border-top: 1px solid #2A2A2A; }
+.legal-doc h3 { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
+  color: #FFFFFF; letter-spacing: .3px; margin: 26px 0 10px; }
+.legal-doc h1[id], .legal-doc h2[id], .legal-doc h3[id] { scroll-margin-top: 100px; }
+.legal-doc p, .legal-doc div { margin: 0 0 12px; }
+.legal-doc ul, .legal-doc ol { margin: 0 0 14px; padding-left: 22px; }
+.legal-doc li { margin: 6px 0; }
+.legal-doc strong, .legal-doc b { color: #E0E0E0; font-weight: 600; }
+.legal-doc a { color: #F9D360; text-decoration: underline; text-underline-offset: 2px;
+  overflow-wrap: anywhere; }
+.legal-doc a:hover { color: #FFFFFF; }
+.legal-doc .legal-updated { font-size: 13px; color: #7A7A7A; }
+.legal-doc table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px;
+  display: block; overflow-x: auto; }
+.legal-doc th, .legal-doc td { border: 1px solid #2A2A2A; padding: 9px 11px; text-align: left;
+  vertical-align: top; }
+.legal-doc thead th, .legal-doc th { background: #141414; color: #FFFFFF; font-weight: 600; }
+
+.legal-foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid #2A2A2A;
+  display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center;
+  font-family: 'Inter', sans-serif; font-size: 13px; color: #7A7A7A; }
+.legal-foot a { color: #B0B0B0; text-decoration: none; }
+.legal-foot a:hover { color: #F9D360; }
+
+@media (max-width: 900px) {
+  .legal-layout { grid-template-columns: 1fr; gap: 0; }
+  .legal-toc { display: none; }
+  .legal-wrap { padding: 100px 18px 60px; }
+  .legal-head h1 { font-size: 34px; }
+}
