@@ -23,8 +23,8 @@ PAGES = [
      "desc": "The legal terms governing your use of the Caprae Capital website and services."},
 ]
 
-NAV_TABS = [("Home", "home"), ("Services", "services"), ("Branding", "branding"),
-            ("How It Works", "how"), ("Results", "results"), ("Pricing", "pricing")]
+NAV_TABS = [("Home", "/"), ("Services", "/services/"), ("Branding", "/services/branding/"),
+            ("How It Works", "/how-it-works/"), ("Results", "/results/"), ("Pricing", "/pricing/")]
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
@@ -87,7 +87,7 @@ TEMPLATE = """<!DOCTYPE html>
             </a>
             <ul class="nav-links">{navlinks}
             </ul>
-            <a href="/#contact" class="cta-button">Contact Us</a>
+            <a href="/contact/" class="cta-button">Contact Us</a>
         </div>
     </nav>
 
@@ -128,7 +128,7 @@ TEMPLATE = """<!DOCTYPE html>
 
 def main():
     navlinks = "".join(
-        f'\n                <li><a href="/#{slug}">{label}</a></li>' for label, slug in NAV_TABS)
+        f'\n                <li><a href="{path}">{label}</a></li>' for label, path in NAV_TABS)
     for p in PAGES:
         body = (LEGAL / f"{p['key']}.html").read_text(encoding="utf-8")
         toc = json.loads((LEGAL / f"{p['key']}.toc.json").read_text(encoding="utf-8"))
@@ -139,7 +139,7 @@ def main():
                               navlinks=navlinks, toc=toc_html, body=body)
         d = SITE / p["dir"]
         d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(out, encoding="utf-8")
+        (d / "index.html").write_text(out, encoding="utf-8", newline="\n")
         print(f"  {p['dir']}/index.html  {len(out):,} bytes | {len(toc)} toc entries")
 
 

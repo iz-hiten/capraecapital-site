@@ -201,8 +201,8 @@ def main():
                 n = min(len(s_txt), len(o_txt))
                 print(f"    length differs: src {len(s_txt)} vs out {len(o_txt)}\n      tail: ...{(s_txt if len(s_txt)>len(o_txt) else o_txt)[n:n+160]}...")
         elif not check:
-            (outdir / f"{key}.html").write_text(frag, encoding="utf-8")
-            (outdir / f"{key}.toc.json").write_text(json.dumps(c.toc, indent=1), encoding="utf-8")
+            (outdir / f"{key}.html").write_text(frag, encoding="utf-8", newline="\n")
+            (outdir / f"{key}.toc.json").write_text(json.dumps(c.toc, indent=1), encoding="utf-8", newline="\n")
     if bad:
         print(f"\nFAILED: {bad} document(s) diverged. Nothing written.")
         return 1
