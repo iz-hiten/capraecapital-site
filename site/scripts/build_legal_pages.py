@@ -5,6 +5,7 @@ Builds /privacy and /terms from the fragments produced by convert_legal.py.
 Both pages share one template so the nav, footer and head stay identical to
 each other and to the main site. Re-run after convert_legal.py.
 """
+import html
 import json
 from pathlib import Path
 
@@ -14,17 +15,21 @@ LEGAL = SITE / "assets" / "legal"
 
 SITE_URL = "https://capraecapital.com"
 
+# title = the on-page <h1>; meta_title = the <title> / og:title
 PAGES = [
     {"key": "privacy", "dir": "privacy", "title": "Privacy Policy",
+     "meta_title": "Privacy Policy | Caprae Capital Services",
      "eyebrow": "LEGAL",
-     "desc": "How Caprae Capital collects, uses, and protects your personal information."},
+     "desc": "Read Caprae Capital's privacy policy to understand how we collect, use, and protect your personal information."},
     {"key": "terms", "dir": "terms", "title": "Terms & Conditions",
+     "meta_title": "Terms & Conditions | Caprae Capital Services",
      "eyebrow": "LEGAL",
-     "desc": "The legal terms governing your use of the Caprae Capital website and services."},
+     "desc": "Review the terms and conditions governing your use of Caprae Capital's website and services."},
 ]
 
-NAV_TABS = [("Home", "/"), ("Services", "/services/"), ("Branding", "/services/branding/"),
-            ("How It Works", "/how-it-works/"), ("Results", "/results/"), ("Pricing", "/pricing/")]
+NAV_TABS = [("Home", "/"), ("About", "/about/"), ("Services", "/services/"),
+            ("Branding", "/services/branding/"), ("How It Works", "/how-it-works/"),
+            ("Pricing", "/pricing/")]
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
@@ -39,7 +44,7 @@ TEMPLATE = """<!DOCTYPE html>
     gtag('js', new Date());
     gtag('config', 'G-JNPTWTS723');
     </script>
-    <title>{title} - Caprae Capital</title>
+    <title>{meta_title}</title>
     <meta name="description" content="{desc}">
     <link rel="canonical" href="{site}/{dir}/">
     <meta name="robots" content="index, follow">
@@ -48,7 +53,7 @@ TEMPLATE = """<!DOCTYPE html>
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{site}/{dir}/">
-    <meta property="og:title" content="{title} - Caprae Capital">
+    <meta property="og:title" content="{meta_title}">
     <meta property="og:description" content="{desc}">
     <meta property="og:image" content="{site}/assets/logo/caprae-logo.png">
     <meta property="og:site_name" content="Caprae Capital Services">
@@ -134,7 +139,9 @@ def main():
         toc = json.loads((LEGAL / f"{p['key']}.toc.json").read_text(encoding="utf-8"))
         toc_html = "".join(
             f'\n                        <a href="#{t["id"]}">{t["text"]}</a>' for t in toc)
-        out = TEMPLATE.format(title=p["title"], desc=p["desc"], dir=p["dir"],
+        esc = lambda v: html.escape(v, quote=False).replace('"', "&quot;")
+        out = TEMPLATE.format(title=p["title"], meta_title=esc(p["meta_title"]),
+                              desc=esc(p["desc"]), dir=p["dir"],
                               eyebrow=p["eyebrow"], site=SITE_URL,
                               navlinks=navlinks, toc=toc_html, body=body)
         d = SITE / p["dir"]

@@ -181,7 +181,7 @@
 
         .nav-links {
             display: flex;
-            gap: 48px;
+            gap: 34px;
             align-items: center;
             list-style: none;
         }
@@ -219,6 +219,113 @@
 
         .nav-links a.active {
             color: #FFFFFF;
+        }
+
+        /* About + Resources made the nav longer; tighten it on narrower desktops so
+           it fits wherever the original six-item nav did */
+        @media (min-width: 769px) and (max-width: 1100px) {
+            .nav-links {
+                gap: 20px;
+            }
+
+            /* Resources sits near the right edge here; open the menu leftwards so it
+               stays on screen */
+            .nav-dropdown-menu {
+                left: auto;
+                right: 0;
+                transform: none;
+            }
+        }
+
+        /* Resources dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > button {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            color: #E0E0E0;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .nav-dropdown > button::after {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin-left: 8px;
+            border-right: 1.5px solid currentColor;
+            border-bottom: 1.5px solid currentColor;
+            transform: translateY(-3px) rotate(45deg);
+        }
+
+        .nav-dropdown > button:hover,
+        .nav-dropdown > button.active {
+            color: #FFFFFF;
+        }
+
+        .nav-dropdown > button.active {
+            text-decoration: underline;
+            text-decoration-color: #F9D360;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 8px;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 190px;
+            margin-top: 14px;
+            padding: 8px 0;
+            list-style: none;
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            border-top: 2px solid #F9D360;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+        /* invisible bridge so the menu doesn't close while the pointer crosses the gap */
+        .nav-dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 0;
+            right: 0;
+            height: 16px;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu,
+        .nav-dropdown.open .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+
+        .nav-dropdown-menu a::after {
+            display: none;
+        }
+
+        .nav-dropdown-menu a:hover,
+        .nav-dropdown-menu a.active {
+            color: #F9D360;
         }
 
         .cta-button {
@@ -686,6 +793,24 @@
             font-weight: 600;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+        }
+
+        .team-member-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .team-member-link .member-photo {
+            transition: border-color 0.3s;
+        }
+
+        .team-member-link:hover .member-photo {
+            border-color: #FFFFFF;
+        }
+
+        .team-member-link:hover h4 {
+            color: #F9D360;
         }
 
 
@@ -1257,6 +1382,227 @@
         .branding-final-cta p { color: #B0B0B0; font-size: 17px; line-height: 1.6; margin: 0 auto 34px; max-width: 560px; }
         @media (max-width: 860px) { .branding-cards-3, .branding-award-grid, .branding-benefits-grid, .branding-audience-grid { grid-template-columns: 1fr; } .branding-press-logos { grid-template-columns: repeat(2, 1fr); } .branding-hero { padding: 70px 0 60px; } .branding-content-section, .branding-benefits, .branding-pricing, .branding-audience, .branding-final-cta { padding: 72px 0; } }
 
+        /* About */
+        .about-section {
+            padding: 120px 0;
+        }
+
+        .about-intro {
+            max-width: 760px;
+            margin: 0 auto 80px;
+        }
+
+        .about-intro p {
+            color: #D0D0D0;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-metrics {
+            margin-bottom: 80px;
+        }
+
+        /* four stat boxes don't fit side by side on narrow desktops */
+        @media (min-width: 769px) and (max-width: 1100px) {
+            .about-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .about-block {
+            margin-bottom: 80px;
+        }
+
+        .about-block-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-serve-grid {
+            margin-top: 0;
+        }
+
+        /* FAQ (placeholder until the questions are written) */
+        .faq-section {
+            padding: 120px 0;
+        }
+
+        .coming-soon {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 40px;
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            border-top: 3px solid #F9D360;
+            text-align: center;
+        }
+
+        .coming-soon p {
+            color: #D0D0D0;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .coming-soon .service-page-ctas {
+            margin-top: 32px;
+        }
+
+        /* Case studies */
+        .case-section {
+            padding: 120px 0;
+        }
+
+        .case-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .case-card {
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            border-left: 4px solid #F9D360;
+            padding: 44px 48px;
+        }
+
+        .case-client {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .case-headline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #FFFFFF;
+            margin-bottom: 28px;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 28px;
+        }
+
+        .case-grid h3 {
+            color: #F9D360;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .case-grid p {
+            color: #D0D0D0;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .case-quote {
+            color: #E0E0E0;
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.8;
+            padding-top: 24px;
+            border-top: 1px solid #2A2A2A;
+        }
+
+        /* Team member profile pages (/team/<name>/) */
+        .profile-section {
+            padding: 100px 0 120px;
+        }
+
+        .profile-back {
+            display: inline-block;
+            color: #B0B0B0;
+            font-size: 14px;
+            text-decoration: none;
+            margin-bottom: 48px;
+            transition: color 0.2s;
+        }
+
+        .profile-back:hover {
+            color: #F9D360;
+        }
+
+        .profile-card {
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 3px solid #F9D360;
+            margin: 0 auto 32px;
+            display: block;
+        }
+
+        .profile-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: #FFFFFF;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .profile-role {
+            color: #F9D360;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .profile-note {
+            color: #B0B0B0;
+            font-size: 16px;
+        }
+
+        /* Home: prompt linking to the FAQ */
+        .home-faq-cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .home-faq-cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 44px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .home-faq-cta p {
+            color: #B0B0B0;
+            font-size: 17px;
+            margin-bottom: 32px;
+        }
+
+        .home-faq-cta a {
+            display: inline-block;
+        }
+
         /* Footer */
         footer {
             background: #0A0A0A;
@@ -1267,8 +1613,8 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
             margin-bottom: 60px;
         }
 
@@ -1459,7 +1805,8 @@
             }
 
             .nav-links.open {
-                max-height: 450px;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
                 padding: 8px 20px 20px;
             }
 
@@ -1502,6 +1849,73 @@
             .mobile-cta-item a:hover {
                 background: #FFFFFF;
                 color: #0A0A0A;
+            }
+
+            /* Resources items are listed inline under a label (after the generic rules above) */
+            .nav-dropdown > button {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 16px 0 8px;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #F9D360;
+                cursor: default;
+            }
+
+            .nav-dropdown > button::after {
+                display: none;
+            }
+
+            .nav-dropdown > button.active {
+                text-decoration: none;
+                color: #F9D360;
+            }
+
+            .nav-dropdown-menu {
+                position: static;
+                transform: none;
+                min-width: 0;
+                margin: 0;
+                padding: 0 0 8px 14px;
+                background: none;
+                border: none;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-dropdown-menu::before {
+                display: none;
+            }
+
+            .nav-dropdown-menu li {
+                border-bottom: none;
+            }
+
+            .nav-dropdown-menu a {
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .case-card {
+                padding: 32px 24px;
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .case-headline {
+                font-size: 26px;
+            }
+
+            .profile-name {
+                font-size: 36px;
             }
 
             .nav-container {
@@ -1657,11 +2071,22 @@
             </a>
             <ul class="nav-links">
                 <li><a href="/" data-nav="home">Home</a></li>
+                <li><a href="/about/" data-nav="about">About</a></li>
                 <li><a href="/services/" data-nav="services">Services</a></li>
                 <li><a href="/services/branding/" data-nav="branding">Branding</a></li>
                 <li><a href="/how-it-works/" data-nav="how">How It Works</a></li>
-                <li><a href="/results/" data-nav="results">Results</a></li>
                 <li><a href="/pricing/" data-nav="pricing">Pricing</a></li>
+                <li class="nav-dropdown">
+                    <button type="button" data-nav="resources" aria-haspopup="true" aria-expanded="false">Resources</button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="https://capraecapitalpartners.com/field-notes/" data-nav="blog">Blog</a></li>
+                        <li><a href="/faq/" data-nav="faq">FAQ</a></li>
+                        <li><a href="/team/" data-nav="team">Our Team</a></li>
+                        <li><a href="/results/" data-nav="results">Results</a></li>
+                        <li><a href="/case-study/" data-nav="case-study">Case Studies</a></li>
+                        <li><a href="https://capraecapitalpartners.com/#careers" data-nav="careers">Careers</a></li>
+                    </ul>
+                </li>
                 <li class="mobile-cta-item"><a href="/contact/" data-nav="contact">Contact Us →</a></li>
             </ul>
             <a href="/contact/" class="cta-button desktop-cta">Contact Us</a>
@@ -1738,55 +2163,71 @@
         </div>
 
         <!-- Team Section -->
+        <!--@team-->
         <div class="team-section">
             <div class="container">
                 <h2 class="team-heading fade-in-element slide-left">Led By Operators Who've Been In Your Shoes</h2>
                 <p class="team-subheading fade-in-element">Deep expertise across PE, startups, and transaction management</p>
                 <div class="team-grid">
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/kevin-hong.jpg" alt="Kevin Hong" class="member-photo">
-                        <h4>Kevin Hong</h4>
-                        <p>Founder</p>
+                        <a class="team-member-link" href="/team/kevin-hong/">
+                            <img src="/assets/team/kevin-hong.jpg" alt="Kevin Hong" class="member-photo">
+                            <h4>Kevin Hong</h4>
+                            <p>Founder</p>
+                        </a>
                     </div>
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/hereford-johnson.jpg" alt="Hereford Johnson" class="member-photo">
-                        <h4>Hereford Johnson</h4>
-                        <p>Principal Adviser</p>
+                        <a class="team-member-link" href="/team/hereford-johnson/">
+                            <img src="/assets/team/hereford-johnson.jpg" alt="Hereford Johnson" class="member-photo">
+                            <h4>Hereford Johnson</h4>
+                            <p>Principal Adviser</p>
+                        </a>
                     </div>
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/zackary-beckham.jpg" alt="Zackary Beckham" class="member-photo">
-                        <h4>Zackary Beckham</h4>
-                        <p>Founder</p>
+                        <a class="team-member-link" href="/team/zackary-beckham/">
+                            <img src="/assets/team/zackary-beckham.jpg" alt="Zackary Beckham" class="member-photo">
+                            <h4>Zackary Beckham</h4>
+                            <p>Founder</p>
+                        </a>
                     </div>
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/jeff-blacklock.png" alt="Jeff Blacklock" class="member-photo">
-                        <h4>Jeff Blacklock</h4>
-                        <p>Deal Adviser</p>
+                        <a class="team-member-link" href="/team/jeff-blacklock/">
+                            <img src="/assets/team/jeff-blacklock.png" alt="Jeff Blacklock" class="member-photo">
+                            <h4>Jeff Blacklock</h4>
+                            <p>Deal Adviser</p>
+                        </a>
                     </div>
                 </div>
 
                 <h3 class="team-subgroup-heading fade-in-element">Capital Advisor</h3>
                 <div class="team-grid-2col">
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/mitch-vermet.jpg" alt="Mitchell Vermet" class="member-photo">
-                        <h4>Mitchell Vermet, CFA, CAIA</h4>
+                        <a class="team-member-link" href="/team/mitchell-vermet/">
+                            <img src="/assets/team/mitch-vermet.jpg" alt="Mitchell Vermet" class="member-photo">
+                            <h4>Mitchell Vermet, CFA, CAIA</h4>
+                        </a>
                     </div>
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/richard-consul.png" alt="Richard Consul" class="member-photo">
-                        <h4>Richard Consul, CFA</h4>
+                        <a class="team-member-link" href="/team/richard-consul/">
+                            <img src="/assets/team/richard-consul.png" alt="Richard Consul" class="member-photo">
+                            <h4>Richard Consul, CFA</h4>
+                        </a>
                     </div>
                 </div>
 
                 <h3 class="team-subgroup-heading fade-in-element">Deal Structurer & Fund</h3>
                 <div class="team-grid-2col" style="grid-template-columns: 1fr; max-width: 320px;">
                     <div class="team-member fade-in-element">
-                        <img src="/assets/team/eric-nehrlich.jpeg" alt="Eric Nehrlich" class="member-photo">
-                        <h4>Eric Nehrlich</h4>
-                        <p>Chief of Staff</p>
+                        <a class="team-member-link" href="/team/eric-nehrlich/">
+                            <img src="/assets/team/eric-nehrlich.jpeg" alt="Eric Nehrlich" class="member-photo">
+                            <h4>Eric Nehrlich</h4>
+                            <p>Chief of Staff</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <!--@/team-->
 
         <!-- CLIENT TESTIMONIALS -->
         <div class="client-testimonials-section">
@@ -1800,6 +2241,15 @@
                     <div class="t-track" id="tTrack"></div>
                 </div>
                 <button class="t-nav" id="tNext" aria-label="Next">&#8594;</button>
+            </div>
+        </div>
+
+        <!-- FAQ PROMPT -->
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Have questions?</h2>
+                <p class="fade-in-element">Answers on Search as a Service, pricing, and engagement timelines.</p>
+                <a href="/faq/" class="button-secondary fade-in-element">Read the FAQ</a>
             </div>
         </div>
     </section>
@@ -2266,6 +2716,208 @@
         </div>
     </section>
 
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container about-section">
+            <h2 class="section-heading fade-in-element slide-left">About Caprae Capital</h2>
+            <p class="section-subtitle fade-in-element slide-right">Operators who've been in your shoes</p>
+
+            <div class="about-intro fade-in-element">
+                <p>Caprae Capital is an end-to-end private equity services firm. We give searchers, acquisition entrepreneurs, founders, and PE firms a completely white-labeled, fully outsourced team for deal sourcing, diligence, and execution, at 30-60% less than traditional providers.</p>
+                <p>Our team brings deep expertise across private equity, startups, and transaction management. Founder Kevin Hong spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital.</p>
+                <p>We don't stop at the introduction. Beyond sourcing, we support deal structuring, preliminary due diligence, research and financial modeling, introductions to bankers and investors, and post-acquisition growth.</p>
+            </div>
+
+            <div class="metrics-grid about-metrics">
+                <div class="metric-item fade-in-element">
+                    <div class="value">$110M+</div>
+                    <div class="label">Deals Closed (2026 YTD)</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">$50M+</div>
+                    <div class="label">Sourced &amp; DD'd (2025)</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">8</div>
+                    <div class="label">Countries Serviced</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">10-20</div>
+                    <div class="label">Engagements/Month</div>
+                </div>
+            </div>
+
+            <div class="about-block">
+                <h3 class="about-block-heading fade-in-element">Who we work with</h3>
+                <div class="serve-grid about-serve-grid">
+                    <div class="serve-card fade-in-element">
+                        <h3>Searchers &amp; Acquisition Teams</h3>
+                        <p>Scale your deal pipeline with professional sourcing, outreach, and due diligence support.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <h3>Entrepreneurs</h3>
+                        <p>Grow your business with fractional operations, marketing, and strategic advising.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <h3>PE &amp; Investment Banks</h3>
+                        <p>Supplement your team with dedicated resources for sourcing, diligence, and execution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-block">
+                <h3 class="about-block-heading fade-in-element">How we operate</h3>
+                <div class="why-grid">
+                    <div class="why-item fade-in-element">
+                        <h3>Integrated Expertise</h3>
+                        <p>Operations, strategy, and execution all in one package - no coordination headaches.</p>
+                    </div>
+                    <div class="why-item fade-in-element">
+                        <h3>Outcome-Driven</h3>
+                        <p>We succeed when you succeed. Our alignment ensures maximum effort and results.</p>
+                    </div>
+                    <div class="why-item fade-in-element">
+                        <h3>Flexible Engagement</h3>
+                        <p>Scale up or down based on your needs. No long-term contracts, no lock-in.</p>
+                    </div>
+                    <div class="why-item fade-in-element">
+                        <h3>AI-Powered Edge</h3>
+                        <p>Cutting-edge tools and automation deliver better results, faster, at lower cost.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-page-ctas">
+                <a href="/team/" class="button-primary">Meet the team</a>
+                <a href="/how-it-works/" class="button-secondary">See how it works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team">
+<!--@TEAM_BLOCK-->
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq">
+        <div class="container faq-section">
+            <h2 class="section-heading fade-in-element slide-left">Frequently Asked Questions</h2>
+            <p class="section-subtitle fade-in-element slide-right">Coming soon</p>
+
+            <div class="coming-soon fade-in-element">
+                <p>We're putting together answers to the questions we hear most about Search as a Service, pricing, and engagement timelines.</p>
+                <p>In the meantime, ask us directly. We'll get back to you within 24 hours.</p>
+                <div class="service-page-ctas">
+                    <a href="/contact/" class="button-primary">Ask a question</a>
+                    <a href="/how-it-works/" class="button-secondary">See how it works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY SECTION -->
+    <section id="case-study">
+        <div class="container case-section">
+            <h2 class="section-heading fade-in-element slide-left">Case Studies</h2>
+            <p class="section-subtitle fade-in-element slide-right">How searchers and sponsors have worked with Caprae</p>
+
+            <div class="case-list">
+                <article class="case-card fade-in-element">
+                    <div class="case-client">
+                        <img src="/assets/testimonials/steve-schepman.jpg" alt="Steve Schepman" class="testimonial-photo">
+                        <div>
+                            <div class="testimonial-author">Gondor Capital</div>
+                            <div class="testimonial-title">Steve Schepman</div>
+                        </div>
+                    </div>
+                    <h2 class="case-headline">A $20M+ first acquisition within six months</h2>
+                    <div class="case-grid">
+                        <div>
+                            <h3>The engagement</h3>
+                            <p>One of Caprae's first three clients. End-to-end support: branding, marketing, website ideation, lead generation, cold calling, email campaigns, and outbound strategy.</p>
+                        </div>
+                        <div>
+                            <h3>The outcome</h3>
+                            <p>Gondor closed its first acquisition, a $20M+ deal, within six months. The transaction led to a partnership with a family office and an expanded sponsorship model.</p>
+                        </div>
+                    </div>
+                    <blockquote class="case-quote">"Caprae saved us a significant amount of time and money and played a critical role in helping us break into the private equity space."</blockquote>
+                </article>
+
+                <article class="case-card fade-in-element">
+                    <div class="case-client">
+                        <img src="/assets/testimonials/jeff-blacklock.jpg" alt="Jeff Blacklock" class="testimonial-photo">
+                        <div>
+                            <div class="testimonial-author">Valwell Technologies</div>
+                            <div class="testimonial-title">Jeff Blacklock</div>
+                        </div>
+                    </div>
+                    <h2 class="case-headline">Two advanced meetings in Houston within two months</h2>
+                    <div class="case-grid">
+                        <div>
+                            <h3>The engagement</h3>
+                            <p>Lead generation and founder outreach, with strategic guidance on how to approach founders and structure the conversations.</p>
+                        </div>
+                        <div>
+                            <h3>The outcome</h3>
+                            <p>Two advanced meetings in Houston within two months of launch. The early traction led Valwell to expand the engagement to sales and marketing for its core team.</p>
+                        </div>
+                    </div>
+                    <blockquote class="case-quote">"It's rare to find a partner that delivers both execution and judgment at this level."</blockquote>
+                </article>
+
+                <article class="case-card fade-in-element">
+                    <div class="case-client">
+                        <img src="/assets/testimonials/kellogg-logo.jpg" alt="Kellogg School of Management" class="testimonial-photo">
+                        <div>
+                            <div class="testimonial-author">Traditional Searcher</div>
+                            <div class="testimonial-title">Kellogg School of Management</div>
+                        </div>
+                    </div>
+                    <h2 class="case-headline">10-20 engagements a month, then diligence under LOI</h2>
+                    <div class="case-grid">
+                        <div>
+                            <h3>The engagement</h3>
+                            <p>Sustained sourcing and outreach over several months. Once a deal moved under LOI, diligence support on NDR, churn, customer concentration, and other areas.</p>
+                        </div>
+                        <div>
+                            <h3>The outcome</h3>
+                            <p>A consistent 10-20 engagements a month and a large volume of qualified leads, saving significant time and money, and more confidence progressing toward close.</p>
+                        </div>
+                    </div>
+                    <blockquote class="case-quote">"Kevin also brings a candid, experience-driven perspective on the search process that I found valuable."</blockquote>
+                </article>
+
+                <article class="case-card fade-in-element">
+                    <div class="case-client">
+                        <img src="/assets/testimonials/berkeley.png" alt="UC Berkeley" class="testimonial-photo">
+                        <div>
+                            <div class="testimonial-author">Traditional Searcher</div>
+                            <div class="testimonial-title">Top 10 MBA Graduate, UC Berkeley</div>
+                        </div>
+                    </div>
+                    <h2 class="case-headline">Reaching owners who rarely respond to email</h2>
+                    <div class="case-grid">
+                        <div>
+                            <h3>The engagement</h3>
+                            <p>A cold calling program to reach business owners directly, then Caprae's team working as an extension of the searcher's own in due diligence once the deal moved into LOI.</p>
+                        </div>
+                        <div>
+                            <h3>The outcome</h3>
+                            <p>A consistent 10-20 engagements a month with owners the searcher wouldn't have reached otherwise.</p>
+                        </div>
+                    </div>
+                    <blockquote class="case-quote">"What really stood out was the diligence horsepower: the Caprae team brought a level of thoroughness and perspective that proved invaluable throughout the journey."</blockquote>
+                </article>
+            </div>
+
+            <div class="testimonials-cta fade-in-element">
+                <p>Want results like these? <a href="/contact/">Get in touch</a> to see how Caprae can improve your deal flow.</p>
+            </div>
+        </div>
+    </section>
+
     <style>
     .contact-section{padding:120px 0;max-width:680px;margin:0 auto}
     .contact-form{margin-top:60px;display:flex;flex-direction:column;gap:24px}
@@ -2449,12 +3101,23 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="https://capraecapitalpartners.com/#careers">Careers</a></li>
+                        <li><a href="/about/">About</a></li>
                         <li><a href="/how-it-works/">How It Works</a></li>
-                        <li><a href="/results/">Results</a></li>
                         <li><a href="/pricing/">Pricing</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
                         <li><a href="/privacy/">Privacy Policy</a></li>
                         <li><a href="/terms/">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://capraecapitalpartners.com/field-notes/">Blog</a></li>
+                        <li><a href="/faq/">FAQ</a></li>
+                        <li><a href="/team/">Our Team</a></li>
+                        <li><a href="/results/">Results</a></li>
+                        <li><a href="/case-study/">Case Studies</a></li>
+                        <li><a href="https://capraecapitalpartners.com/#careers">Careers</a></li>
                     </ul>
                 </div>
             </div>
@@ -2468,8 +3131,9 @@
         // Every section is its own page (generated by src/build_pages.py), so
         // buttons that used to switch tabs now navigate to that page's URL.
         var PAGE_PATHS = {
-            home: '/', services: '/services/', branding: '/services/branding/',
-            how: '/how-it-works/', results: '/results/', pricing: '/pricing/', contact: '/contact/'
+            home: '/', about: '/about/', services: '/services/', branding: '/services/branding/',
+            how: '/how-it-works/', results: '/results/', pricing: '/pricing/', contact: '/contact/',
+            team: '/team/', faq: '/faq/', 'case-study': '/case-study/'
         };
         function goToPage(key) {
             if (PAGE_PATHS[key]) window.location.href = PAGE_PATHS[key];
@@ -2505,12 +3169,32 @@
             document.body.classList.remove('menu-open');
         }
 
+        // Resources dropdown: hover/focus open it in CSS; click toggles it for touch screens
+        document.querySelectorAll('.nav-dropdown > button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (window.innerWidth <= 768) return; // listed inline in the mobile menu
+                var item = btn.parentElement;
+                var open = item.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        });
+        function closeDropdowns(except) {
+            document.querySelectorAll('.nav-dropdown.open').forEach(function(item) {
+                if (item === except) return;
+                item.classList.remove('open');
+                item.querySelector('button').setAttribute('aria-expanded', 'false');
+            });
+        }
+        document.addEventListener('click', function(e) {
+            closeDropdowns(e.target.closest ? e.target.closest('.nav-dropdown') : null);
+        });
+
         // Close on overlay tap
         document.getElementById('mobileOverlay').addEventListener('click', closeMobileMenu);
 
         // Close on Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeMobileMenu();
+            if (e.key === 'Escape') { closeMobileMenu(); closeDropdowns(null); }
         });
 
         // Close mobile menu if resized to desktop
