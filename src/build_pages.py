@@ -133,6 +133,95 @@ TEAM_META = {
     "kevin-hong": {"title": "Kevin Hong | Founder | Caprae Capital", "description": ""},
 }
 
+# <meta name="keywords"> per page, from the finalized SEO keyword sheet (2026-09-28).
+# Only these pages get the tag. Exact duplicates are written once.
+KEYWORDS = {
+    "/": [
+        "ETA", "entrepreneurship through acquisition", "private equity consulting services",
+        "private equity consulting firms", "private equity due diligence consulting",
+        "private equity outsourcing", "business broker lead generation", "private equity deal sourcing",
+        "off market businesses for sale", "deal sourcing services", "buy side deal sourcing.",
+        "off market deal sourcing", "independent sponsor deal sourcing", "lower middle market deal sourcing",
+        "acquisition entrepreneur support services", "affordable private equity services",
+        "white label private equity services", "white-labeled deal sourcing firm",
+        "best outsourced private equity partner", "affordable private equity services",
+        "independent sponsor services", "outsourced deal sourcing", "outsourced private equity analysts",
+        "outsourced private equity services", "search fund services", "self funded search support",
+        "sell side M&A advisory small business", "white label M&A services", "search fund support services",
+        "outsourced M&A support",
+    ],
+    "/services/": [
+        "sell side advisory", "buy side M&A advisory", "M&A due diligence services",
+        "business acquisition consulting", "m&a deal advisory", "deal advisory services",
+        "advisory services for mergers and acquisitions", "acquisition support services",
+        "deal advisory for private equity", "acquisition advisory services", "deal structuring advisory",
+        "M&A research services", "capital raising for independent sponsors",
+        "best outsourced deal sourcing companies", "deal sourcing and advisory services",
+        "what services do search fund providers offer", "white label PE service packages",
+        "buy side advisory business", "buy side advisory small business", "financial modeling for acquisitions",
+        "market research for acquisitions", "SBA acquisition advisory",
+    ],
+    "/services/search-as-a-service/": [
+        "fractional CMO", "B2B lead generation agency", "appointment setting services",
+        "outsourced lead generation", "outsourced sales and marketing", "search as a service", "outsourced SDR",
+        "cold calling agency", "outsourced business development", "AI automation for small business",
+        "outsourced cold calling", "LinkedIn outreach service", "proprietary deal flow", "fractional sales team",
+        "cold calling business owners", "proprietary deal sourcing", "AI consulting for private equity",
+        "acquisition target identification", "search fund deal sourcing", "handwritten letter marketing",
+        "search as a service reviews", "search as a service vs in house sourcing", "business owner outreach",
+        "buy box sourcing", "cold calling for search funds", "deal sourcing for search funds",
+        "how to find off market businesses to buy", "off market business acquisition",
+        "search fund lead generation", "search fund outsourcing", "entrepreneurship as a service",
+        "fractional growth team", "outsourced linkedin services",
+    ],
+    "/services/entrepreneurship-as-a-service/": [  # "EaaS" in the sheet
+        "fractional business development", "growth as a service", "outsourced business operations",
+        "fractional operations support", "business growth consulting for acquisitions",
+        "done for you business growth", "entrepreneurship as a service vs hiring in house",
+        "fractional executive team", "fractional team vs full time hires",
+        "growth support for small business owners", "outsourced growth strategy", "outsourced growth team",
+        "outsourced operations for small business", "outsourced team for acquired business",
+        "post acquisition growth support", "support for first time business owners",
+        "support for new business acquirers", "turnkey business operations support",
+        "what is entrepreneurship as a service",
+    ],
+    "/services/ai-readiness/": [
+        "ai readiness assessment", "AI readiness audit", "AI enablement services", "AI readiness consulting",
+        "AI implementation for small business", "AI readiness assessment tool", "small business AI consulting",
+        "AI automation consulting for small business", "AI readiness checklist for business",
+        "AI readiness assessment for businesses", "AI readiness consulting cost",
+        "AI readiness for small business owners", "AI strategy consulting for acquired companies",
+        "AI due diligence M&A", "AI for private equity portfolio companies",
+        "technology due diligence for acquisitions",
+    ],
+    "/services/post-acquisition-strategy/": [  # sheet: /services/Post-acquisition-strategy
+        "fractional COO", "buy and build strategy", "fractional CFO for small business",
+        "value creation plan private equity", "fractional CXO services", "post acquisition integration strategy",
+        "post acquisition strategy", "post acquisition value creation", "post acquisition integration consulting",
+        "100 day plan after acquisition", "first 100 days after buying a business", "first time CEO coaching",
+        "post acquisition support", "what to do after buying a business",
+        "acquisition entrepreneur post close support", "business transition consulting after acquisition",
+        "post acquisition growth strategy", "post acquisition leadership support", "add-on acquisition strategy",
+        "growing a business after acquisition", "operational improvement after acquisition",
+        "portfolio company operations support", "search fund CEO coaching", "search fund CEO support",
+    ],
+    "/services/branding/": [
+        "social media management agency", "financial services marketing agency", "press release service",
+        "personal branding agency", "LinkedIn content strategy", "executive branding", "newsletter writing service",
+        "LinkedIn ghostwriter", "LinkedIn profile management", "m&a branding agency",
+        "social media management for financial services", "founder branding", "outsourced CMO for small business",
+        "PR for private equity firms", "branding as a service", "LinkedIn content management",
+        "LinkedIn management service", "ghostwriter for executives", "LinkedIn ghostwriting service",
+        "personal branding for finance professionals", "thought leadership ghostwriting",
+        "private equity marketing services", "brand identity after acquisition",
+        "brand messaging service for small business", "brand positioning service for acquired companies",
+        "brand refresh service for acquired business", "brand strategy consulting for search funds",
+        "branding agency for private equity portfolio companies", "branding service for acquisition entrepreneurs",
+        "branding services for small business acquisitions", "B2B content marketing for finance",
+        "LinkedIn ghostwriting for finance", "branding for search funds", "thought leadership for private equity",
+    ],
+}
+
 # Legal pages are built by site/scripts/build_legal_pages.py; listed here for the sitemap.
 EXTRA_SITEMAP = [("/privacy/", "yearly", "0.3"), ("/terms/", "yearly", "0.3")]
 
@@ -157,6 +246,9 @@ def head_meta(p):
     lines = [f'    <title>{html.escape(p["title"], quote=False)}</title>']
     if desc:
         lines.append(f'    <meta name="description" content="{attr(desc)}">')
+    keywords = list(dict.fromkeys(KEYWORDS.get(p["path"], [])))  # drop exact repeats, keep order
+    if keywords:
+        lines.append(f'    <meta name="keywords" content="{attr(", ".join(keywords))}">')
     lines += [
         f'    <link rel="canonical" href="{url}">',
         f'    <meta property="og:type" content="{p.get("og_type", "website")}">',
@@ -326,6 +418,8 @@ def main():
     sections["team"] = team_block.rstrip("\n")
 
     pages = PAGES + profile_pages(team_members(block))
+    unknown = set(KEYWORDS) - {p["path"] for p in pages}
+    assert not unknown, f"KEYWORDS for pages that don't exist: {unknown}"
     for p in pages:
         if not p["description"]:
             print(f"  note: {p['path']} has no meta description")
