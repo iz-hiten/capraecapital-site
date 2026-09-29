@@ -240,6 +240,18 @@ KEYWORDS = {
         "branding services for small business acquisitions", "B2B content marketing for finance",
         "LinkedIn ghostwriting for finance", "branding for search funds", "thought leadership for private equity",
     ],
+    "/services/tech-development/": [
+        "custom software development", "web app development", "MVP development", "AI app development",
+        "CRM development", "SaaS development agency", "startup MVP development",
+        "website development for small business", "full stack development agency", "startup website design",
+        "website design for private equity firms", "website for search funds",
+    ],
+    "/pricing/": [
+        "lead generation pricing", "M&A advisory fees", "buy side advisory fees", "M&A success fee",
+        "deal sourcing pricing", "LinkedIn ghostwriting pricing", "search fund services pricing",
+        "search fund cost", "outsourced deal sourcing cost", "outsourced cold calling pricing",
+        "deal sourcing cost", "affordable deal sourcing", "affordable M&A advisory",
+    ],
 }
 
 # Legal pages are built by site/scripts/build_legal_pages.py; listed here for the sitemap.
