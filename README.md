@@ -15,8 +15,8 @@ Snapshot of the live site taken 2026-09-23 from the production web root
                               branding, ai-readiness, …)    │ src/build_pages.py,
       team/                   /team/ + one folder per       │ do not edit by hand
                               person (kevin-hong, …)        │
-      about/ how-it-works/ results/ pricing/ contact/       │
-      faq/ case-study/                                      ┘
+      about/ how-it-works/ pricing/ contact/               │
+      faq/ case-study/ (results + case studies)             ┘
       privacy/  terms/        legal pages
       field-notes/            blog index + posts + rss.xml
       assets/                 images, logos, portfolio, team, testimonials, legal.css

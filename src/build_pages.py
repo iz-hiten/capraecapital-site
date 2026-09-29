@@ -32,7 +32,6 @@ SITE_URL = "https://capraecapital.com"
 # Heading promoted to the page's <h1> (the home hero already has one).
 H1_SECTION_HEADING = r'<h2 class="(section-heading[^"]*)"([^>]*)>(.*?)</h2>'
 H1_BRANDING = r'<h2 class="(branding-h1)"()>(.*?)</h2>'
-H1_TESTIMONIALS = r'<h2 class="(fade-in-element)"()>(Client Testimonials)</h2>'
 
 # nav       — nav items marked active (a page inside Resources marks both)
 # section   — which <section id> the page shows
@@ -111,11 +110,7 @@ PAGES = [
      "description": "Get to know Caprae Capital founders, principal advisers, deal advisers, and capital advisors driving results across $110M+ in closed deals.",
      "crumbs": [("Our Team", None)], "priority": "0.7"},
 
-    {"path": "/results/", "section": "results", "nav": ["resources", "results"], "h1": H1_TESTIMONIALS,
-     "title": "Our Results | $110M+ in Deals Closed",
-     "description": "See the numbers behind Caprae Capital $110M+ deals closed, 8 countries serviced, and 10-20 engagements per month for our clients.",
-     "crumbs": [("Results", None)], "priority": "0.7"},
-
+    # Results and case studies share one page
     {"path": "/case-study/", "section": "case-study", "nav": ["resources", "case-study"], "h1": H1_SECTION_HEADING,
      "title": "Case Studies | Client Results with Caprae Capital",
      "description": "How clients used Caprae Capital: a $20M+ first acquisition in six months, two advanced meetings in two months, and 10-20 owner engagements a month.",
@@ -434,7 +429,7 @@ def main():
     template = TEMPLATE.read_text(encoding="utf-8")
     matches = list(SECTION_RE.finditer(template))
     sections = {m.group(1): m.group(2) for m in matches}
-    expected = {"home", "services", "branding", "how", "results", "pricing", "contact",
+    expected = {"home", "services", "branding", "how", "pricing", "contact",
                 "about", "team", "faq", "case-study"}
     assert set(sections) == expected, sorted(sections)
     prefix, suffix = template[:matches[0].start()], template[matches[-1].end():]
