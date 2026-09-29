@@ -130,7 +130,27 @@ PAGES = [
 # Meta for /team/<slug>/ pages. Anyone not listed gets "<Name> | <Role> | Caprae Capital"
 # and no description until one is written.
 TEAM_META = {
-    "kevin-hong": {"title": "Kevin Hong | Founder | Caprae Capital", "description": ""},
+    "kevin-hong": {
+        "title": "Kevin Hong | Founder | Caprae Capital",
+        "description": "Kevin Hong, Founder of Caprae Capital, is a serial tech entrepreneur who scaled two startups to $31M and $7M ARR, raised $8M+ VC, wrote an Amazon bestseller, published in Forbes/Inc. Chicago Booth MBA."},
+    "hereford-johnson": {
+        "title": "Hereford Johnson | Principal | Caprae Capital",
+        "description": "Hereford Johnson, Principal at Caprae Capital, closed acquisitions in 11 and 6 months. Northwestern Kellogg MBA, former Deloitte Consulting."},
+    "zackary-beckham": {
+        "title": "Zackary Beckham | Founder | Caprae Capital",
+        "description": "Zackary Beckham, Founder of Caprae Capital, is a self-funded searcher who closed an MSP, with 10+ years of tech and AI implementation experience."},
+    "jeff-blacklock": {
+        "title": "Jeff Blacklock | Deal Advisor | Caprae Capital",
+        "description": "Jeff Blacklock, Deal Advisor at Caprae Capital, is a former searcher and President of ValWell Technologies in the oil and gas industry."},
+    "mitchell-vermet": {
+        "title": "Mitch Vermet, CFA, CAIA | Caprae Capital",
+        "description": "Mitch Vermet, Capital Adviser at Caprae Capital, is Managing Partner at Bankers Edge, having helped manage $30B+ in institutional capital. CFA, CAIA."},
+    "richard-consul": {
+        "title": "Richard Consul, CFA | Caprae Capital",
+        "description": "Richard Consul, Capital Adviser at Caprae Capital, is Founder and Managing Partner of Bankers Edge with 20+ years of buy-side experience. CFA."},
+    "eric-nehrlich": {
+        "title": "Eric Nehrlich | Executive Coach | Caprae Capital",
+        "description": "Eric Nehrlich, Executive Coach at Caprae Capital, is a former Chief of Staff at Google who now prepares operators for the CEO seat. MIT, Columbia, Stanford."},
 }
 
 # <meta name="keywords"> per page, from the finalized SEO keyword sheet (2026-09-28).
