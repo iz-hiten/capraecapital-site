@@ -1652,6 +1652,235 @@
             display: inline-block;
         }
 
+        /* Service pages: the few pieces the site had no component for, styled to
+           match it (eyebrow = the Branding page label, boxes = site cards) */
+        .eyebrow {
+            display: block;
+            text-align: center;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #F9D360;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .page-reviewed {
+            font-size: 14px;
+            margin-top: 16px;
+        }
+
+        .page-reviewed a,
+        .about-intro a,
+        .comparison-table a {
+            color: #F9D360;
+            text-decoration: none;
+        }
+
+        .page-reviewed a:hover,
+        .about-intro a:hover,
+        .comparison-table a:hover {
+            color: #FFFFFF;
+        }
+
+        .section-heading + .comparison-section,
+        .section-heading + .about-intro,
+        .section-heading + .faq-list {
+            margin-top: 50px;
+        }
+
+        /* cards inside a grey band keep the container's side padding, so let
+           them be slightly narrower to stay three across like elsewhere */
+        .how-section .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .timeline.timeline-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .timeline.timeline-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        /* a key term explained inside the intro text */
+        .definition-note {
+            background: #1A1A1A;
+            border-left: 4px solid #F9D360;
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+
+        .about-intro .definition-note p {
+            margin-bottom: 0;
+        }
+
+        .table-note {
+            text-align: center;
+            color: #B0B0B0;
+            font-size: 13px;
+            margin-top: -50px;
+        }
+
+        .single-testimonial {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .single-testimonial .service-link {
+            margin-top: 24px;
+        }
+
+        .testimonial-note {
+            color: #B0B0B0;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 16px;
+        }
+
+        .two-col-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .beyond-list.single-col {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .team-member .member-bio {
+            color: #B0B0B0;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0;
+            text-transform: none;
+            margin-top: 16px;
+        }
+
+        .metrics-grid.metrics-3 {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 80px 0 0;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-list details {
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+        }
+
+        .faq-list summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-list summary::after {
+            content: '+';
+            color: #F9D360;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .faq-list details[open] summary::after {
+            content: '\2013';
+        }
+
+        .faq-list details p {
+            color: #B0B0B0;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 14px;
+        }
+
+        .faq-list a,
+        .disclosure-note a {
+            color: #F9D360;
+        }
+
+        .disclosure-note {
+            max-width: 800px;
+            margin: 60px auto 0;
+            border: 1px solid #2A2A2A;
+            padding: 20px 24px;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #B0B0B0;
+        }
+
+        .disclosure-note strong {
+            color: #FFFFFF;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .related-links a {
+            border: 1px solid #2A2A2A;
+            padding: 8px 14px;
+            font-size: 13px;
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .related-links a:hover {
+            border-color: #F9D360;
+            color: #F9D360;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            /* two stat boxes side by side must fit a phone screen */
+            .metrics-grid.metrics-compact {
+                gap: 16px;
+            }
+
+            .metrics-grid.metrics-compact .metric-item {
+                padding: 28px 12px;
+            }
+
+            .metrics-grid.metrics-compact .value {
+                font-size: 30px;
+            }
+
+            .timeline.timeline-4,
+            .timeline.timeline-5 {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .two-col-boxes,
+            .metrics-grid.metrics-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Footer */
         footer {
             background: #0A0A0A;
@@ -2147,33 +2376,280 @@
     </nav>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section id="services" class="active">
+    <section id="entrepreneurship-as-a-service" class="active">
         <div class="container services-section">
-            <h1 class="section-heading fade-in-element slide-left">Entrepreneurship as a Service</h1>
-            <p class="section-subtitle fade-in-element slide-right">Part of Caprae Capital's end-to-end services, from deal sourcing to post-acquisition growth</p>
+            <h1 class="section-heading fade-in-element slide-left">Entrepreneurship as a Service: Your Outsourced Sales and Marketing Team</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>A fractional growth team for founders and new business owners, covering outreach, marketing, PR and software in one monthly plan.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/kevin-hong/">Kevin Hong</a>, Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
 
-            <div class="services-grid single">
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                    </div>
-                    <h3>Entrepreneurship as a Service</h3>
-                    <p>Fractional operations for growth-stage entrepreneurs and founders.</p>
-                    <ul class="service-features">
-                        <li>Cold calling & LinkedIn outreach</li>
-                        <li>Social media management</li>
-                        <li>Newsletter & email campaigns</li>
-                        <li>Handwritten letter campaigns</li>
-                        <li>Software development</li>
-                        <li>Press releases & PR</li>
-                        <li>Marketing optimization</li>
-                    </ul>
-                    <div class="service-price">$1,250/mo</div>
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">40 hrs</div>
+                    <div class="label">Dedicated Time / Month</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">7</div>
+                    <div class="label">Growth Channels</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Monthly</div>
+                    <div class="label">No Long-Term Contract</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value" data-counted="1">$1,000</div>
+                    <div class="label">Per Month</div>
                 </div>
             </div>
-            <div class="service-page-ctas">
-                <a href="/contact/" class="button-primary">Talk to us</a>
-                <a href="/services/" class="button-secondary">All services</a>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Entrepreneurship as a Service is Caprae Capital's fractional growth team for founders and new business owners.</strong> One monthly plan gives you outsourced sales and marketing: cold calling, LinkedIn outreach, social media, email newsletters, handwritten letters, PR and light software work, with about 40 hours of dedicated time each month.</p>
+                <p>Think of it as growth as a service: the output of a small business development and marketing team, without hiring for each role.</p>
+                <div class="definition-note">
+                    <p><strong>Fractional business development</strong> means sharing an experienced team's time across a few clients, so each business gets senior-level outreach and marketing for a fraction of full-time cost.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">What's Included</span>
+                <h2 class="section-heading fade-in-element slide-left">Seven Channels, One Team</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h3>Cold Calling &amp; LinkedIn Outreach</h3>
+                        <p>Outsourced business development that books conversations with buyers, partners and customers.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Social Media Management</h3>
+                        <p>Consistent posting and engagement on the platforms your customers use.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </div>
+                        <h3>Newsletter &amp; Email Campaigns</h3>
+                        <p>Regular newsletters and email sequences that keep your pipeline warm.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+                        </div>
+                        <h3>Handwritten Letter Campaigns</h3>
+                        <p>Personal direct mail for high-value prospects who ignore digital outreach.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>Light builds and fixes: landing pages, integrations and simple tools.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                        </div>
+                        <h3>Press Releases &amp; PR</h3>
+                        <p>Announcements of launches, hires and milestones placed with the right outlets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Fractional Team vs. Full-Time Hires</span>
+            <h2 class="section-heading fade-in-element slide-left">Why an Outsourced Growth Team</h2>
+            <div class="comparison-section table-scroll fade-in-element">
+                <table class="comparison-table">
+                    <tr>
+                        <th></th>
+                        <th>Hiring in-house</th>
+                        <th class="caprae-header">Entrepreneurship as a Service</th>
+                    </tr>
+                    <tr>
+                        <td>Roles covered</td>
+                        <td>Usually one per hire</td>
+                        <td class="caprae">Outreach, social, email, PR and dev</td>
+                    </tr>
+                    <tr>
+                        <td>Time to start</td>
+                        <td>Weeks of recruiting</td>
+                        <td class="caprae">Plan agreed in the first call</td>
+                    </tr>
+                    <tr>
+                        <td>Fixed cost</td>
+                        <td>Salary, benefits and tools</td>
+                        <td class="caprae">One monthly fee</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibility</td>
+                        <td>Hard to scale down</td>
+                        <td class="caprae">Reallocate hours each month</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Process</span>
+                <h2 class="section-heading fade-in-element slide-left">How an Engagement Runs</h2>
+                <div class="timeline timeline-5">
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">1</div>
+                        <h4>Intake Call</h4>
+                        <p>Goals, audience, offer and current channels.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">2</div>
+                        <h4>30-Day Plan</h4>
+                        <p>Hours allocated across the channels with the best expected return.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">3</div>
+                        <h4>Launch</h4>
+                        <p>Campaigns go live, run by a named point of contact.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">4</div>
+                        <h4>Weekly Reporting</h4>
+                        <p>Activity, replies and meetings booked, every week.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">5</div>
+                        <h4>Monthly Review</h4>
+                        <p>Hours move to what is working.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Who It's For</span>
+            <h2 class="section-heading fade-in-element slide-left">Built for Growing and Newly Acquired Businesses</h2>
+            <div class="serve-grid">
+                <div class="serve-card fade-in-element">
+                    <div class="serve-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h3>Growth-Stage Founders</h3>
+                    <p>Founders who need outsourced business development before building a sales team.</p>
+                </div>
+                <div class="serve-card fade-in-element">
+                    <div class="serve-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/></svg>
+                    </div>
+                    <h3>New Business Acquirers</h3>
+                    <p>Owners in their first year after close who need marketing running from day one.</p>
+                </div>
+                <div class="serve-card fade-in-element">
+                    <div class="serve-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>
+                    </div>
+                    <h3>Small Businesses</h3>
+                    <p>Outsourced operations for small business owners without a marketing department.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who Runs Your Growth Team</span>
+                <h2 class="section-heading fade-in-element slide-left">Operators, With Senior Oversight</h2>
+                <div class="about-intro fade-in-element">
+                    <p>Entrepreneurship as a Service is overseen by founder <strong>Kevin Hong</strong>, who spent seven years as a business journalist and scaled two startups to $31M and $7M ARR.</p>
+                    <p>Each client has a named point of contact, and senior team members review messaging and campaign results every week.</p>
+                </div>
+
+                <div class="team-grid-2col" style="grid-template-columns: 1fr; max-width: 320px; margin-top: 60px;">
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/kevin-hong/">
+                            <img src="/assets/team/kevin-hong.jpg" alt="Kevin Hong" class="member-photo">
+                            <h4>Kevin Hong</h4>
+                            <p>Founder, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Former business journalist (7 years) who scaled two startups to $31M and $7M ARR and raised $8M+ in venture capital. Chicago Booth MBA and Amazon bestselling author.</p>
+                        <a class="service-link" href="/team/kevin-hong/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <div class="testimonial-card single-testimonial fade-in-element">
+                <div class="testimonial-header">
+                    <img src="/assets/testimonials/jeff-blacklock.jpg" alt="Jeff Blacklock" class="testimonial-photo">
+                    <div class="testimonial-meta">
+                        <div class="testimonial-author">Jeff Blacklock</div>
+                        <div class="testimonial-title">Valwell Technologies</div>
+                    </div>
+                </div>
+                <div class="testimonial-quote">&ldquo;Within two months of launching the program, Caprae had already secured two advanced meetings in Houston and opened doors I didn't think were reachable this early.&rdquo;</div>
+                <p class="testimonial-note">Disclosure: Jeff Blacklock later joined Caprae Capital as a Deal Adviser.</p>
+                <a class="service-link" href="/case-study/">Read the case study <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is Entrepreneurship as a Service?</summary>
+                        <p>Entrepreneurship as a Service is Caprae Capital's fractional growth team for founders and new business owners. One monthly plan covers outsourced sales and marketing: cold calling, LinkedIn outreach, social media, email, handwritten letters, PR and software support.</p>
+                    </details>
+                    <details>
+                        <summary>What's included in Entrepreneurship as a Service?</summary>
+                        <p>Cold calling and LinkedIn outreach, social media management, newsletter and email campaigns, handwritten letter campaigns, software development, press releases and PR, and marketing optimization, with about 40 hours of dedicated time each month.</p>
+                    </details>
+                    <details>
+                        <summary>How much does Entrepreneurship as a Service cost?</summary>
+                        <p>Entrepreneurship as a Service is $1,000 per month for about 40 hours of dedicated support.</p>
+                    </details>
+                    <details>
+                        <summary>Is outsourced sales and marketing better than hiring in-house?</summary>
+                        <p>One full-time hire usually covers one role. This plan gives you outreach, social, email, PR and development support together, which suits businesses not yet ready to build a full team.</p>
+                    </details>
+                    <details>
+                        <summary>Is this a good fit if I just bought a business?</summary>
+                        <p>Yes. New owners often need outreach and marketing right away. For deeper operational work, see <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>.</p>
+                    </details>
+                    <details>
+                        <summary>Can I cancel any time?</summary>
+                        <p>Engagements run month to month with no long-term contract.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Ready to Grow Without Hiring a Full Team?</h2>
+                <p class="fade-in-element">Book a growth planning call. We'll map your 30-day plan and show which channels to start with.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
             </div>
         </div>
     </section>

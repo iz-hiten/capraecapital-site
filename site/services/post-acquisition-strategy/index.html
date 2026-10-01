@@ -1652,6 +1652,235 @@
             display: inline-block;
         }
 
+        /* Service pages: the few pieces the site had no component for, styled to
+           match it (eyebrow = the Branding page label, boxes = site cards) */
+        .eyebrow {
+            display: block;
+            text-align: center;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #F9D360;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .page-reviewed {
+            font-size: 14px;
+            margin-top: 16px;
+        }
+
+        .page-reviewed a,
+        .about-intro a,
+        .comparison-table a {
+            color: #F9D360;
+            text-decoration: none;
+        }
+
+        .page-reviewed a:hover,
+        .about-intro a:hover,
+        .comparison-table a:hover {
+            color: #FFFFFF;
+        }
+
+        .section-heading + .comparison-section,
+        .section-heading + .about-intro,
+        .section-heading + .faq-list {
+            margin-top: 50px;
+        }
+
+        /* cards inside a grey band keep the container's side padding, so let
+           them be slightly narrower to stay three across like elsewhere */
+        .how-section .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .timeline.timeline-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .timeline.timeline-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        /* a key term explained inside the intro text */
+        .definition-note {
+            background: #1A1A1A;
+            border-left: 4px solid #F9D360;
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+
+        .about-intro .definition-note p {
+            margin-bottom: 0;
+        }
+
+        .table-note {
+            text-align: center;
+            color: #B0B0B0;
+            font-size: 13px;
+            margin-top: -50px;
+        }
+
+        .single-testimonial {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .single-testimonial .service-link {
+            margin-top: 24px;
+        }
+
+        .testimonial-note {
+            color: #B0B0B0;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 16px;
+        }
+
+        .two-col-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .beyond-list.single-col {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .team-member .member-bio {
+            color: #B0B0B0;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0;
+            text-transform: none;
+            margin-top: 16px;
+        }
+
+        .metrics-grid.metrics-3 {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 80px 0 0;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-list details {
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+        }
+
+        .faq-list summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-list summary::after {
+            content: '+';
+            color: #F9D360;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .faq-list details[open] summary::after {
+            content: '\2013';
+        }
+
+        .faq-list details p {
+            color: #B0B0B0;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 14px;
+        }
+
+        .faq-list a,
+        .disclosure-note a {
+            color: #F9D360;
+        }
+
+        .disclosure-note {
+            max-width: 800px;
+            margin: 60px auto 0;
+            border: 1px solid #2A2A2A;
+            padding: 20px 24px;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #B0B0B0;
+        }
+
+        .disclosure-note strong {
+            color: #FFFFFF;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .related-links a {
+            border: 1px solid #2A2A2A;
+            padding: 8px 14px;
+            font-size: 13px;
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .related-links a:hover {
+            border-color: #F9D360;
+            color: #F9D360;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            /* two stat boxes side by side must fit a phone screen */
+            .metrics-grid.metrics-compact {
+                gap: 16px;
+            }
+
+            .metrics-grid.metrics-compact .metric-item {
+                padding: 28px 12px;
+            }
+
+            .metrics-grid.metrics-compact .value {
+                font-size: 30px;
+            }
+
+            .timeline.timeline-4,
+            .timeline.timeline-5 {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .two-col-boxes,
+            .metrics-grid.metrics-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Footer */
         footer {
             background: #0A0A0A;
@@ -2147,32 +2376,254 @@
     </nav>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section id="services" class="active">
+    <section id="post-acquisition-strategy" class="active">
         <div class="container services-section">
-            <h1 class="section-heading fade-in-element slide-left">Post-Acquisition Strategy</h1>
-            <p class="section-subtitle fade-in-element slide-right">Part of Caprae Capital's end-to-end services, from deal sourcing to post-acquisition growth</p>
+            <h1 class="section-heading fade-in-element slide-left">Post-Acquisition Strategy and Value Creation</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Hands-on support for the first 100 days and beyond, for searchers, sponsors and PE-backed owners.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/hereford-johnson/">Hereford Johnson</a>, Principal Adviser &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
 
-            <div class="services-grid single">
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-                    </div>
-                    <h3>Post-Acquisition Strategy</h3>
-                    <p>Scale acquired businesses with hands-on growth programs and advisory.</p>
-                    <ul class="service-features">
-                        <li>Growth program design</li>
-                        <li>Fractional CXO services</li>
-                        <li>Operational optimization</li>
-                        <li>Team expansion planning</li>
-                        <li>Process automation</li>
-                        <li>Performance metrics</li>
-                    </ul>
-                    <div class="service-price">Custom pricing</div>
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">100-Day</div>
+                    <div class="label">Plan Built With You</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">COO / CFO / CMO</div>
+                    <div class="label">Fractional Support</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">11 &amp; 6 mo</div>
+                    <div class="label">Lead's Own Deals Closed</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Custom</div>
+                    <div class="label">Pricing</div>
                 </div>
             </div>
-            <div class="service-page-ctas">
-                <a href="/contact/" class="button-primary">Talk to us</a>
-                <a href="/services/" class="button-secondary">All services</a>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Caprae Capital's Post-Acquisition Strategy service helps new owners grow a business after close.</strong> We build your 100-day plan and value creation plan, provide fractional COO, CFO and CMO support, and coach first-time CEOs. Pricing is custom.</p>
+                <p>Post-acquisition value creation starts with stability: keep people and customers, understand the numbers, then improve.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Your First 100 Days</span>
+                <h2 class="section-heading fade-in-element slide-left">The First 100 Days After Buying a Business</h2>
+                <div class="comparison-section table-scroll fade-in-element">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Phase</th>
+                            <th>Focus</th>
+                            <th>Typical actions</th>
+                        </tr>
+                        <tr>
+                            <td>Days 0 to 30</td>
+                            <td>Stabilize</td>
+                            <td>Meet staff and top customers, secure cash controls, keep the seller close</td>
+                        </tr>
+                        <tr>
+                            <td>Days 31 to 60</td>
+                            <td>Learn and measure</td>
+                            <td>Map key processes, set KPIs, build the reporting dashboard</td>
+                        </tr>
+                        <tr>
+                            <td>Days 61 to 100</td>
+                            <td>Improve</td>
+                            <td>Pick quick wins, draft the hiring plan, agree the value creation plan</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Integration and Value Creation</span>
+            <h2 class="section-heading fade-in-element slide-left">Post-Acquisition Integration Strategy</h2>
+            <p class="section-subtitle fade-in-element slide-right">A good integration plan protects what you paid for. A value creation plan private equity investors trust shows how you will grow it.</p>
+
+            <div class="two-col-boxes">
+                <div class="beyond-sourcing fade-in-element">
+                    <h3>Integration checklist</h3>
+                    <div class="beyond-list single-col">
+                        <div class="beyond-item">People: retention, roles, communication</div>
+                        <div class="beyond-item">Systems: accounting, CRM, IT access</div>
+                        <div class="beyond-item">Finance: banking, reporting, lender covenants</div>
+                        <div class="beyond-item">Customers: introductions, contracts, pricing</div>
+                        <div class="beyond-item">Brand: what changes and when</div>
+                    </div>
+                </div>
+                <div class="beyond-sourcing fade-in-element">
+                    <h3>Value creation levers</h3>
+                    <div class="beyond-list single-col">
+                        <div class="beyond-item">Pricing and packaging</div>
+                        <div class="beyond-item">Sales capacity and pipeline</div>
+                        <div class="beyond-item">Cost and process efficiency</div>
+                        <div class="beyond-item">Technology and AI</div>
+                        <div class="beyond-item">Add-on acquisitions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Fractional Executive Support</span>
+                <h2 class="section-heading fade-in-element slide-left">Fractional COO and CXO Services</h2>
+                <p class="section-subtitle fade-in-element slide-right">Senior leadership on a part-time basis, until the business is ready for full-time hires.</p>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Fractional COO</h3>
+                        <p>Fixes operations holding back growth: processes, hiring, KPIs and accountability.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                        </div>
+                        <h3>Fractional CFO for Small Business</h3>
+                        <p>Cash flow, reporting, budgeting and lender relationships.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                        </div>
+                        <h3>Fractional CMO</h3>
+                        <p>Marketing and outreach strategy, run through Entrepreneurship as a Service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <h2 class="section-heading fade-in-element slide-left">Buy and Build Strategy and Add-On Acquisitions</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>A buy and build strategy grows faster than organic growth alone.</strong> Caprae sources add-on acquisitions through <a href="/services/search-as-a-service/">Search as a Service</a> and plans how each one integrates with the platform company, so add-ons strengthen the value creation plan instead of distracting from it.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Process</span>
+                <h2 class="section-heading fade-in-element slide-left">How an Engagement Runs</h2>
+                <div class="timeline timeline-5">
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">1</div>
+                        <h4>Post-Close Diagnostic</h4>
+                        <p>Where the business stands in weeks one and two.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">2</div>
+                        <h4>100-Day Plan</h4>
+                        <p>Priorities, owners and KPIs agreed.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">3</div>
+                        <h4>Operating Reviews</h4>
+                        <p>Monthly reviews against the plan.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">4</div>
+                        <h4>KPI Dashboard</h4>
+                        <p>The numbers that matter, tracked weekly.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">5</div>
+                        <h4>Quarterly Review</h4>
+                        <p>Value creation plan updated each quarter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Who You'll Work With</span>
+            <h2 class="section-heading fade-in-element slide-left">Advisers Who Have Taken the CEO Seat Themselves</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>Hereford Johnson</strong> closed acquisitions in 11 and 6 months as a buyer. <strong>Eric Nehrlich</strong>, a former Chief of Staff at Google, provides search fund CEO coaching to prepare operators for the CEO seat.</p>
+                <p>Co-founder <strong>Zackary Beckham</strong> acquired and runs a managed IT services business, so the team has lived the first 100 days, not just advised on them.</p>
+            </div>
+
+            <div class="team-grid-2col" style="margin-top: 60px;">
+                <div class="team-member fade-in-element">
+                    <a class="team-member-link" href="/team/hereford-johnson/">
+                        <img src="/assets/team/hereford-johnson.jpg" alt="Hereford Johnson" class="member-photo">
+                        <h4>Hereford Johnson</h4>
+                        <p>Principal Adviser, Caprae Capital</p>
+                    </a>
+                    <p class="member-bio">Closed acquisitions in 11 and 6 months as a buyer. Northwestern Kellogg MBA and former Deloitte Consulting.</p>
+                    <a class="service-link" href="/team/hereford-johnson/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="team-member fade-in-element">
+                    <a class="team-member-link" href="/team/eric-nehrlich/">
+                        <img src="/assets/team/eric-nehrlich.jpeg" alt="Eric Nehrlich" class="member-photo">
+                        <h4>Eric Nehrlich</h4>
+                        <p>Executive Coach, Caprae Capital</p>
+                    </a>
+                    <p class="member-bio">Former Chief of Staff at Google who now prepares operators for the CEO seat. Studied at MIT, Columbia and Stanford.</p>
+                    <a class="service-link" href="/team/eric-nehrlich/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is post-acquisition strategy?</summary>
+                        <p>Post-acquisition strategy is the plan for running and growing a business after you buy it. Caprae builds your 100-day plan and value creation plan, provides fractional executive support and coaches first-time CEOs.</p>
+                    </details>
+                    <details>
+                        <summary>What should I focus on in the first 100 days after buying a business?</summary>
+                        <p>Keep key staff and customers, learn how the business actually runs, and set clear performance metrics before making big changes. Quick wins come after you understand the numbers.</p>
+                    </details>
+                    <details>
+                        <summary>What is a value creation plan in private equity?</summary>
+                        <p>A value creation plan lists the specific levers that will grow a company's value after acquisition, such as pricing, sales capacity, cost and add-ons, with owners, targets and review dates for each.</p>
+                    </details>
+                    <details>
+                        <summary>When does a business need a fractional COO?</summary>
+                        <p>When operations are holding back growth but a full-time COO isn't affordable yet. This is common right after an acquisition, when processes need fixing and the team is settling in.</p>
+                    </details>
+                    <details>
+                        <summary>What is a buy and build strategy?</summary>
+                        <p>A buy and build strategy acquires a platform company and then adds smaller add-on acquisitions to grow faster than organic growth alone. Caprae can source add-ons and plan their integration.</p>
+                    </details>
+                    <details>
+                        <summary>How much does post-acquisition support cost?</summary>
+                        <p>Pricing is custom, based on the size of the business and the support you need. Talk to us for a quote.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Plan Your First 100 Days</h2>
+                <p class="fade-in-element">Tell us about the business you've bought or are about to close, and we'll outline a 100-day plan on the first call.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
             </div>
         </div>
     </section>

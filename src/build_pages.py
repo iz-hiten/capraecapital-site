@@ -35,7 +35,7 @@ H1_BRANDING = r'<h2 class="(branding-h1)"()>(.*?)</h2>'
 
 # nav       — nav items marked active (a page inside Resources marks both)
 # section   — which <section id> the page shows
-# card      — service pages: the single service card to show
+# h1        — heading promoted to <h1>; None when the section already has its own <h1>
 # description may be "" — the description tags are then left out
 PAGES = [
     {"path": "/", "section": "home", "nav": ["home"], "h1": None,
@@ -48,37 +48,37 @@ PAGES = [
      "description": "Meet the team behind Caprae Capital deep expertise across private equity, startups, and transaction management, built to support searchers and PE firms.",
      "crumbs": [("About", None)], "priority": "0.8"},
 
-    {"path": "/services/", "section": "services", "nav": ["services"], "h1": H1_SECTION_HEADING,
+    {"path": "/services/", "section": "services-overview", "nav": ["services"], "h1": None,
      "title": "Our Services | Deal Sourcing to Post-Acquisition Growth",
      "description": "End-to-end coverage for every stage. Search as a Service, Entrepreneurship as a Service, AI-Readiness, Tech Development, and Post-Acquisition Strategy.",
      "crumbs": [("Services", "/services/")], "priority": "0.9"},
 
-    {"path": "/services/search-as-a-service/", "section": "services", "nav": ["services"],
-     "card": "search-as-a-service", "name": "Search as a Service",
+    {"path": "/services/search-as-a-service/", "section": "search-as-a-service", "nav": ["services"],
+     "h1": None, "name": "Search as a Service",
      "title": "Search as a Service | Deal Sourcing Starting at $1,250/mo",
      "description": "Complete deal sourcing tailored to your criteria. lead generation, email list cleansing, cold calling campaigns, and email automation. Starting at $1,250/mo.",
      "crumbs": [("Services", "/services/"), ("Search as a Service", None)], "priority": "0.8"},
 
-    {"path": "/services/entrepreneurship-as-a-service/", "section": "services", "nav": ["services"],
-     "card": "entrepreneurship-as-a-service", "name": "Entrepreneurship as a Service",
+    {"path": "/services/entrepreneurship-as-a-service/", "section": "entrepreneurship-as-a-service", "nav": ["services"],
+     "h1": None, "name": "Entrepreneurship as a Service",
      "title": "Entrepreneurship | Fractional Ops for Founders | Capraecapital",
      "description": "Fractional operations for growth-stage entrepreneurs cold calling, LinkedIn outreach, social media management, and marketing support to scale your business faster.",
      "crumbs": [("Services", "/services/"), ("Entrepreneurship as a Service", None)], "priority": "0.8"},
 
-    {"path": "/services/ai-readiness/", "section": "services", "nav": ["services"],
-     "card": "ai-readiness", "name": "AI-Readiness as a Service",
+    {"path": "/services/ai-readiness/", "section": "ai-readiness", "nav": ["services"],
+     "h1": None, "name": "AI-Readiness as a Service",
      "title": "AI-Readiness | Tech Strategy & Due Diligence | Capraecapital",
      "description": "Prepare your business for the AI era technology due diligence, ROI optimization, AI-driven automation, and team training & adoption. Custom pricing.",
      "crumbs": [("Services", "/services/"), ("AI-Readiness", None)], "priority": "0.8"},
 
-    {"path": "/services/tech-development/", "section": "services", "nav": ["services"],
-     "card": "tech-development", "name": "Tech Development",
+    {"path": "/services/tech-development/", "section": "tech-development", "nav": ["services"],
+     "h1": None, "name": "Tech Development",
      "title": "Tech Development | MVP to Full-Stack Platforms | Capraecapital",
      "description": "From MVP to full-stack platforms built with modern frameworks digital marketing tools, project management, and quality assurance. Project-based pricing.",
      "crumbs": [("Services", "/services/"), ("Tech Development", None)], "priority": "0.8"},
 
-    {"path": "/services/post-acquisition-strategy/", "section": "services", "nav": ["services"],
-     "card": "post-acquisition-strategy", "name": "Post-Acquisition Strategy",
+    {"path": "/services/post-acquisition-strategy/", "section": "post-acquisition-strategy", "nav": ["services"],
+     "h1": None, "name": "Post-Acquisition Strategy",
      "title": "Post-Acquisition Strategy | Growth Programs and Advisory",
      "description": "Scale acquired businesses with hands-on growth programs fractional CXO services, operational optimization, and performance metrics. Custom pricing.",
      "crumbs": [("Services", "/services/"), ("Post-Acquisition Strategy", None)], "priority": "0.8"},
@@ -253,7 +253,6 @@ KEYWORDS = {
 EXTRA_SITEMAP = [("/privacy/", "yearly", "0.3"), ("/terms/", "yearly", "0.3")]
 
 SECTION_RE = re.compile(r'    <!-- [A-Z ]+ SECTION -->\n    <section id="([\w-]+)">\n(.*?)\n    </section>\n', re.S)
-CARD_RE = re.compile(r'                <!--@card:([\w-]+)-->\n(.*?)                <!--@/card-->\n', re.S)
 TEAM_RE = re.compile(r'        <!--@team-->\n(.*?)        <!--@/team-->\n', re.S)
 MEMBER_RE = re.compile(
     r'<h3 class="team-subgroup-heading[^"]*">(?P<group>.*?)</h3>'
@@ -329,31 +328,6 @@ def promote_h1(section, pattern):
     return new
 
 
-def service_page(section, p):
-    """The services section, narrowed to one card, headed by the service name."""
-    cards = dict(CARD_RE.findall(section))
-    card = cards[p["card"]]
-    card = re.sub(r'\n *<a class="service-link"[^\n]*', "", card)  # no "Learn more" to itself
-    start = section.index('            <div class="services-grid">')
-    last = list(CARD_RE.finditer(section))[-1]
-    grid_close = section.index("            </div>\n", last.end())
-    new = (section[:start]
-           + '            <div class="services-grid single">\n' + card
-           + "            </div>\n"
-           + '            <div class="service-page-ctas">\n'
-           + '                <a href="/contact/" class="button-primary">Talk to us</a>\n'
-           + '                <a href="/services/" class="button-secondary">All services</a>\n'
-           + "            </div>\n"
-           + section[grid_close + len("            </div>\n"):])
-    new = re.sub(H1_SECTION_HEADING,
-                 lambda m: f'<h1 class="{m.group(1)}"{m.group(2)}>{html.escape(p["name"], quote=False)}</h1>',
-                 new, count=1, flags=re.S)
-    new = re.sub(r'(<p class="section-subtitle[^"]*">)(.*?)(</p>)',
-                 r"\1Part of Caprae Capital's end-to-end services, from deal sourcing to post-acquisition growth\3",
-                 new, count=1, flags=re.S)
-    return new
-
-
 def team_members(block):
     """(slug, img, alt, name, role) for everyone in the team block, in page order.
     Someone without a role line takes their subgroup heading (e.g. Capital Advisor)."""
@@ -403,12 +377,8 @@ def build(p, sections, prefix, suffix):
         section = p["html"]
     else:
         section = sections[p["section"]]
-        if p.get("card"):
-            section = service_page(section, p)
-        elif p.get("h1"):
+        if p.get("h1"):
             section = promote_h1(section, p["h1"])
-    # strip build markers left in the services grid
-    section = re.sub(r" *<!--@/?card[^>]*-->\n", "", section)
 
     head = prefix.replace("    <!--@PAGE_META-->", head_meta(p), 1)
     jl = page_jsonld(p)
@@ -429,7 +399,7 @@ def main():
     template = TEMPLATE.read_text(encoding="utf-8")
     matches = list(SECTION_RE.finditer(template))
     sections = {m.group(1): m.group(2) for m in matches}
-    expected = {"home", "services", "branding", "how", "pricing", "contact",
+    expected = {"home", "services-overview", "search-as-a-service", "entrepreneurship-as-a-service", "ai-readiness", "tech-development", "post-acquisition-strategy", "branding", "how", "pricing", "contact",
                 "about", "team", "faq", "case-study"}
     assert set(sections) == expected, sorted(sections)
     prefix, suffix = template[:matches[0].start()], template[matches[-1].end():]

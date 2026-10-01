@@ -1652,6 +1652,235 @@
             display: inline-block;
         }
 
+        /* Service pages: the few pieces the site had no component for, styled to
+           match it (eyebrow = the Branding page label, boxes = site cards) */
+        .eyebrow {
+            display: block;
+            text-align: center;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #F9D360;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .page-reviewed {
+            font-size: 14px;
+            margin-top: 16px;
+        }
+
+        .page-reviewed a,
+        .about-intro a,
+        .comparison-table a {
+            color: #F9D360;
+            text-decoration: none;
+        }
+
+        .page-reviewed a:hover,
+        .about-intro a:hover,
+        .comparison-table a:hover {
+            color: #FFFFFF;
+        }
+
+        .section-heading + .comparison-section,
+        .section-heading + .about-intro,
+        .section-heading + .faq-list {
+            margin-top: 50px;
+        }
+
+        /* cards inside a grey band keep the container's side padding, so let
+           them be slightly narrower to stay three across like elsewhere */
+        .how-section .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .timeline.timeline-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .timeline.timeline-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        /* a key term explained inside the intro text */
+        .definition-note {
+            background: #1A1A1A;
+            border-left: 4px solid #F9D360;
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+
+        .about-intro .definition-note p {
+            margin-bottom: 0;
+        }
+
+        .table-note {
+            text-align: center;
+            color: #B0B0B0;
+            font-size: 13px;
+            margin-top: -50px;
+        }
+
+        .single-testimonial {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .single-testimonial .service-link {
+            margin-top: 24px;
+        }
+
+        .testimonial-note {
+            color: #B0B0B0;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 16px;
+        }
+
+        .two-col-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .beyond-list.single-col {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .team-member .member-bio {
+            color: #B0B0B0;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0;
+            text-transform: none;
+            margin-top: 16px;
+        }
+
+        .metrics-grid.metrics-3 {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 80px 0 0;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-list details {
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+        }
+
+        .faq-list summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-list summary::after {
+            content: '+';
+            color: #F9D360;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .faq-list details[open] summary::after {
+            content: '\2013';
+        }
+
+        .faq-list details p {
+            color: #B0B0B0;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 14px;
+        }
+
+        .faq-list a,
+        .disclosure-note a {
+            color: #F9D360;
+        }
+
+        .disclosure-note {
+            max-width: 800px;
+            margin: 60px auto 0;
+            border: 1px solid #2A2A2A;
+            padding: 20px 24px;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #B0B0B0;
+        }
+
+        .disclosure-note strong {
+            color: #FFFFFF;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .related-links a {
+            border: 1px solid #2A2A2A;
+            padding: 8px 14px;
+            font-size: 13px;
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .related-links a:hover {
+            border-color: #F9D360;
+            color: #F9D360;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            /* two stat boxes side by side must fit a phone screen */
+            .metrics-grid.metrics-compact {
+                gap: 16px;
+            }
+
+            .metrics-grid.metrics-compact .metric-item {
+                padding: 28px 12px;
+            }
+
+            .metrics-grid.metrics-compact .value {
+                font-size: 30px;
+            }
+
+            .timeline.timeline-4,
+            .timeline.timeline-5 {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .two-col-boxes,
+            .metrics-grid.metrics-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Footer */
         footer {
             background: #0A0A0A;
@@ -2147,32 +2376,260 @@
     </nav>
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section id="services" class="active">
+    <section id="ai-readiness" class="active">
         <div class="container services-section">
-            <h1 class="section-heading fade-in-element slide-left">AI-Readiness as a Service</h1>
-            <p class="section-subtitle fade-in-element slide-right">Part of Caprae Capital's end-to-end services, from deal sourcing to post-acquisition growth</p>
+            <h1 class="section-heading fade-in-element slide-left">AI Readiness Assessment and Consulting</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Find where AI will pay back first in your business or your next acquisition, and what needs to be in place before you invest.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/zackary-beckham/">Zackary Beckham</a>, Co-Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
 
-            <div class="services-grid single">
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-                    </div>
-                    <h3>AI-Readiness as a Service</h3>
-                    <p>Prepare your business for the AI era with comprehensive tech strategy.</p>
-                    <ul class="service-features">
-                        <li>Technology due diligence</li>
-                        <li>ROI optimization</li>
-                        <li>AI-driven automation</li>
-                        <li>Process documentation</li>
-                        <li>Tool stack optimization</li>
-                        <li>Team training & adoption</li>
-                    </ul>
-                    <div class="service-price">Custom pricing</div>
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">6</div>
+                    <div class="label">Areas Scored</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">90-Day</div>
+                    <div class="label">Roadmap Delivered</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">10+ yrs</div>
+                    <div class="label">Lead's AI &amp; Tech Experience</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Custom</div>
+                    <div class="label">Pricing</div>
                 </div>
             </div>
-            <div class="service-page-ctas">
-                <a href="/contact/" class="button-primary">Talk to us</a>
-                <a href="/services/" class="button-secondary">All services</a>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Caprae Capital's AI readiness assessment scores a business across six areas, then ranks the AI use cases with the fastest payback.</strong> It is built for small business owners, searchers evaluating a target and private equity portfolio companies. Pricing is custom and set after a short scoping call.</p>
+                <p>The goal is practical: fewer manual hours and better decisions, not new tools for their own sake.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">The Framework</span>
+                <h2 class="section-heading fade-in-element slide-left">The 6 Areas We Score</h2>
+                <div class="comparison-section table-scroll fade-in-element">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Area</th>
+                            <th>What we review</th>
+                            <th>What you get</th>
+                        </tr>
+                        <tr>
+                            <td>Data quality &amp; access</td>
+                            <td>Where data lives, how clean and connected it is</td>
+                            <td>Data gaps to fix first</td>
+                        </tr>
+                        <tr>
+                            <td>Systems &amp; tool stack</td>
+                            <td>Core software, integrations, licenses</td>
+                            <td>Tool-stack optimization plan</td>
+                        </tr>
+                        <tr>
+                            <td>Process documentation</td>
+                            <td>How key workflows actually run</td>
+                            <td>Automation candidates</td>
+                        </tr>
+                        <tr>
+                            <td>Team skills &amp; adoption</td>
+                            <td>Current use of AI, training needs</td>
+                            <td>Training and adoption plan</td>
+                        </tr>
+                        <tr>
+                            <td>Security &amp; compliance</td>
+                            <td>Access, data handling, vendor risk</td>
+                            <td>Guardrails before rollout</td>
+                        </tr>
+                        <tr>
+                            <td>ROI &amp; use-case fit</td>
+                            <td>Cost and time of each candidate</td>
+                            <td>Ranked use-case list</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Process</span>
+            <h2 class="section-heading fade-in-element slide-left">How the AI Readiness Audit Works</h2>
+            <div class="timeline timeline-5">
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">1</div>
+                    <h4>Discovery</h4>
+                    <p>Interviews with owners and team leads.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">2</div>
+                    <h4>Systems Review</h4>
+                    <p>Data, software and integrations mapped.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">3</div>
+                    <h4>Use-Case Scoring</h4>
+                    <p>Each opportunity scored on value and effort.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">4</div>
+                    <h4>Roadmap</h4>
+                    <p>A 90-day plan with ROI estimates.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">5</div>
+                    <h4>Readout</h4>
+                    <p>Results walked through with your team.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Beyond the Assessment</span>
+                <h2 class="section-heading fade-in-element slide-left">AI Enablement Services</h2>
+                <p class="section-subtitle fade-in-element slide-right">When you're ready to act, the same team implements the roadmap.</p>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+                        </div>
+                        <h3>AI-Driven Automation</h3>
+                        <p>Repetitive tasks moved to automated workflows, starting with the highest ROI.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Tool Stack Optimization</h3>
+                        <p>Overlapping software cut and remaining tools connected.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Team Training &amp; Adoption</h3>
+                        <p>Hands-on training so your team uses what is built.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <h2 class="section-heading fade-in-element slide-left">AI Due Diligence for M&amp;A</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>Buying a business? Technology risk affects value.</strong> Caprae's AI due diligence for M&amp;A reviews a target's systems, data and AI exposure before you sign, so you can price in upgrade costs and plan the first year after close.</p>
+                <p>It covers outdated or unsupported software, key-person dependency on one IT contractor, data that can't be migrated, and AI opportunities that could support your value creation plan. It complements, and does not replace, your formal legal and financial diligence.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who It's For</span>
+                <h2 class="section-heading fade-in-element slide-left">Small Business AI Consulting and More</h2>
+                <div class="serve-grid">
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>
+                        </div>
+                        <h3>Small Business Owners</h3>
+                        <p>Practical AI guidance without enterprise-sized budgets.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <h3>Acquisition Entrepreneurs</h3>
+                        <p>Technology due diligence for acquisitions before LOI or close.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>PE Portfolio Companies</h3>
+                        <p>AI for private equity portfolio companies, tied to the value creation plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Who Leads Your Assessment</span>
+            <h2 class="section-heading fade-in-element slide-left">Hands-On Technology and Acquisition Experience</h2>
+            <div class="about-intro fade-in-element">
+                <p>Assessments are led by co-founder <strong>Zackary Beckham</strong>, who has more than 10 years of technology and AI implementation experience and acquired and runs a managed IT services business himself.</p>
+                <p>That means recommendations are tested against what an owner can actually budget, staff and maintain.</p>
+            </div>
+
+            <div class="team-grid-2col" style="grid-template-columns: 1fr; max-width: 320px; margin-top: 60px;">
+                <div class="team-member fade-in-element">
+                    <a class="team-member-link" href="/team/zackary-beckham/">
+                        <img src="/assets/team/zackary-beckham.jpg" alt="Zackary Beckham" class="member-photo">
+                        <h4>Zackary Beckham</h4>
+                        <p>Co-Founder, Caprae Capital</p>
+                    </a>
+                    <p class="member-bio">Self-funded searcher who acquired and runs a managed IT services business, with 10+ years of technology and AI implementation experience.</p>
+                    <a class="service-link" href="/team/zackary-beckham/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is an AI readiness assessment?</summary>
+                        <p>An AI readiness assessment reviews a business's data, systems, processes and people to find where AI can save time and money, and what has to be fixed first. Caprae turns the results into a prioritized roadmap.</p>
+                    </details>
+                    <details>
+                        <summary>What does an AI readiness audit include?</summary>
+                        <p>Discovery interviews, a systems and data review, process mapping, use-case scoring and a readout with a 90-day roadmap, tool-stack recommendations and a training plan.</p>
+                    </details>
+                    <details>
+                        <summary>How long does an AI readiness assessment take?</summary>
+                        <p>Most assessments take two to four weeks, depending on company size and how many systems we review.</p>
+                    </details>
+                    <details>
+                        <summary>How much does AI readiness consulting cost?</summary>
+                        <p>Pricing is custom and set after a short scoping call, based on business size and the number of systems and teams involved.</p>
+                    </details>
+                    <details>
+                        <summary>Do you offer AI due diligence for M&amp;A?</summary>
+                        <p>Yes. For buyers, we review a target's technology, data and AI exposure so you understand the risks and upgrade costs before you sign.</p>
+                    </details>
+                    <details>
+                        <summary>Is AI worth it for a small business?</summary>
+                        <p>Usually, when it starts with repetitive tasks and existing workflows. We rank use cases by return first, so you don't pay for tools your team won't use.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Find Out How AI-Ready Your Business Is</h2>
+                <p class="fade-in-element">Book a scoping call. We'll confirm the systems in scope and send a fixed quote for your assessment.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
             </div>
         </div>
     </section>

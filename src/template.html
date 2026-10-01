@@ -1603,6 +1603,235 @@
             display: inline-block;
         }
 
+        /* Service pages: the few pieces the site had no component for, styled to
+           match it (eyebrow = the Branding page label, boxes = site cards) */
+        .eyebrow {
+            display: block;
+            text-align: center;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #F9D360;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .page-reviewed {
+            font-size: 14px;
+            margin-top: 16px;
+        }
+
+        .page-reviewed a,
+        .about-intro a,
+        .comparison-table a {
+            color: #F9D360;
+            text-decoration: none;
+        }
+
+        .page-reviewed a:hover,
+        .about-intro a:hover,
+        .comparison-table a:hover {
+            color: #FFFFFF;
+        }
+
+        .section-heading + .comparison-section,
+        .section-heading + .about-intro,
+        .section-heading + .faq-list {
+            margin-top: 50px;
+        }
+
+        /* cards inside a grey band keep the container's side padding, so let
+           them be slightly narrower to stay three across like elsewhere */
+        .how-section .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .timeline.timeline-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .timeline.timeline-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        /* a key term explained inside the intro text */
+        .definition-note {
+            background: #1A1A1A;
+            border-left: 4px solid #F9D360;
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+
+        .about-intro .definition-note p {
+            margin-bottom: 0;
+        }
+
+        .table-note {
+            text-align: center;
+            color: #B0B0B0;
+            font-size: 13px;
+            margin-top: -50px;
+        }
+
+        .single-testimonial {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .single-testimonial .service-link {
+            margin-top: 24px;
+        }
+
+        .testimonial-note {
+            color: #B0B0B0;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 16px;
+        }
+
+        .two-col-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .beyond-list.single-col {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .team-member .member-bio {
+            color: #B0B0B0;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0;
+            text-transform: none;
+            margin-top: 16px;
+        }
+
+        .metrics-grid.metrics-3 {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 80px 0 0;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-list details {
+            background: #1A1A1A;
+            border: 1px solid #2A2A2A;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+        }
+
+        .faq-list summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-list summary::after {
+            content: '+';
+            color: #F9D360;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .faq-list details[open] summary::after {
+            content: '\2013';
+        }
+
+        .faq-list details p {
+            color: #B0B0B0;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 14px;
+        }
+
+        .faq-list a,
+        .disclosure-note a {
+            color: #F9D360;
+        }
+
+        .disclosure-note {
+            max-width: 800px;
+            margin: 60px auto 0;
+            border: 1px solid #2A2A2A;
+            padding: 20px 24px;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #B0B0B0;
+        }
+
+        .disclosure-note strong {
+            color: #FFFFFF;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .related-links a {
+            border: 1px solid #2A2A2A;
+            padding: 8px 14px;
+            font-size: 13px;
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .related-links a:hover {
+            border-color: #F9D360;
+            color: #F9D360;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            /* two stat boxes side by side must fit a phone screen */
+            .metrics-grid.metrics-compact {
+                gap: 16px;
+            }
+
+            .metrics-grid.metrics-compact .metric-item {
+                padding: 28px 12px;
+            }
+
+            .metrics-grid.metrics-compact .value {
+                font-size: 30px;
+            }
+
+            .timeline.timeline-4,
+            .timeline.timeline-5 {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .two-col-boxes,
+            .metrics-grid.metrics-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Footer */
         footer {
             background: #0A0A0A;
@@ -2253,114 +2482,1648 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services">
+    <!-- The /services/ page. Content from templates/services.html, laid out with the site's own components. -->
+    <!-- SERVICES OVERVIEW SECTION -->
+    <section id="services-overview">
         <div class="container services-section">
-            <h2 class="section-heading fade-in-element slide-left">Comprehensive Services for Every Stage</h2>
-            <p class="section-subtitle fade-in-element slide-right">End-to-end coverage from deal sourcing to post-acquisition growth</p>
+            <h1 class="section-heading fade-in-element slide-left">Buy-Side M&amp;A and Acquisition Support Services</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Acquisition support services from off-market deal sourcing to post-acquisition growth, for searchers, independent sponsors and private equity firms.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/kevin-hong/">Kevin Hong</a>, Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
+
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">$110M+</div>
+                    <div class="label">Client Deals Closed</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">8</div>
+                    <div class="label">Countries Served</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">10 to 20</div>
+                    <div class="label">Owner Engagements / Month</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value" data-counted="1">$1,250</div>
+                    <div class="label">Plans From / Month</div>
+                </div>
+            </div>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Caprae Capital provides outsourced, white-labeled buy-side M&amp;A support for small and lower middle market acquisitions.</strong> Our six services cover off-market deal sourcing, growth operations, AI readiness, tech development, post-acquisition strategy and LinkedIn branding, so a searcher or sponsor can run a full acquisition process without building a full team.</p>
+                <p>Need M&amp;A deal advisory or deal advisory for private equity teams? Every engagement is led by operators and runs under your firm's name.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Choose Your Starting Point</span>
+                <h2 class="section-heading fade-in-element slide-left">Which Caprae Service Do You Need?</h2>
+                <div class="comparison-section table-scroll fade-in-element">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>If you are...</th>
+                            <th>Your main challenge</th>
+                            <th class="caprae-header">Start with</th>
+                        </tr>
+                        <tr>
+                            <td>A self-funded or traditional searcher</td>
+                            <td>Too few owner conversations</td>
+                            <td class="caprae"><a href="/services/search-as-a-service/">Search as a Service</a></td>
+                        </tr>
+                        <tr>
+                            <td>An independent sponsor</td>
+                            <td>Deal flow between deals</td>
+                            <td class="caprae"><a href="/services/search-as-a-service/">Search as a Service</a></td>
+                        </tr>
+                        <tr>
+                            <td>A PE firm or investment bank</td>
+                            <td>Sourcing and diligence capacity</td>
+                            <td class="caprae"><a href="/pricing/">Custom / Enterprise</a></td>
+                        </tr>
+                        <tr>
+                            <td>A new business owner</td>
+                            <td>The first 100 days after close</td>
+                            <td class="caprae"><a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a></td>
+                        </tr>
+                        <tr>
+                            <td>A founder</td>
+                            <td>Sales, marketing and outreach</td>
+                            <td class="caprae"><a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a></td>
+                        </tr>
+                        <tr>
+                            <td>Evaluating a tech-heavy target</td>
+                            <td>Technology and AI risk</td>
+                            <td class="caprae"><a href="/services/ai-readiness/">AI-Readiness</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Our Services</span>
+            <h2 class="section-heading fade-in-element slide-left">Acquisition Support at Every Stage</h2>
+            <p class="section-subtitle fade-in-element slide-right">Use one service or combine them.</p>
 
             <div class="services-grid">
-                <!--@card:search-as-a-service-->
                 <div class="service-card fade-in-element">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </div>
                     <h3>Search as a Service</h3>
-                    <p>Our flagship offering: Complete deal sourcing tailored to your criteria.</p>
-                    <ul class="service-features">
-                        <li>Lead generation & prospecting</li>
-                        <li>Email list cleansing & validation</li>
-                        <li>LeadGen QA software</li>
-                        <li>Cold calling campaigns</li>
-                        <li>Email automation</li>
-                        <li>PR & branding</li>
-                        <li>Cold call analytics</li>
-                    </ul>
-                    <div class="service-price">Starting at $1,250/mo</div>
+                    <p>Off-market deal sourcing built on your buy box: list building, cold calling, email, LinkedIn and direct mail.</p>
+                    <div class="service-price">From $1,250/mo + success fee</div>
                     <a class="service-link" href="/services/search-as-a-service/">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <!--@/card-->
-
-                <!--@card:entrepreneurship-as-a-service-->
                 <div class="service-card fade-in-element">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
                     </div>
                     <h3>Entrepreneurship as a Service</h3>
-                    <p>Fractional operations for growth-stage entrepreneurs and founders.</p>
-                    <ul class="service-features">
-                        <li>Cold calling & LinkedIn outreach</li>
-                        <li>Social media management</li>
-                        <li>Newsletter & email campaigns</li>
-                        <li>Handwritten letter campaigns</li>
-                        <li>Software development</li>
-                        <li>Press releases & PR</li>
-                        <li>Marketing optimization</li>
-                    </ul>
-                    <div class="service-price">$1,250/mo</div>
+                    <p>A fractional growth team for founders and new owners: outreach, social media, email, PR and software support.</p>
+                    <div class="service-price">Fixed monthly plan</div>
                     <a class="service-link" href="/services/entrepreneurship-as-a-service/">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <!--@/card-->
-
-                <!--@card:ai-readiness-->
                 <div class="service-card fade-in-element">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
                     </div>
-                    <h3>AI-Readiness as a Service</h3>
-                    <p>Prepare your business for the AI era with comprehensive tech strategy.</p>
-                    <ul class="service-features">
-                        <li>Technology due diligence</li>
-                        <li>ROI optimization</li>
-                        <li>AI-driven automation</li>
-                        <li>Process documentation</li>
-                        <li>Tool stack optimization</li>
-                        <li>Team training & adoption</li>
-                    </ul>
+                    <h3>AI-Readiness</h3>
+                    <p>An AI readiness assessment, technology due diligence and automation roadmap for owners and buyers.</p>
                     <div class="service-price">Custom pricing</div>
                     <a class="service-link" href="/services/ai-readiness/">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <!--@/card-->
-
-                <!--@card:tech-development-->
                 <div class="service-card fade-in-element">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
                     <h3>Tech Development</h3>
-                    <p>From MVP to full-stack platforms, built with modern frameworks.</p>
-                    <ul class="service-features">
-                        <li>MVP development</li>
-                        <li>Full-stack platforms</li>
-                        <li>Digital marketing tools</li>
-                        <li>Project management</li>
-                        <li>Agile implementation</li>
-                        <li>Quality assurance</li>
-                    </ul>
+                    <p>Custom software development, from startup MVPs to full-stack platforms, CRMs and websites.</p>
                     <div class="service-price">Project-based</div>
                     <a class="service-link" href="/services/tech-development/">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <!--@/card-->
-
-                <!--@card:post-acquisition-strategy-->
                 <div class="service-card fade-in-element">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
                     </div>
                     <h3>Post-Acquisition Strategy</h3>
-                    <p>Scale acquired businesses with hands-on growth programs and advisory.</p>
-                    <ul class="service-features">
-                        <li>Growth program design</li>
-                        <li>Fractional CXO services</li>
-                        <li>Operational optimization</li>
-                        <li>Team expansion planning</li>
-                        <li>Process automation</li>
-                        <li>Performance metrics</li>
-                    </ul>
+                    <p>100-day plans, value creation plans, fractional COO and CFO support, and CEO coaching after close.</p>
                     <div class="service-price">Custom pricing</div>
                     <a class="service-link" href="/services/post-acquisition-strategy/">Learn more <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <!--@/card-->
+                <div class="service-card fade-in-element">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+                    </div>
+                    <h3>Branding as a Service</h3>
+                    <p>Ghostwritten LinkedIn content that builds credibility with owners, investors and capital partners.</p>
+                    <div class="service-price">$1,250/mo</div>
+                    <a class="service-link" href="/services/branding/">Learn more <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">The Acquisition Lifecycle</span>
+                <h2 class="section-heading fade-in-element slide-left">How Caprae Supports the Full Process</h2>
+                <div class="timeline timeline-5">
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">1</div>
+                        <h4>Define</h4>
+                        <p>Set your buy box: industry, size, geography and owner profile.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">2</div>
+                        <h4>Source</h4>
+                        <p>Reach off-market owners through calls, email, LinkedIn and mail.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">3</div>
+                        <h4>Qualify</h4>
+                        <p>Screen opportunities and prepare research and models for diligence.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">4</div>
+                        <h4>Close</h4>
+                        <p>Your attorney, lender and QoE provider complete the transaction.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">5</div>
+                        <h4>Grow</h4>
+                        <p>Run the 100-day plan and value creation plan after close.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">M&amp;A Due Diligence Services</span>
+            <h2 class="section-heading fade-in-element slide-left">Diligence Support, With Clear Boundaries</h2>
+            <p class="section-subtitle fade-in-element slide-right">Our business acquisition consulting speeds up diligence. Licensed work stays with licensed advisors.</p>
+
+            <div class="two-col-boxes">
+                <div class="beyond-sourcing fade-in-element">
+                    <h3>What Caprae prepares</h3>
+                    <div class="beyond-list single-col">
+                        <div class="beyond-item">Preliminary financial review</div>
+                        <div class="beyond-item">NDR, churn and customer concentration analysis</div>
+                        <div class="beyond-item">Market research and competitor mapping</div>
+                        <div class="beyond-item">Financial modeling for the acquisition</div>
+                        <div class="beyond-item">Lender and investor introductions</div>
+                    </div>
+                </div>
+                <div class="beyond-sourcing fade-in-element">
+                    <h3>What stays with your advisors</h3>
+                    <div class="beyond-list single-col">
+                        <div class="beyond-item">Quality of earnings (QoE) report</div>
+                        <div class="beyond-item">Legal due diligence and contracts</div>
+                        <div class="beyond-item">Tax structuring and advice</div>
+                        <div class="beyond-item">Final valuation and investment decision</div>
+                        <div class="beyond-item">Loan underwriting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who Stands Behind the Work</span>
+                <h2 class="section-heading fade-in-element slide-left">Led by Operators Who Have Been in Your Shoes</h2>
+                <div class="about-intro fade-in-element">
+                    <p>Caprae Capital was founded in 2025 by <strong>Kevin Hong</strong> and <strong>Zackary Beckham</strong>. Both have built or bought companies themselves, and the adviser bench includes former searchers, CFA charterholders and a former Google Chief of Staff.</p>
+                    <p>Meet the full <a href="/team/">team</a> or read our <a href="/case-study/">case studies</a>.</p>
+                </div>
+
+                <div class="team-grid-2col">
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/kevin-hong/">
+                            <img src="/assets/team/kevin-hong.jpg" alt="Kevin Hong" class="member-photo">
+                            <h4>Kevin Hong</h4>
+                            <p>Founder, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Former business journalist (7 years) who scaled two startups to $31M and $7M ARR and raised $8M+ in venture capital. Chicago Booth MBA and Amazon bestselling author.</p>
+                        <a class="service-link" href="/team/kevin-hong/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/hereford-johnson/">
+                            <img src="/assets/team/hereford-johnson.jpg" alt="Hereford Johnson" class="member-photo">
+                            <h4>Hereford Johnson</h4>
+                            <p>Principal Adviser, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Closed acquisitions in 11 and 6 months as a buyer. Northwestern Kellogg MBA and former Deloitte Consulting.</p>
+                        <a class="service-link" href="/team/hereford-johnson/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class="metrics-grid metrics-3 metrics-compact">
+                    <div class="metric-item fade-in-element">
+                        <div class="value">$110M+</div>
+                        <div class="label">Client deals closed</div>
+                    </div>
+                    <div class="metric-item fade-in-element">
+                        <div class="value">8</div>
+                        <div class="label">Countries served</div>
+                    </div>
+                    <div class="metric-item fade-in-element">
+                        <div class="value">&lt;1 wk</div>
+                        <div class="label">Fastest onboarding to first IOI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">FAQ</span>
+            <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+            <div class="faq-list fade-in-element">
+                <details open>
+                    <summary>What does a buy-side M&amp;A advisor do?</summary>
+                    <p>A buy-side M&amp;A advisor helps a buyer find, evaluate and close an acquisition. Caprae Capital covers the support side: sourcing off-market targets, preparing diligence research and planning growth after close.</p>
+                </details>
+                <details>
+                    <summary>How much do Caprae Capital's services cost?</summary>
+                    <p>Search as a Service starts at $1,250 per month plus a success fee. Entrepreneurship as a Service is a fixed monthly plan. AI-Readiness and Post-Acquisition Strategy are custom priced, and Tech Development is priced per project. Current figures are on the <a href="/pricing/">pricing page</a>.</p>
+                </details>
+                <details>
+                    <summary>What is the difference between deal sourcing and deal advisory?</summary>
+                    <p>Deal sourcing finds and contacts owners who match your buy box. M&amp;A deal advisory supports what comes next: qualifying, research, modeling and diligence preparation. Caprae offers both.</p>
+                </details>
+                <details>
+                    <summary>Does Caprae replace my lawyer, accountant or QoE provider?</summary>
+                    <p>No. Caprae prepares research and analysis that makes diligence faster, but legal review, tax advice, audited financials and quality of earnings reports should come from your own licensed advisors.</p>
+                </details>
+            </div>
+
+            <div class="disclosure-note" role="note">
+                <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Not Sure Where to Start?</h2>
+                <p class="fade-in-element">Book a 20-minute fit call. We'll look at your buy box and stage, and recommend one service or a combined scope.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The /services/search-as-a-service/ page. Content from templates/search-as-a-service.html. -->
+    <!-- SEARCH AS A SERVICE SECTION -->
+    <section id="search-as-a-service">
+        <div class="container services-section">
+            <h1 class="section-heading fade-in-element slide-left">Search as a Service: Off-Market Deal Sourcing</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Proprietary deal sourcing for searchers, independent sponsors and PE firms, built and run by operators who have closed acquisitions themselves.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/kevin-hong/">Kevin Hong</a>, Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
+
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">$110M+</div>
+                    <div class="label">Client Deals Closed</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">10 to 20</div>
+                    <div class="label">Owner Engagements / Month</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">&lt;1 wk</div>
+                    <div class="label">Fastest Onboarding to IOI</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value" data-counted="1">$1,250</div>
+                    <div class="label">Starting / Month</div>
+                </div>
+            </div>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Search as a Service is Caprae Capital's outsourced deal sourcing program.</strong> We build target lists from your buy box, reach business owners by phone, email, LinkedIn and handwritten mail, and pass you qualified owner conversations. Plans start at <strong>$1,250 per month plus a success fee</strong>, and clients typically see 10 to 20 owner engagements a month.</p>
+                <p>You decide which deals to pursue. We run the sourcing behind it, under your firm's name.</p>
+                <div class="definition-note">
+                    <p><strong>Proprietary deal sourcing</strong> means finding acquisitions by contacting owners directly, not through brokers or auctions. The result is <strong>proprietary deal flow</strong>: conversations where you are often the only buyer at the table.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">What's Included</span>
+                <h2 class="section-heading fade-in-element slide-left">A Full Outsourced Sourcing Stack</h2>
+                <p class="section-subtitle fade-in-element slide-right">Managed by Caprae's team from week one.</p>
+
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <h3>Lead Generation &amp; Prospecting</h3>
+                        <p>Target lists built to your buy box and refreshed as the campaign learns.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        </div>
+                        <h3>List Cleansing &amp; LeadGen QA</h3>
+                        <p>Validated contact data and QA software that removes bad and duplicate records before outreach.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h3>Cold Calling Business Owners</h3>
+                        <p>Callers trained on acquisition conversations, not generic sales scripts.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </div>
+                        <h3>Email Automation</h3>
+                        <p>Personalized email sequences running alongside calls and LinkedIn.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M4 4l7.5 7.5"/></svg>
+                        </div>
+                        <h3>LinkedIn Outreach Service</h3>
+                        <p>Owner-level LinkedIn prospecting as an added channel.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+                        </div>
+                        <h3>Handwritten Letters</h3>
+                        <p>Direct mail for owners who ignore calls and email.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                        </div>
+                        <h3>Cold Call Analytics</h3>
+                        <p>Weekly reports on volume, connect rates and qualified conversations.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Deal Advisory Support</h3>
+                        <p>Modeling, research and diligence setup once a deal is live.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Process</span>
+            <h2 class="section-heading fade-in-element slide-left">How Search as a Service Works</h2>
+            <div class="timeline timeline-4">
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">1</div>
+                    <h4>Define Your Buy Box</h4>
+                    <p>Industry, size, geography and owner profile, agreed in week one.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">2</div>
+                    <h4>Build the Target List</h4>
+                    <p>Owner data matched to your buy box, cleaned and QA'd before use.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">3</div>
+                    <h4>Run Multi-Channel Outreach</h4>
+                    <p>Calls, email, LinkedIn and mail run in parallel from weeks two to three.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">4</div>
+                    <h4>Hand Off Qualified Owners</h4>
+                    <p>Interested owners come to you with call notes and next steps.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who It's For</span>
+                <h2 class="section-heading fade-in-element slide-left">Search Fund Deal Sourcing and More</h2>
+                <div class="serve-grid">
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <h3>Searchers</h3>
+                        <p>Self-funded and traditional searchers who need steady owner conversations.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/></svg>
+                        </div>
+                        <h3>Independent Sponsors</h3>
+                        <p>Off-market business acquisition leads between deals.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>
+                        </div>
+                        <h3>PE Firms &amp; Investment Banks</h3>
+                        <p>White-labeled sourcing capacity for platforms and add-ons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Search as a Service vs. In-House Sourcing</span>
+            <h2 class="section-heading fade-in-element slide-left">Why Buyers Outsource Deal Sourcing</h2>
+            <div class="comparison-section table-scroll fade-in-element">
+                <table class="comparison-table">
+                    <tr>
+                        <th></th>
+                        <th>In-house sourcing team</th>
+                        <th class="caprae-header">Caprae Search as a Service</th>
+                    </tr>
+                    <tr>
+                        <td>Monthly cost</td>
+                        <td>Salaries, benefits, data and software paid separately</td>
+                        <td class="caprae">From $1,250/mo plus success fee</td>
+                    </tr>
+                    <tr>
+                        <td>Time to first outreach</td>
+                        <td>Weeks to months of hiring and ramp</td>
+                        <td class="caprae">Typically within the first weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Channels covered</td>
+                        <td>Often one or two</td>
+                        <td class="caprae">Calls, email, LinkedIn and direct mail</td>
+                    </tr>
+                    <tr>
+                        <td>Management overhead</td>
+                        <td>Yours to carry</td>
+                        <td class="caprae">Handled by Caprae</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="table-note">Timelines are typical, not guaranteed.</p>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Why Trust Caprae With Your Sourcing</span>
+                <h2 class="section-heading fade-in-element slide-left">Run by Operators, Not an Anonymous Call Center</h2>
+                <div class="about-intro fade-in-element">
+                    <p>Search as a Service is led by people who have closed acquisitions themselves. <strong>Hereford Johnson</strong> closed deals in 11 and 6 months as a buyer, backed by advisers in capital markets, SBA lending and coaching.</p>
+                    <p>Gondor Capital closed a $20M+ first acquisition within six months of working with Caprae.</p>
+                </div>
+
+                <div class="team-grid-2col">
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/kevin-hong/">
+                            <img src="/assets/team/kevin-hong.jpg" alt="Kevin Hong" class="member-photo">
+                            <h4>Kevin Hong</h4>
+                            <p>Founder, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Former business journalist (7 years) who scaled two startups to $31M and $7M ARR and raised $8M+ in venture capital. Chicago Booth MBA and Amazon bestselling author.</p>
+                        <a class="service-link" href="/team/kevin-hong/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/hereford-johnson/">
+                            <img src="/assets/team/hereford-johnson.jpg" alt="Hereford Johnson" class="member-photo">
+                            <h4>Hereford Johnson</h4>
+                            <p>Principal Adviser, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Closed acquisitions in 11 and 6 months as a buyer. Northwestern Kellogg MBA and former Deloitte Consulting.</p>
+                        <a class="service-link" href="/team/hereford-johnson/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class="metrics-grid metrics-3 metrics-compact">
+                    <div class="metric-item fade-in-element">
+                        <div class="value">$110M+</div>
+                        <div class="label">Client deals closed</div>
+                    </div>
+                    <div class="metric-item fade-in-element">
+                        <div class="value">8</div>
+                        <div class="label">Countries served</div>
+                    </div>
+                    <div class="metric-item fade-in-element">
+                        <div class="value">&lt;1 wk</div>
+                        <div class="label">Onboarding to first IOI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <div class="testimonial-card single-testimonial fade-in-element">
+                <div class="testimonial-header">
+                    <img src="/assets/testimonials/steve-schepman.jpg" alt="Steve Schepman" class="testimonial-photo">
+                    <div class="testimonial-meta">
+                        <div class="testimonial-author">Steve Schepman</div>
+                        <div class="testimonial-title">Gondor Capital</div>
+                    </div>
+                </div>
+                <div class="testimonial-quote">&ldquo;Caprae saved us a significant amount of time and money and played a critical role in helping us break into the private equity space.&rdquo;</div>
+                <a class="service-link" href="/case-study/">Read the case study <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is Search as a Service?</summary>
+                        <p>Search as a Service is Caprae Capital's outsourced deal sourcing program. We build target lists from your buy box, reach owners through cold calling, email, LinkedIn and handwritten mail, and hand you qualified owner conversations, so you can spend your time on owners and deals.</p>
+                    </details>
+                    <details>
+                        <summary>How much does Search as a Service cost?</summary>
+                        <p>Search as a Service starts at $1,250 per month plus a success fee on closed deals. Final pricing depends on the channels and outreach volume your search needs.</p>
+                    </details>
+                    <details>
+                        <summary>How is Search as a Service different from building an in-house sourcing team?</summary>
+                        <p>In-house means hiring callers, buying data and software, and months of ramp time. Search as a Service has the team, data and tools ready from week one.</p>
+                    </details>
+                    <details>
+                        <summary>What is a buy box, and how do you use it?</summary>
+                        <p>A buy box is your acquisition criteria: industry, revenue or EBITDA range, geography and owner profile. Every target list and outreach script in your campaign is built from it.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Ready to Build Your Pipeline?</h2>
+                <p class="fade-in-element">Share your buy box and we'll show you what Search as a Service could source in the first 30 days.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The /services/entrepreneurship-as-a-service/ page. Content from templates/entrepreneurship-as-a-service.html. -->
+    <!-- ENTREPRENEURSHIP AS A SERVICE SECTION -->
+    <section id="entrepreneurship-as-a-service">
+        <div class="container services-section">
+            <h1 class="section-heading fade-in-element slide-left">Entrepreneurship as a Service: Your Outsourced Sales and Marketing Team</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>A fractional growth team for founders and new business owners, covering outreach, marketing, PR and software in one monthly plan.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/kevin-hong/">Kevin Hong</a>, Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
+
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">40 hrs</div>
+                    <div class="label">Dedicated Time / Month</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">7</div>
+                    <div class="label">Growth Channels</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Monthly</div>
+                    <div class="label">No Long-Term Contract</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value" data-counted="1">$1,000</div>
+                    <div class="label">Per Month</div>
+                </div>
+            </div>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Entrepreneurship as a Service is Caprae Capital's fractional growth team for founders and new business owners.</strong> One monthly plan gives you outsourced sales and marketing: cold calling, LinkedIn outreach, social media, email newsletters, handwritten letters, PR and light software work, with about 40 hours of dedicated time each month.</p>
+                <p>Think of it as growth as a service: the output of a small business development and marketing team, without hiring for each role.</p>
+                <div class="definition-note">
+                    <p><strong>Fractional business development</strong> means sharing an experienced team's time across a few clients, so each business gets senior-level outreach and marketing for a fraction of full-time cost.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">What's Included</span>
+                <h2 class="section-heading fade-in-element slide-left">Seven Channels, One Team</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <h3>Cold Calling &amp; LinkedIn Outreach</h3>
+                        <p>Outsourced business development that books conversations with buyers, partners and customers.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Social Media Management</h3>
+                        <p>Consistent posting and engagement on the platforms your customers use.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </div>
+                        <h3>Newsletter &amp; Email Campaigns</h3>
+                        <p>Regular newsletters and email sequences that keep your pipeline warm.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+                        </div>
+                        <h3>Handwritten Letter Campaigns</h3>
+                        <p>Personal direct mail for high-value prospects who ignore digital outreach.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>Light builds and fixes: landing pages, integrations and simple tools.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                        </div>
+                        <h3>Press Releases &amp; PR</h3>
+                        <p>Announcements of launches, hires and milestones placed with the right outlets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Fractional Team vs. Full-Time Hires</span>
+            <h2 class="section-heading fade-in-element slide-left">Why an Outsourced Growth Team</h2>
+            <div class="comparison-section table-scroll fade-in-element">
+                <table class="comparison-table">
+                    <tr>
+                        <th></th>
+                        <th>Hiring in-house</th>
+                        <th class="caprae-header">Entrepreneurship as a Service</th>
+                    </tr>
+                    <tr>
+                        <td>Roles covered</td>
+                        <td>Usually one per hire</td>
+                        <td class="caprae">Outreach, social, email, PR and dev</td>
+                    </tr>
+                    <tr>
+                        <td>Time to start</td>
+                        <td>Weeks of recruiting</td>
+                        <td class="caprae">Plan agreed in the first call</td>
+                    </tr>
+                    <tr>
+                        <td>Fixed cost</td>
+                        <td>Salary, benefits and tools</td>
+                        <td class="caprae">One monthly fee</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibility</td>
+                        <td>Hard to scale down</td>
+                        <td class="caprae">Reallocate hours each month</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Process</span>
+                <h2 class="section-heading fade-in-element slide-left">How an Engagement Runs</h2>
+                <div class="timeline timeline-5">
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">1</div>
+                        <h4>Intake Call</h4>
+                        <p>Goals, audience, offer and current channels.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">2</div>
+                        <h4>30-Day Plan</h4>
+                        <p>Hours allocated across the channels with the best expected return.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">3</div>
+                        <h4>Launch</h4>
+                        <p>Campaigns go live, run by a named point of contact.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">4</div>
+                        <h4>Weekly Reporting</h4>
+                        <p>Activity, replies and meetings booked, every week.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">5</div>
+                        <h4>Monthly Review</h4>
+                        <p>Hours move to what is working.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Who It's For</span>
+            <h2 class="section-heading fade-in-element slide-left">Built for Growing and Newly Acquired Businesses</h2>
+            <div class="serve-grid">
+                <div class="serve-card fade-in-element">
+                    <div class="serve-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h3>Growth-Stage Founders</h3>
+                    <p>Founders who need outsourced business development before building a sales team.</p>
+                </div>
+                <div class="serve-card fade-in-element">
+                    <div class="serve-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/></svg>
+                    </div>
+                    <h3>New Business Acquirers</h3>
+                    <p>Owners in their first year after close who need marketing running from day one.</p>
+                </div>
+                <div class="serve-card fade-in-element">
+                    <div class="serve-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>
+                    </div>
+                    <h3>Small Businesses</h3>
+                    <p>Outsourced operations for small business owners without a marketing department.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who Runs Your Growth Team</span>
+                <h2 class="section-heading fade-in-element slide-left">Operators, With Senior Oversight</h2>
+                <div class="about-intro fade-in-element">
+                    <p>Entrepreneurship as a Service is overseen by founder <strong>Kevin Hong</strong>, who spent seven years as a business journalist and scaled two startups to $31M and $7M ARR.</p>
+                    <p>Each client has a named point of contact, and senior team members review messaging and campaign results every week.</p>
+                </div>
+
+                <div class="team-grid-2col" style="grid-template-columns: 1fr; max-width: 320px; margin-top: 60px;">
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/kevin-hong/">
+                            <img src="/assets/team/kevin-hong.jpg" alt="Kevin Hong" class="member-photo">
+                            <h4>Kevin Hong</h4>
+                            <p>Founder, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Former business journalist (7 years) who scaled two startups to $31M and $7M ARR and raised $8M+ in venture capital. Chicago Booth MBA and Amazon bestselling author.</p>
+                        <a class="service-link" href="/team/kevin-hong/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <div class="testimonial-card single-testimonial fade-in-element">
+                <div class="testimonial-header">
+                    <img src="/assets/testimonials/jeff-blacklock.jpg" alt="Jeff Blacklock" class="testimonial-photo">
+                    <div class="testimonial-meta">
+                        <div class="testimonial-author">Jeff Blacklock</div>
+                        <div class="testimonial-title">Valwell Technologies</div>
+                    </div>
+                </div>
+                <div class="testimonial-quote">&ldquo;Within two months of launching the program, Caprae had already secured two advanced meetings in Houston and opened doors I didn't think were reachable this early.&rdquo;</div>
+                <p class="testimonial-note">Disclosure: Jeff Blacklock later joined Caprae Capital as a Deal Adviser.</p>
+                <a class="service-link" href="/case-study/">Read the case study <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is Entrepreneurship as a Service?</summary>
+                        <p>Entrepreneurship as a Service is Caprae Capital's fractional growth team for founders and new business owners. One monthly plan covers outsourced sales and marketing: cold calling, LinkedIn outreach, social media, email, handwritten letters, PR and software support.</p>
+                    </details>
+                    <details>
+                        <summary>What's included in Entrepreneurship as a Service?</summary>
+                        <p>Cold calling and LinkedIn outreach, social media management, newsletter and email campaigns, handwritten letter campaigns, software development, press releases and PR, and marketing optimization, with about 40 hours of dedicated time each month.</p>
+                    </details>
+                    <details>
+                        <summary>How much does Entrepreneurship as a Service cost?</summary>
+                        <p>Entrepreneurship as a Service is $1,000 per month for about 40 hours of dedicated support.</p>
+                    </details>
+                    <details>
+                        <summary>Is outsourced sales and marketing better than hiring in-house?</summary>
+                        <p>One full-time hire usually covers one role. This plan gives you outreach, social, email, PR and development support together, which suits businesses not yet ready to build a full team.</p>
+                    </details>
+                    <details>
+                        <summary>Is this a good fit if I just bought a business?</summary>
+                        <p>Yes. New owners often need outreach and marketing right away. For deeper operational work, see <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>.</p>
+                    </details>
+                    <details>
+                        <summary>Can I cancel any time?</summary>
+                        <p>Engagements run month to month with no long-term contract.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Ready to Grow Without Hiring a Full Team?</h2>
+                <p class="fade-in-element">Book a growth planning call. We'll map your 30-day plan and show which channels to start with.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The /services/ai-readiness/ page. Content from templates/ai-readiness.html. -->
+    <!-- AI READINESS SECTION -->
+    <section id="ai-readiness">
+        <div class="container services-section">
+            <h1 class="section-heading fade-in-element slide-left">AI Readiness Assessment and Consulting</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Find where AI will pay back first in your business or your next acquisition, and what needs to be in place before you invest.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/zackary-beckham/">Zackary Beckham</a>, Co-Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
+
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">6</div>
+                    <div class="label">Areas Scored</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">90-Day</div>
+                    <div class="label">Roadmap Delivered</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">10+ yrs</div>
+                    <div class="label">Lead's AI &amp; Tech Experience</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Custom</div>
+                    <div class="label">Pricing</div>
+                </div>
+            </div>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Caprae Capital's AI readiness assessment scores a business across six areas, then ranks the AI use cases with the fastest payback.</strong> It is built for small business owners, searchers evaluating a target and private equity portfolio companies. Pricing is custom and set after a short scoping call.</p>
+                <p>The goal is practical: fewer manual hours and better decisions, not new tools for their own sake.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">The Framework</span>
+                <h2 class="section-heading fade-in-element slide-left">The 6 Areas We Score</h2>
+                <div class="comparison-section table-scroll fade-in-element">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Area</th>
+                            <th>What we review</th>
+                            <th>What you get</th>
+                        </tr>
+                        <tr>
+                            <td>Data quality &amp; access</td>
+                            <td>Where data lives, how clean and connected it is</td>
+                            <td>Data gaps to fix first</td>
+                        </tr>
+                        <tr>
+                            <td>Systems &amp; tool stack</td>
+                            <td>Core software, integrations, licenses</td>
+                            <td>Tool-stack optimization plan</td>
+                        </tr>
+                        <tr>
+                            <td>Process documentation</td>
+                            <td>How key workflows actually run</td>
+                            <td>Automation candidates</td>
+                        </tr>
+                        <tr>
+                            <td>Team skills &amp; adoption</td>
+                            <td>Current use of AI, training needs</td>
+                            <td>Training and adoption plan</td>
+                        </tr>
+                        <tr>
+                            <td>Security &amp; compliance</td>
+                            <td>Access, data handling, vendor risk</td>
+                            <td>Guardrails before rollout</td>
+                        </tr>
+                        <tr>
+                            <td>ROI &amp; use-case fit</td>
+                            <td>Cost and time of each candidate</td>
+                            <td>Ranked use-case list</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Process</span>
+            <h2 class="section-heading fade-in-element slide-left">How the AI Readiness Audit Works</h2>
+            <div class="timeline timeline-5">
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">1</div>
+                    <h4>Discovery</h4>
+                    <p>Interviews with owners and team leads.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">2</div>
+                    <h4>Systems Review</h4>
+                    <p>Data, software and integrations mapped.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">3</div>
+                    <h4>Use-Case Scoring</h4>
+                    <p>Each opportunity scored on value and effort.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">4</div>
+                    <h4>Roadmap</h4>
+                    <p>A 90-day plan with ROI estimates.</p>
+                </div>
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-number">5</div>
+                    <h4>Readout</h4>
+                    <p>Results walked through with your team.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Beyond the Assessment</span>
+                <h2 class="section-heading fade-in-element slide-left">AI Enablement Services</h2>
+                <p class="section-subtitle fade-in-element slide-right">When you're ready to act, the same team implements the roadmap.</p>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+                        </div>
+                        <h3>AI-Driven Automation</h3>
+                        <p>Repetitive tasks moved to automated workflows, starting with the highest ROI.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Tool Stack Optimization</h3>
+                        <p>Overlapping software cut and remaining tools connected.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Team Training &amp; Adoption</h3>
+                        <p>Hands-on training so your team uses what is built.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <h2 class="section-heading fade-in-element slide-left">AI Due Diligence for M&amp;A</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>Buying a business? Technology risk affects value.</strong> Caprae's AI due diligence for M&amp;A reviews a target's systems, data and AI exposure before you sign, so you can price in upgrade costs and plan the first year after close.</p>
+                <p>It covers outdated or unsupported software, key-person dependency on one IT contractor, data that can't be migrated, and AI opportunities that could support your value creation plan. It complements, and does not replace, your formal legal and financial diligence.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who It's For</span>
+                <h2 class="section-heading fade-in-element slide-left">Small Business AI Consulting and More</h2>
+                <div class="serve-grid">
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>
+                        </div>
+                        <h3>Small Business Owners</h3>
+                        <p>Practical AI guidance without enterprise-sized budgets.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <h3>Acquisition Entrepreneurs</h3>
+                        <p>Technology due diligence for acquisitions before LOI or close.</p>
+                    </div>
+                    <div class="serve-card fade-in-element">
+                        <div class="serve-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>PE Portfolio Companies</h3>
+                        <p>AI for private equity portfolio companies, tied to the value creation plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Who Leads Your Assessment</span>
+            <h2 class="section-heading fade-in-element slide-left">Hands-On Technology and Acquisition Experience</h2>
+            <div class="about-intro fade-in-element">
+                <p>Assessments are led by co-founder <strong>Zackary Beckham</strong>, who has more than 10 years of technology and AI implementation experience and acquired and runs a managed IT services business himself.</p>
+                <p>That means recommendations are tested against what an owner can actually budget, staff and maintain.</p>
+            </div>
+
+            <div class="team-grid-2col" style="grid-template-columns: 1fr; max-width: 320px; margin-top: 60px;">
+                <div class="team-member fade-in-element">
+                    <a class="team-member-link" href="/team/zackary-beckham/">
+                        <img src="/assets/team/zackary-beckham.jpg" alt="Zackary Beckham" class="member-photo">
+                        <h4>Zackary Beckham</h4>
+                        <p>Co-Founder, Caprae Capital</p>
+                    </a>
+                    <p class="member-bio">Self-funded searcher who acquired and runs a managed IT services business, with 10+ years of technology and AI implementation experience.</p>
+                    <a class="service-link" href="/team/zackary-beckham/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is an AI readiness assessment?</summary>
+                        <p>An AI readiness assessment reviews a business's data, systems, processes and people to find where AI can save time and money, and what has to be fixed first. Caprae turns the results into a prioritized roadmap.</p>
+                    </details>
+                    <details>
+                        <summary>What does an AI readiness audit include?</summary>
+                        <p>Discovery interviews, a systems and data review, process mapping, use-case scoring and a readout with a 90-day roadmap, tool-stack recommendations and a training plan.</p>
+                    </details>
+                    <details>
+                        <summary>How long does an AI readiness assessment take?</summary>
+                        <p>Most assessments take two to four weeks, depending on company size and how many systems we review.</p>
+                    </details>
+                    <details>
+                        <summary>How much does AI readiness consulting cost?</summary>
+                        <p>Pricing is custom and set after a short scoping call, based on business size and the number of systems and teams involved.</p>
+                    </details>
+                    <details>
+                        <summary>Do you offer AI due diligence for M&amp;A?</summary>
+                        <p>Yes. For buyers, we review a target's technology, data and AI exposure so you understand the risks and upgrade costs before you sign.</p>
+                    </details>
+                    <details>
+                        <summary>Is AI worth it for a small business?</summary>
+                        <p>Usually, when it starts with repetitive tasks and existing workflows. We rank use cases by return first, so you don't pay for tools your team won't use.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Find Out How AI-Ready Your Business Is</h2>
+                <p class="fade-in-element">Book a scoping call. We'll confirm the systems in scope and send a fixed quote for your assessment.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The /services/tech-development/ page. Content from templates/tech-development.html. -->
+    <!-- TECH DEVELOPMENT SECTION -->
+    <section id="tech-development">
+        <div class="container services-section">
+            <h1 class="section-heading fade-in-element slide-left">Custom Software Development, From MVP to Full-Stack Platform</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Software, SaaS products and websites for founders, small businesses and the companies acquisition teams buy.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/zackary-beckham/">Zackary Beckham</a>, Co-Founder &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
+
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">MVP</div>
+                    <div class="label">to Full Platform</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Agile</div>
+                    <div class="label">Sprints with Demos</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">QA</div>
+                    <div class="label">On Every Release</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Project</div>
+                    <div class="label">Based Pricing</div>
+                </div>
+            </div>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Caprae Capital's Tech Development team provides custom software development, from startup MVPs to full-stack SaaS platforms, CRMs and websites.</strong> Projects run in agile sprints with built-in QA and are priced per project after scoping.</p>
+                <p>Because Caprae also sources and grows acquired companies, we build with an owner's priorities in mind: speed to value, maintainable code and tools a small team can run.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">What We Build</span>
+                <h2 class="section-heading fade-in-element slide-left">Software for Founders and Acquired Businesses</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        </div>
+                        <h3>MVP Development</h3>
+                        <p>A working first version in users' hands quickly, then improved with real feedback.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>SaaS Development</h3>
+                        <p>Full-stack platforms with authentication, billing, admin and analytics.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>CRMs &amp; Client Portals</h3>
+                        <p>Custom CRM development and portals shaped around how your team sells.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+                        </div>
+                        <h3>Internal Tools &amp; Automations</h3>
+                        <p>Dashboards and workflow tools that remove manual work.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                        </div>
+                        <h3>Digital Marketing Tools</h3>
+                        <p>Landing pages, lead capture and reporting tools for growth teams.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>Websites</h3>
+                        <p>Website development for small business, startups, search funds and PE firms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <h2 class="section-heading fade-in-element slide-left">Startup MVP Development and Websites</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>MVP development is about learning fast.</strong> We agree the one or two jobs the product must do, build only those, and launch to real users. Startup MVP development with Caprae includes a scope document, clickable design, a working build, QA and launch support.</p>
+                <p>For a startup website design or a website for a small business, the same process applies at a smaller scale: clear messaging, fast pages and analytics from day one.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Process</span>
+                <h2 class="section-heading fade-in-element slide-left">Our Development Process</h2>
+                <div class="timeline timeline-5">
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">1</div>
+                        <h4>Discovery</h4>
+                        <p>Goals, users and must-have features.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">2</div>
+                        <h4>Scope &amp; Estimate</h4>
+                        <p>Written scope, timeline and price.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">3</div>
+                        <h4>Design</h4>
+                        <p>Wireframes and clickable prototype.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">4</div>
+                        <h4>Build in Sprints</h4>
+                        <p>Two-week sprints with a demo after each.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">5</div>
+                        <h4>QA &amp; Launch</h4>
+                        <p>Every release tested, then supported after launch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Why Caprae</span>
+            <h2 class="section-heading fade-in-element slide-left">A SaaS Development Agency That Thinks Like an Owner</h2>
+            <div class="comparison-section table-scroll fade-in-element">
+                <table class="comparison-table">
+                    <tr>
+                        <th></th>
+                        <th>Typical dev shop</th>
+                        <th class="caprae-header">Caprae Tech Development</th>
+                    </tr>
+                    <tr>
+                        <td>Starting point</td>
+                        <td>Feature list</td>
+                        <td class="caprae">Business outcome and budget</td>
+                    </tr>
+                    <tr>
+                        <td>Project management</td>
+                        <td>Often extra</td>
+                        <td class="caprae">Included</td>
+                    </tr>
+                    <tr>
+                        <td>Quality assurance</td>
+                        <td>Often extra</td>
+                        <td class="caprae">Included on every release</td>
+                    </tr>
+                    <tr>
+                        <td>Growth support</td>
+                        <td>Ends at launch</td>
+                        <td class="caprae">Marketing, AI and growth services available</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Who Builds It</span>
+                <h2 class="section-heading fade-in-element slide-left">Technology Led by an Owner-Operator</h2>
+                <div class="about-intro fade-in-element">
+                    <p>Tech Development is overseen by co-founder <strong>Zackary Beckham</strong>, who brings more than 10 years of technology and AI implementation experience and runs a managed IT services business he acquired.</p>
+                    <p>Project examples are available on request during your discovery call.</p>
+                </div>
+
+                <div class="team-grid-2col" style="grid-template-columns: 1fr; max-width: 320px; margin-top: 60px;">
+                    <div class="team-member fade-in-element">
+                        <a class="team-member-link" href="/team/zackary-beckham/">
+                            <img src="/assets/team/zackary-beckham.jpg" alt="Zackary Beckham" class="member-photo">
+                            <h4>Zackary Beckham</h4>
+                            <p>Co-Founder, Caprae Capital</p>
+                        </a>
+                        <p class="member-bio">Self-funded searcher who acquired and runs a managed IT services business, with 10+ years of technology and AI implementation experience.</p>
+                        <a class="service-link" href="/team/zackary-beckham/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">FAQ</span>
+            <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+            <div class="faq-list fade-in-element">
+                <details open>
+                    <summary>What tech development services do you offer?</summary>
+                    <p>Custom software development from MVPs to full-stack platforms, SaaS products, CRMs and client portals, internal tools, digital marketing tools and websites, with project management and QA included.</p>
+                </details>
+                <details>
+                    <summary>How long does MVP development take?</summary>
+                    <p>A focused MVP typically takes 6 to 12 weeks, depending on scope and integrations. We agree the scope and timeline before work starts.</p>
+                </details>
+                <details>
+                    <summary>How much does custom software development cost?</summary>
+                    <p>Tech Development is priced per project, based on scope and complexity. You receive a written estimate after the discovery call.</p>
+                </details>
+                <details>
+                    <summary>Who owns the code?</summary>
+                    <p>Ownership terms are set in your project agreement.</p>
+                </details>
+                <details>
+                    <summary>Do you build websites for search funds and PE firms?</summary>
+                    <p>Yes. We build websites for search funds, independent sponsors and private equity firms, often alongside <a href="/services/branding/">Branding as a Service</a>.</p>
+                </details>
+                <details>
+                    <summary>Can you build tools for search funds or PE firms?</summary>
+                    <p>Yes. As part of Caprae Capital's end-to-end services, we build deal-tracking tools, investor portals and digital marketing tools for acquisition teams and the businesses they buy.</p>
+                </details>
+                <details>
+                    <summary>Do you provide support after launch?</summary>
+                    <p>Yes. Post-launch support and further development are available on a monthly or per-sprint basis.</p>
+                </details>
+            </div>
+
+            <div class="disclosure-note" role="note">
+                <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Have a Product or Tool in Mind?</h2>
+                <p class="fade-in-element">Scope your project with us. You'll get a written estimate, timeline and team plan after one discovery call.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The /services/post-acquisition-strategy/ page. Content from templates/post-acquisition-strategy.html. -->
+    <!-- POST ACQUISITION STRATEGY SECTION -->
+    <section id="post-acquisition-strategy">
+        <div class="container services-section">
+            <h1 class="section-heading fade-in-element slide-left">Post-Acquisition Strategy and Value Creation</h1>
+            <div class="section-subtitle fade-in-element slide-right">
+                <p>Hands-on support for the first 100 days and beyond, for searchers, sponsors and PE-backed owners.</p>
+                <p class="page-reviewed">Reviewed by <a href="/team/hereford-johnson/">Hereford Johnson</a>, Principal Adviser &middot; Last updated <time datetime="2026-10-01">October 2026</time></p>
+            </div>
+
+            <div class="metrics-grid metrics-compact">
+                <div class="metric-item fade-in-element">
+                    <div class="value">100-Day</div>
+                    <div class="label">Plan Built With You</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">COO / CFO / CMO</div>
+                    <div class="label">Fractional Support</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">11 &amp; 6 mo</div>
+                    <div class="label">Lead's Own Deals Closed</div>
+                </div>
+                <div class="metric-item fade-in-element">
+                    <div class="value">Custom</div>
+                    <div class="label">Pricing</div>
+                </div>
+            </div>
+
+            <div class="about-intro fade-in-element">
+                <p><strong>Caprae Capital's Post-Acquisition Strategy service helps new owners grow a business after close.</strong> We build your 100-day plan and value creation plan, provide fractional COO, CFO and CMO support, and coach first-time CEOs. Pricing is custom.</p>
+                <p>Post-acquisition value creation starts with stability: keep people and customers, understand the numbers, then improve.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Your First 100 Days</span>
+                <h2 class="section-heading fade-in-element slide-left">The First 100 Days After Buying a Business</h2>
+                <div class="comparison-section table-scroll fade-in-element">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Phase</th>
+                            <th>Focus</th>
+                            <th>Typical actions</th>
+                        </tr>
+                        <tr>
+                            <td>Days 0 to 30</td>
+                            <td>Stabilize</td>
+                            <td>Meet staff and top customers, secure cash controls, keep the seller close</td>
+                        </tr>
+                        <tr>
+                            <td>Days 31 to 60</td>
+                            <td>Learn and measure</td>
+                            <td>Map key processes, set KPIs, build the reporting dashboard</td>
+                        </tr>
+                        <tr>
+                            <td>Days 61 to 100</td>
+                            <td>Improve</td>
+                            <td>Pick quick wins, draft the hiring plan, agree the value creation plan</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Integration and Value Creation</span>
+            <h2 class="section-heading fade-in-element slide-left">Post-Acquisition Integration Strategy</h2>
+            <p class="section-subtitle fade-in-element slide-right">A good integration plan protects what you paid for. A value creation plan private equity investors trust shows how you will grow it.</p>
+
+            <div class="two-col-boxes">
+                <div class="beyond-sourcing fade-in-element">
+                    <h3>Integration checklist</h3>
+                    <div class="beyond-list single-col">
+                        <div class="beyond-item">People: retention, roles, communication</div>
+                        <div class="beyond-item">Systems: accounting, CRM, IT access</div>
+                        <div class="beyond-item">Finance: banking, reporting, lender covenants</div>
+                        <div class="beyond-item">Customers: introductions, contracts, pricing</div>
+                        <div class="beyond-item">Brand: what changes and when</div>
+                    </div>
+                </div>
+                <div class="beyond-sourcing fade-in-element">
+                    <h3>Value creation levers</h3>
+                    <div class="beyond-list single-col">
+                        <div class="beyond-item">Pricing and packaging</div>
+                        <div class="beyond-item">Sales capacity and pipeline</div>
+                        <div class="beyond-item">Cost and process efficiency</div>
+                        <div class="beyond-item">Technology and AI</div>
+                        <div class="beyond-item">Add-on acquisitions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Fractional Executive Support</span>
+                <h2 class="section-heading fade-in-element slide-left">Fractional COO and CXO Services</h2>
+                <p class="section-subtitle fade-in-element slide-right">Senior leadership on a part-time basis, until the business is ready for full-time hires.</p>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Fractional COO</h3>
+                        <p>Fixes operations holding back growth: processes, hiring, KPIs and accountability.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                        </div>
+                        <h3>Fractional CFO for Small Business</h3>
+                        <p>Cash flow, reporting, budgeting and lender relationships.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                        </div>
+                        <h3>Fractional CMO</h3>
+                        <p>Marketing and outreach strategy, run through Entrepreneurship as a Service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <h2 class="section-heading fade-in-element slide-left">Buy and Build Strategy and Add-On Acquisitions</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>A buy and build strategy grows faster than organic growth alone.</strong> Caprae sources add-on acquisitions through <a href="/services/search-as-a-service/">Search as a Service</a> and plans how each one integrates with the platform company, so add-ons strengthen the value creation plan instead of distracting from it.</p>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">Process</span>
+                <h2 class="section-heading fade-in-element slide-left">How an Engagement Runs</h2>
+                <div class="timeline timeline-5">
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">1</div>
+                        <h4>Post-Close Diagnostic</h4>
+                        <p>Where the business stands in weeks one and two.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">2</div>
+                        <h4>100-Day Plan</h4>
+                        <p>Priorities, owners and KPIs agreed.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">3</div>
+                        <h4>Operating Reviews</h4>
+                        <p>Monthly reviews against the plan.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">4</div>
+                        <h4>KPI Dashboard</h4>
+                        <p>The numbers that matter, tracked weekly.</p>
+                    </div>
+                    <div class="timeline-item fade-in-element">
+                        <div class="timeline-number">5</div>
+                        <h4>Quarterly Review</h4>
+                        <p>Value creation plan updated each quarter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container services-section">
+            <span class="eyebrow fade-in-element">Who You'll Work With</span>
+            <h2 class="section-heading fade-in-element slide-left">Advisers Who Have Taken the CEO Seat Themselves</h2>
+            <div class="about-intro fade-in-element">
+                <p><strong>Hereford Johnson</strong> closed acquisitions in 11 and 6 months as a buyer. <strong>Eric Nehrlich</strong>, a former Chief of Staff at Google, provides search fund CEO coaching to prepare operators for the CEO seat.</p>
+                <p>Co-founder <strong>Zackary Beckham</strong> acquired and runs a managed IT services business, so the team has lived the first 100 days, not just advised on them.</p>
+            </div>
+
+            <div class="team-grid-2col" style="margin-top: 60px;">
+                <div class="team-member fade-in-element">
+                    <a class="team-member-link" href="/team/hereford-johnson/">
+                        <img src="/assets/team/hereford-johnson.jpg" alt="Hereford Johnson" class="member-photo">
+                        <h4>Hereford Johnson</h4>
+                        <p>Principal Adviser, Caprae Capital</p>
+                    </a>
+                    <p class="member-bio">Closed acquisitions in 11 and 6 months as a buyer. Northwestern Kellogg MBA and former Deloitte Consulting.</p>
+                    <a class="service-link" href="/team/hereford-johnson/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="team-member fade-in-element">
+                    <a class="team-member-link" href="/team/eric-nehrlich/">
+                        <img src="/assets/team/eric-nehrlich.jpeg" alt="Eric Nehrlich" class="member-photo">
+                        <h4>Eric Nehrlich</h4>
+                        <p>Executive Coach, Caprae Capital</p>
+                    </a>
+                    <p class="member-bio">Former Chief of Staff at Google who now prepares operators for the CEO seat. Studied at MIT, Columbia and Stanford.</p>
+                    <a class="service-link" href="/team/eric-nehrlich/">Full profile <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-section">
+            <div class="container">
+                <span class="eyebrow fade-in-element">FAQ</span>
+                <h2 class="section-heading fade-in-element slide-left">Common Questions</h2>
+                <div class="faq-list fade-in-element">
+                    <details open>
+                        <summary>What is post-acquisition strategy?</summary>
+                        <p>Post-acquisition strategy is the plan for running and growing a business after you buy it. Caprae builds your 100-day plan and value creation plan, provides fractional executive support and coaches first-time CEOs.</p>
+                    </details>
+                    <details>
+                        <summary>What should I focus on in the first 100 days after buying a business?</summary>
+                        <p>Keep key staff and customers, learn how the business actually runs, and set clear performance metrics before making big changes. Quick wins come after you understand the numbers.</p>
+                    </details>
+                    <details>
+                        <summary>What is a value creation plan in private equity?</summary>
+                        <p>A value creation plan lists the specific levers that will grow a company's value after acquisition, such as pricing, sales capacity, cost and add-ons, with owners, targets and review dates for each.</p>
+                    </details>
+                    <details>
+                        <summary>When does a business need a fractional COO?</summary>
+                        <p>When operations are holding back growth but a full-time COO isn't affordable yet. This is common right after an acquisition, when processes need fixing and the team is settling in.</p>
+                    </details>
+                    <details>
+                        <summary>What is a buy and build strategy?</summary>
+                        <p>A buy and build strategy acquires a platform company and then adds smaller add-on acquisitions to grow faster than organic growth alone. Caprae can source add-ons and plan their integration.</p>
+                    </details>
+                    <details>
+                        <summary>How much does post-acquisition support cost?</summary>
+                        <p>Pricing is custom, based on the size of the business and the support you need. Talk to us for a quote.</p>
+                    </details>
+                </div>
+
+                <div class="disclosure-note" role="note">
+                    <strong>Disclosure:</strong> Caprae Capital LLC provides outsourced deal sourcing, research, marketing, technology and operational support. We are not a registered broker-dealer or investment adviser and do not provide investment, legal, tax or accounting advice. Client results described on this page come from specific engagements and do not guarantee future outcomes. See our <a href="/terms/#disclaimer">full disclaimer</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="home-faq-cta">
+            <div class="container">
+                <h2 class="fade-in-element">Plan Your First 100 Days</h2>
+                <p class="fade-in-element">Tell us about the business you've bought or are about to close, and we'll outline a 100-day plan on the first call.</p>
+                <div class="service-page-ctas fade-in-element">
+                    <a href="/contact/" class="button-primary">Talk to Us</a>
+                    <a href="/pricing/" class="button-secondary">See Pricing</a>
+                </div>
+                <div class="related-links" role="navigation" aria-label="Related services">
+                    <a href="/services/search-as-a-service/">Search as a Service</a>
+                    <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>
+                    <a href="/services/ai-readiness/">AI-Readiness</a>
+                    <a href="/services/tech-development/">Tech Development</a>
+                    <a href="/services/branding/">Branding as a Service</a>
+                    <a href="/services/">All services</a>
+                </div>
             </div>
         </div>
     </section>
