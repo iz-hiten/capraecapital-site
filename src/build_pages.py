@@ -127,7 +127,7 @@ PAGES = [
 TEAM_META = {
     "kevin-hong": {
         "title": "Kevin Hong | Founder | Caprae Capital",
-        "description": "Kevin Hong, Founder of Caprae Capital, is a serial tech entrepreneur who scaled two startups to $31M and $7M ARR, raised $8M+ VC, wrote an Amazon bestseller, published in Forbes/Inc. Chicago Booth MBA."},
+        "description": "Kevin Hong, Founder of Caprae Capital, scaled two startups to $31M and $7M ARR, raised $8M+ VC, and is a Chicago Booth MBA and Amazon bestselling author."},
     "hereford-johnson": {
         "title": "Hereford Johnson | Principal | Caprae Capital",
         "description": "Hereford Johnson, Principal at Caprae Capital, closed acquisitions in 11 and 6 months. Northwestern Kellogg MBA, former Deloitte Consulting."},
@@ -146,6 +146,62 @@ TEAM_META = {
     "eric-nehrlich": {
         "title": "Eric Nehrlich | Executive Coach | Caprae Capital",
         "description": "Eric Nehrlich, Executive Coach at Caprae Capital, is a former Chief of Staff at Google who now prepares operators for the CEO seat. MIT, Columbia, Stanford."},
+}
+
+# Body of each /team/<slug>/ page: a short bio (from the person's meta description and
+# facts already on the site) and their profile links.
+TEAM_PROFILES = {
+    "kevin-hong": {
+        "bio": [
+            "Kevin Hong is the Founder of Caprae Capital. Before founding the firm, he spent seven years as a business journalist, then scaled two startups to $31M and $7M in annual recurring revenue and raised more than $8M in venture capital.",
+            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <em>The Outlier Approach</em>. At Caprae he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work.',
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/kevinhshong/"),
+                  ("Searchfunder", "https://searchfunder.com/profile/kevin-hong")],
+    },
+    "hereford-johnson": {
+        "bio": [
+            "Hereford Johnson is a Principal at Caprae Capital. As a buyer, he closed acquisitions in 11 and 6 months, so he advises clients from first-hand experience of getting deals to close.",
+            'He holds an MBA from Northwestern\'s Kellogg School of Management and previously worked at Deloitte Consulting. He reviews Caprae\'s <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> work and brings a buyer\'s view to <a href="/services/search-as-a-service/">Search as a Service</a>.',
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/hereford/")],
+    },
+    "zackary-beckham": {
+        "bio": [
+            "Zackary Beckham is a Founder of Caprae Capital. He is a self-funded searcher who acquired a managed IT services business (MSP), which he runs today.",
+            'With more than 10 years of technology and AI implementation experience, he leads Caprae\'s <a href="/services/ai-readiness/">AI-Readiness</a> assessments and oversees <a href="/services/tech-development/">Tech Development</a>.',
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/zackarybeckham/"),
+                  ("Searchfunder", "https://searchfunder.com/profile/zackary-beckham")],
+    },
+    "jeff-blacklock": {
+        "bio": [
+            "Jeff Blacklock is a Deal Advisor at Caprae Capital. He is a former searcher and the President of ValWell Technologies, a company in the oil and gas industry.",
+            'Jeff first worked with Caprae as a client, when the program secured two advanced meetings in Houston within two months. Read the <a href="/case-study/">Valwell case study</a>.',
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/jeffblacklock/")],
+    },
+    "mitchell-vermet": {
+        "bio": [
+            "Mitch Vermet is a Capital Adviser at Caprae Capital. He is a Managing Partner at Bankers Edge and has helped manage more than $30B in institutional capital.",
+            "He holds both the Chartered Financial Analyst (CFA) and Chartered Alternative Investment Analyst (CAIA) designations.",
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/mitch-vermet-cfa-caia-5472b880/")],
+    },
+    "richard-consul": {
+        "bio": [
+            "Richard Consul is a Capital Adviser at Caprae Capital. He is the Founder and Managing Partner of Bankers Edge and brings more than 20 years of buy-side experience.",
+            "He is a Chartered Financial Analyst (CFA) charterholder.",
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/richard-consul-cfa/")],
+    },
+    "eric-nehrlich": {
+        "bio": [
+            "Eric Nehrlich is an Executive Coach at Caprae Capital. He is a former Chief of Staff at Google and now prepares operators for the CEO seat.",
+            'He studied at MIT, Columbia and Stanford, and provides search fund CEO coaching as part of Caprae\'s <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> service.',
+        ],
+        "links": [("LinkedIn", "https://www.linkedin.com/in/nehrlich/")],
+    },
 }
 
 # <meta name="keywords"> per page, from the finalized SEO keyword sheet (2026-09-28).
@@ -313,12 +369,18 @@ def page_jsonld(p):
         }))
     if p.get("person"):
         m = p["person"]
-        blocks.append(jsonld({
+        person = {
             "@context": "https://schema.org", "@type": "Person",
             "name": m["alt"], "jobTitle": m["role"], "image": SITE_URL + m["img"],
             "url": SITE_URL + p["path"],
             "worksFor": {"@type": "Organization", "name": "Caprae Capital", "url": SITE_URL + "/"},
-        }))
+        }
+        if p["description"]:
+            person["description"] = p["description"]
+        links = [url for _, url in TEAM_PROFILES.get(m["slug"], {}).get("links", [])]
+        if links:
+            person["sameAs"] = links
+        blocks.append(jsonld(person))
     return "\n".join(blocks)
 
 
@@ -344,14 +406,22 @@ def team_members(block):
 
 def profile_section(m):
     e = lambda v: html.escape(v, quote=False)
+    profile = TEAM_PROFILES.get(m["slug"])
+    if profile:
+        paras = "\n".join(f"                    <p>{p}</p>" for p in profile["bio"])
+        links = "\n".join(f'                    <a href="{attr(url)}" target="_blank" rel="noopener">{e(label)} <span aria-hidden="true">&#8599;</span></a>'
+                          for label, url in profile["links"])
+        body = (f'                <div class="profile-bio">\n{paras}\n                </div>\n'
+                f'                <div class="related-links" role="navigation" aria-label="{attr(m["alt"])} elsewhere">\n{links}\n                </div>\n')
+    else:
+        body = '                <p class="profile-note">Full profile coming soon.</p>\n'
     return f"""        <div class="container profile-section">
             <a class="profile-back" href="/team/">&larr; Meet our team</a>
             <div class="profile-card">
                 <img src="{m['img']}" alt="{attr(m['alt'])}" class="profile-photo">
                 <h1 class="profile-name">{e(m['name'])}</h1>
                 <p class="profile-role">{e(m['role'])}</p>
-                <p class="profile-note">Full profile coming soon.</p>
-                <div class="service-page-ctas">
+{body}                <div class="service-page-ctas">
                     <a href="/contact/" class="button-primary">Talk to our team</a>
                 </div>
             </div>
