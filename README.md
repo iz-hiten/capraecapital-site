@@ -16,7 +16,7 @@ Snapshot of the live site taken 2026-09-23 from the production web root
       team/                   /team/ + one folder per       │ do not edit by hand
                               person (kevin-hong, …)        │
       about/ how-it-works/ pricing/ contact/               │
-      faq/ case-study/ (results + case studies)             ┘
+      faq/ blog/ case-study/ (results + case studies)       ┘
       privacy/  terms/        legal pages
       field-notes/            blog index + posts + rss.xml
       assets/                 images, logos, portfolio, team, testimonials, legal.css
@@ -45,8 +45,8 @@ page forwards them to the matching URL.
 The team block lives once, in the home section of the template; `/team/`
 reuses it, and each person in it gets a `/team/<name>/` page automatically.
 Profile meta titles/descriptions go in `TEAM_META` in `src/build_pages.py`.
-Blog and Careers still link to capraecapitalpartners.com (Field Notes and
-`/#careers`).
+Blog has its own page at /blog/ (placeholder for now); Careers still links to
+capraecapitalpartners.com/#careers.
 
 ## Run it locally
 

@@ -120,6 +120,11 @@ PAGES = [
      "title": "FAQ | Common Questions About Caprae Capital Services",
      "description": "Answers to common questions about Search as a Service, pricing, engagement timelines, and how Caprae Capital supports PE professionals.",
      "crumbs": [("FAQ", None)], "priority": "0.5"},
+
+    {"path": "/blog/", "section": "blog", "nav": ["resources", "blog"], "h1": H1_SECTION_HEADING,
+     "title": "Blog | Caprae Capital Services",
+     "description": "",
+     "crumbs": [("Blog", None)], "priority": "0.5"},
 ]
 
 # Meta for /team/<slug>/ pages. Anyone not listed gets "<Name> | <Role> | Caprae Capital"
@@ -470,7 +475,7 @@ def main():
     matches = list(SECTION_RE.finditer(template))
     sections = {m.group(1): m.group(2) for m in matches}
     expected = {"home", "services-overview", "search-as-a-service", "entrepreneurship-as-a-service", "ai-readiness", "tech-development", "post-acquisition-strategy", "branding", "how", "pricing", "contact",
-                "about", "team", "faq", "case-study"}
+                "about", "team", "faq", "blog", "case-study"}
     assert set(sections) == expected, sorted(sections)
     prefix, suffix = template[:matches[0].start()], template[matches[-1].end():]
 
