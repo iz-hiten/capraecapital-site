@@ -83,6 +83,12 @@ PAGES = [
      "description": "Scale acquired businesses with hands-on growth programs fractional CXO services, operational optimization, and performance metrics. Custom pricing.",
      "crumbs": [("Services", "/services/"), ("Post-Acquisition Strategy", None)], "priority": "0.8"},
 
+    {"path": "/services/cold-mail-handwritten-letters/", "section": "cold-mail-handwritten-letters", "nav": ["services"],
+     "h1": None, "name": "Cold Mail & Handwritten Letters",
+     "title": "Cold Mail & Handwritten Letters | Caprae Capital Services",
+     "description": "",
+     "crumbs": [("Services", "/services/"), ("Cold Mail & Handwritten Letters", None)], "priority": "0.8"},
+
     {"path": "/services/branding/", "section": "branding", "nav": ["branding"], "h1": H1_BRANDING,
      "service_name": "Branding as a Service",
      "title": "Branding as a Service | LinkedIn Ghostwriting for Finance",
@@ -474,7 +480,7 @@ def main():
     template = TEMPLATE.read_text(encoding="utf-8")
     matches = list(SECTION_RE.finditer(template))
     sections = {m.group(1): m.group(2) for m in matches}
-    expected = {"home", "services-overview", "search-as-a-service", "entrepreneurship-as-a-service", "ai-readiness", "tech-development", "post-acquisition-strategy", "branding", "how", "pricing", "contact",
+    expected = {"home", "services-overview", "search-as-a-service", "entrepreneurship-as-a-service", "ai-readiness", "tech-development", "post-acquisition-strategy", "cold-mail-handwritten-letters", "branding", "how", "pricing", "contact",
                 "about", "team", "faq", "blog", "case-study"}
     assert set(sections) == expected, sorted(sections)
     prefix, suffix = template[:matches[0].start()], template[matches[-1].end():]

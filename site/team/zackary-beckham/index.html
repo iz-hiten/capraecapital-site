@@ -1885,6 +1885,25 @@
             overflow-x: auto;
         }
 
+        /* two pricing cards side by side (Cold Mail formats) */
+        .pricing-grid.two-up {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mail-compare-tag {
+            display: block;
+            margin-top: 6px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #F9D360;
+            font-weight: 500;
+        }
+
         @media (max-width: 768px) {
             /* two stat boxes side by side must fit a phone screen */
             .metrics-grid.metrics-compact {
@@ -1905,7 +1924,8 @@
             }
 
             .two-col-boxes,
-            .metrics-grid.metrics-3 {
+            .metrics-grid.metrics-3,
+            .pricing-grid.two-up {
                 grid-template-columns: 1fr;
             }
         }
@@ -2603,6 +2623,7 @@
                         <li><a href="/services/tech-development/">Tech Development</a></li>
                         <li><a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a></li>
                         <li><a href="/services/branding/">Branding as a Service</a></li>
+                        <li><a href="/services/cold-mail-handwritten-letters/">Cold Mail &amp; Handwritten Letters</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
