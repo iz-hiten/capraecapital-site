@@ -356,6 +356,21 @@
             color: #F9D360;
         }
 
+        .nav-dropdown-menu a:hover {
+            background: rgba(249, 211, 96, 0.06);
+        }
+
+        /* Services: the label is a link to /services/, with the same arrow as Resources */
+        .nav-caret {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin-left: 8px;
+            border-right: 1.5px solid currentColor;
+            border-bottom: 1.5px solid currentColor;
+            transform: translateY(-3px) rotate(45deg);
+        }
+
         .cta-button {
             background: transparent;
             color: #F9D360;
@@ -2167,7 +2182,8 @@
                 cursor: default;
             }
 
-            .nav-dropdown > button::after {
+            .nav-dropdown > button::after,
+            .nav-caret {
                 display: none;
             }
 
@@ -2374,7 +2390,18 @@
             <ul class="nav-links">
                 <li><a href="/" data-nav="home">Home</a></li>
                 <li><a href="/about/" data-nav="about">About</a></li>
-                <li><a href="/services/" data-nav="services" class="active">Services</a></li>
+                <li class="nav-dropdown">
+                    <a href="/services/" data-nav="services" class="active">Services<span class="nav-caret" aria-hidden="true"></span></a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/services/search-as-a-service/" data-nav="svc-search-as-a-service">Search as a Service</a></li>
+                        <li><a href="/services/entrepreneurship-as-a-service/" data-nav="svc-entrepreneurship-as-a-service">Entrepreneurship as a Service</a></li>
+                        <li><a href="/services/ai-readiness/" data-nav="svc-ai-readiness">AI-Readiness</a></li>
+                        <li><a href="/services/tech-development/" data-nav="svc-tech-development">Tech Development</a></li>
+                        <li><a href="/services/post-acquisition-strategy/" data-nav="svc-post-acquisition-strategy">Post-Acquisition Strategy</a></li>
+                        <li><a href="/services/cold-mail-handwritten-letters/" data-nav="svc-cold-mail-handwritten-letters">Cold Mail &amp; Handwritten Letters</a></li>
+                        <li><a href="/services/branding/" data-nav="svc-branding">Branding as a Service</a></li>
+                    </ul>
+                </li>
                 <li><a href="/services/branding/" data-nav="branding">Branding</a></li>
                 <li><a href="/how-it-works/" data-nav="how">How It Works</a></li>
                 <li><a href="/pricing/" data-nav="pricing">Pricing</a></li>
