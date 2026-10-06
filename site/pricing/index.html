@@ -126,26 +126,6 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://capraecapital.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Pricing",
-          "item": "https://capraecapital.com/pricing/"
-        }
-      ]
-    }
-    </script>
 
     <style>
         * {
@@ -3029,5 +3009,127 @@
             });
         })();
     </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://capraecapital.com/#organization",
+      "name": "Caprae Capital",
+      "alternateName": "Caprae Capital Partners",
+      "url": "https://capraecapital.com/",
+      "slogan": "Rapid Growth, Simplified",
+      "email": "partners@capraecapital.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://capraecapital.com/assets/logo/caprae-logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/caprae-capital",
+        "https://capraecapitalpartners.substack.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://capraecapital.com/#website",
+      "url": "https://capraecapital.com/",
+      "name": "Caprae Capital",
+      "publisher": { "@id": "https://capraecapital.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://capraecapital.com/pricing/#webpage",
+      "url": "https://capraecapital.com/pricing/",
+      "name": "Pricing | Caprae Capital",
+      "description": "Transparent, value-driven pricing for deal sourcing and growth services, 30-60% less than traditional providers. Plans start at $1,000/month with no long-term contracts.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://capraecapital.com/#website" },
+      "about": { "@id": "https://capraecapital.com/#organization" },
+      "breadcrumb": { "@id": "https://capraecapital.com/pricing/#breadcrumb" },
+      "mainEntity": { "@id": "https://capraecapital.com/pricing/#faq" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://capraecapital.com/pricing/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://capraecapital.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://capraecapital.com/pricing/" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://capraecapital.com/pricing/#search-as-a-service",
+      "name": "Search as a Service",
+      "serviceType": "Deal sourcing and lead generation",
+      "description": "Lead generation, email list cleansing, LeadGen QA software, financial modeling, market research, due diligence setup, cold calling, email automation, PR and branding, deal advisory, a team of associates and cold call analytics. Available in 8 countries.",
+      "provider": { "@id": "https://capraecapital.com/#organization" },
+      "url": "https://capraecapital.com/pricing/",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://capraecapital.com/pricing/",
+        "priceCurrency": "USD",
+        "description": "$1,250 per month plus a 2% success fee",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1250.00",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "unitText": "month"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://capraecapital.com/pricing/#entrepreneurship-as-a-service",
+      "name": "Entrepreneurship as a Service",
+      "serviceType": "Outsourced growth and outreach services",
+      "description": "40 hours per month of dedicated work covering cold calling, LinkedIn outreach, social media management, newsletters, email campaigns, handwritten letters, software development, and press releases and PR.",
+      "provider": { "@id": "https://capraecapital.com/#organization" },
+      "url": "https://capraecapital.com/pricing/",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://capraecapital.com/pricing/",
+        "priceCurrency": "USD",
+        "description": "$1,000 per month for 40 hours of dedication",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1000.00",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "unitText": "month"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://capraecapital.com/pricing/#custom-enterprise",
+      "name": "Custom / Enterprise",
+      "serviceType": "Custom deal sourcing and advisory",
+      "description": "Fully customizable, white-labeled service for PE firms, investment banks and larger teams, with a dedicated team, scalable hours, priority support, custom integrations, strategic advisory and post-acquisition support. Contact for pricing.",
+      "provider": { "@id": "https://capraecapital.com/#organization" },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Private equity firms, investment banks and larger teams"
+      },
+      "url": "https://capraecapital.com/pricing/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://capraecapital.com/pricing/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it cheaper to outsource deal sourcing than build an in-house team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, yes. Hiring and training your own callers, analysts, and data tools costs more and takes longer to get running. Our services typically cost 30 to 60% less than building the same team in-house, and clients save $50K+ a year on data and software alone."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

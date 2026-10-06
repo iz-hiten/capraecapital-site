@@ -18,6 +18,7 @@ Team member pages (/team/<name>/) are generated from the team block on the
 home page: add, remove or rename someone there and their page follows.
 Their meta lives in TEAM_META.
 """
+import csv
 import html
 import json
 import re
@@ -26,6 +27,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "src" / "template.html"
+# Structured data (JSON-LD) from the SEO team's schema sheet: one <script> per page,
+# placed at the end of that page's <body> exactly as written in the sheet.
+SCHEMA_CSV = ROOT / "src" / "schema.csv"
 SITE = ROOT / "site"
 SITE_URL = "https://capraecapital.com"
 
@@ -453,7 +457,26 @@ def profile_pages(members):
     return pages
 
 
-def build(p, sections, prefix, suffix):
+def load_schema():
+    """{page path: <script> block} from the SEO schema sheet. Sheet URLs are mapped to
+    the site's canonical form (lowercase, trailing slash), and every block must be
+    valid JSON-LD before it is published."""
+    schema = {}
+    with open(SCHEMA_CSV, encoding="utf-8", newline="") as f:
+        for row in csv.reader(f):
+            if len(row) < 4 or not row[1].strip().startswith(SITE_URL):
+                continue
+            path = row[1].strip()[len(SITE_URL):].lower().rstrip("/") + "/"
+            code = row[3].strip()
+            m = re.fullmatch(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', code, re.S)
+            assert m, f"schema for {path} is not a single JSON-LD <script>"
+            json.loads(m.group(1))  # fails the build on broken JSON
+            assert path not in schema, f"two schema rows for {path}"
+            schema[path] = code
+    return schema
+
+
+def build(p, sections, prefix, suffix, schema):
     if "html" in p:
         section = p["html"]
     else:
@@ -462,8 +485,12 @@ def build(p, sections, prefix, suffix):
             section = promote_h1(section, p["h1"])
 
     head = prefix.replace("    <!--@PAGE_META-->", head_meta(p), 1)
-    jl = page_jsonld(p)
+    # A page with schema in the sheet uses only that; others keep the generated blocks.
+    jl = "" if p["path"] in schema else page_jsonld(p)
     head = head.replace("    <!--@PAGE_JSONLD-->\n", jl + "\n" if jl else "", 1)
+    if p["path"] in schema:
+        assert suffix.count("</body>") == 1
+        suffix = suffix.replace("</body>", schema[p["path"]] + "\n</body>", 1)
     for key in p["nav"]:
         marker = f'data-nav="{key}"'
         assert marker in head, f"no nav item {marker} for {p['path']}"
@@ -496,6 +523,9 @@ def main():
     sections["team"] = team_block.rstrip("\n")
 
     pages = PAGES + profile_pages(team_members(block))
+    schema = load_schema()
+    unknown = set(schema) - {p["path"] for p in pages}
+    assert not unknown, f"schema rows for pages that don't exist: {unknown}"
     unknown = set(KEYWORDS) - {p["path"] for p in pages}
     assert not unknown, f"KEYWORDS for pages that don't exist: {unknown}"
     for p in pages:
@@ -506,7 +536,7 @@ def main():
                 print(f"  note: {p['path']} {field} is {len(p[field])} chars (> {limit})")
         out_file = SITE / p["path"].strip("/") / "index.html"
         out_file.parent.mkdir(parents=True, exist_ok=True)
-        out_file.write_text(build(p, sections, prefix, suffix), encoding="utf-8", newline="\n")
+        out_file.write_text(build(p, sections, prefix, suffix, schema), encoding="utf-8", newline="\n")
         print(f"wrote {out_file.relative_to(ROOT)}")
 
     today = date.today().isoformat()

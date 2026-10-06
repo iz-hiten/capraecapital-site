@@ -125,26 +125,6 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://capraecapital.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Case Studies",
-          "item": "https://capraecapital.com/case-study/"
-        }
-      ]
-    }
-    </script>
 
     <style>
         * {
@@ -3033,5 +3013,159 @@
             });
         })();
     </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://capraecapital.com/#organization",
+      "name": "Caprae Capital",
+      "url": "https://capraecapital.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://capraecapital.com/assets/logo/caprae-logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/caprae-capital",
+        "https://capraecapitalpartners.com/"
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://capraecapital.com/case-study/#webpage",
+      "url": "https://capraecapital.com/case-study/",
+      "name": "Case Studies",
+      "description": "Case studies showing how searchers and sponsors have worked with Caprae Capital across sourcing, outreach, marketing, technology and due diligence.",
+      "isPartOf": {
+        "@id": "https://capraecapital.com/#website"
+      },
+      "publisher": {
+        "@id": "https://capraecapital.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://capraecapital.com/case-study/#casestudies"
+      },
+      "breadcrumb": {
+        "@id": "https://capraecapital.com/case-study/#breadcrumb"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://capraecapital.com/case-study/#casestudies",
+      "name": "Caprae Capital Case Studies",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "@id": "https://capraecapital.com/case-study/#gondor-capital",
+            "headline": "A $20M+ first acquisition within six months",
+            "description": "Gondor Capital received end-to-end support from Caprae Capital including branding, marketing, website ideation, lead generation, cold calling, email campaigns and outbound strategy.",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "publisher": {
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "image": "https://capraecapital.com/assets/testimonials/steve-schepman.jpg",
+            "about": {
+              "@type": "Organization",
+              "name": "Gondor Capital"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "@id": "https://capraecapital.com/case-study/#valwell-technologies",
+            "headline": "Two advanced meetings in Houston within two months",
+            "description": "Valwell Technologies received lead generation and founder outreach support from Caprae Capital, along with strategic guidance for approaching founders and structuring conversations.",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "publisher": {
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "image": "https://capraecapital.com/assets/testimonials/jeff-blacklock.jpg",
+            "about": {
+              "@type": "Organization",
+              "name": "Valwell Technologies"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "@id": "https://capraecapital.com/case-study/#traditional-searcher-kellogg",
+            "headline": "10-20 engagements a month, then diligence under LOI",
+            "description": "A traditional searcher received sustained sourcing, outreach and diligence support from Caprae Capital, including support with NDR, churn and customer concentration.",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "publisher": {
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "image": "https://capraecapital.com/assets/testimonials/kellogg-logo.jpg",
+            "about": {
+              "@type": "Organization",
+              "name": "Kellogg School of Management"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "@id": "https://capraecapital.com/case-study/#traditional-searcher-berkeley",
+            "headline": "Reaching owners who rarely respond to email",
+            "description": "A traditional searcher and top 10 MBA graduate from UC Berkeley used Caprae Capital for cold calling and due diligence support to reach business owners directly.",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "publisher": {
+              "@id": "https://capraecapital.com/#organization"
+            },
+            "image": "https://capraecapital.com/assets/testimonials/berkeley.png",
+            "about": {
+              "@type": "Organization",
+              "name": "UC Berkeley"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://capraecapital.com/case-study/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://capraecapital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://capraecapital.com/case-study/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

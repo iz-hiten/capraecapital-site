@@ -126,47 +126,6 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://capraecapital.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://capraecapital.com/services/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Tech Development",
-          "item": "https://capraecapital.com/services/tech-development/"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Tech Development",
-      "description": "From MVP to full-stack platforms built with modern frameworks digital marketing tools, project management, and quality assurance. Project-based pricing.",
-      "url": "https://capraecapital.com/services/tech-development/",
-      "areaServed": "Worldwide",
-      "provider": {
-        "@type": "Organization",
-        "name": "Caprae Capital",
-        "url": "https://capraecapital.com/"
-      }
-    }
-    </script>
 
     <style>
         * {
@@ -3116,5 +3075,76 @@
             });
         })();
     </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://capraecapital.com/#organization",
+      "name": "Caprae Capital",
+      "url": "https://capraecapital.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://capraecapital.com/assets/logo/caprae-logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/caprae-capital",
+        "https://capraecapitalpartners.com/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://capraecapital.com/services/tech-development/#service",
+      "name": "Custom Software Development",
+      "serviceType": "Custom Software Development",
+      "description": "Custom software, SaaS products and websites developed from MVP to full-stack platforms for founders, small businesses and companies acquisition teams buy.",
+      "url": "https://capraecapital.com/services/tech-development/",
+      "provider": {
+        "@id": "https://capraecapital.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Founders, small businesses and acquisition teams"
+      },
+      "category": [
+        "Custom Software Development",
+        "SaaS Development",
+        "Website Development",
+        "MVP Development",
+        "Full-Stack Development"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://capraecapital.com/services/tech-development/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://capraecapital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://capraecapital.com/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tech Development",
+          "item": "https://capraecapital.com/services/tech-development/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

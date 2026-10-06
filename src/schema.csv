@@ -1,0 +1,1883 @@
+,,,,
+, Web Pages,Schema Types,Schema Code,Status
+,,,,
+,https://capraecapital.com/,Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""Organization"",
+  ""@id"": ""https://capraecapital.com/#organization"",
+  ""name"": ""Caprae Capital"",
+  ""url"": ""https://capraecapital.com/"",
+  ""logo"": {
+    ""@type"": ""ImageObject"",
+    ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+  },
+  ""email"": ""partners@capraecapital.com"",
+  ""sameAs"": [
+    ""https://www.linkedin.com/company/caprae-capital""
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/,CollectionPage + Itemlist,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""CollectionPage"",
+      ""@id"": ""https://capraecapital.com/services/#webpage"",
+      ""url"": ""https://capraecapital.com/services/"",
+      ""name"": ""Services | Caprae Capital"",
+      ""description"": ""Explore Caprae Capital's services, including Search as a Service, Entrepreneurship as a Service, AI-Readiness, Post-Acquisition Strategy, and Branding."",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/services/#service-list""
+      }
+    },
+    {
+      ""@type"": ""ItemList"",
+      ""@id"": ""https://capraecapital.com/services/#service-list"",
+      ""name"": ""Caprae Capital Services"",
+      ""description"": ""A list of services offered by Caprae Capital."",
+      ""itemListOrder"": ""https://schema.org/ItemListOrderAscending"",
+      ""numberOfItems"": 5,
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Search as a Service"",
+          ""url"": ""https://capraecapital.com/services/search-as-a-service/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Entrepreneurship as a Service"",
+          ""url"": ""https://capraecapital.com/services/entrepreneurship-as-a-service/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""AI-Readiness"",
+          ""url"": ""https://capraecapital.com/services/ai-readiness/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 4,
+          ""name"": ""Post-Acquisition Strategy"",
+          ""url"": ""https://capraecapital.com/services/post-acquisition-strategy/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 5,
+          ""name"": ""Branding as a Service"",
+          ""url"": ""https://capraecapital.com/services/branding/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/search-as-a-service/,Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""Service"",
+  ""@id"": ""https://capraecapital.com/services/search-as-a-service/#service"",
+  ""name"": ""Search as a Service"",
+  ""serviceType"": ""Deal Sourcing"",
+  ""url"": ""https://capraecapital.com/services/search-as-a-service/"",
+  ""provider"": {
+    ""@type"": ""Organization"",
+    ""@id"": ""https://capraecapital.com/#organization"",
+    ""name"": ""Caprae Capital"",
+    ""url"": ""https://capraecapital.com/""
+  }
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/entrepreneurship-as-a-service/,Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""Service"",
+  ""@id"": ""https://capraecapital.com/services/entrepreneurship-as-a-service/#service"",
+  ""name"": ""Entrepreneurship as a Service"",
+  ""serviceType"": ""Entrepreneurship Support"",
+  ""url"": ""https://capraecapital.com/services/entrepreneurship-as-a-service/"",
+  ""provider"": {
+    ""@type"": ""Organization"",
+    ""@id"": ""https://capraecapital.com/#organization"",
+    ""name"": ""Caprae Capital"",
+    ""url"": ""https://capraecapital.com/""
+  }
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/ai-readiness/,Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""Service"",
+  ""@id"": ""https://capraecapital.com/services/ai-readiness/#service"",
+  ""name"": ""AI-Readiness"",
+  ""serviceType"": ""AI Readiness"",
+  ""url"": ""https://capraecapital.com/services/ai-readiness/"",
+  ""provider"": {
+    ""@type"": ""Organization"",
+    ""@id"": ""https://capraecapital.com/#organization"",
+    ""name"": ""Caprae Capital"",
+    ""url"": ""https://capraecapital.com/""
+  }
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/Post-acquisition-strategy,Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""Service"",
+  ""@id"": ""https://capraecapital.com/services/post-acquisition-strategy/#service"",
+  ""name"": ""Post-Acquisition Strategy"",
+  ""serviceType"": ""Post-Acquisition Strategy"",
+  ""url"": ""https://capraecapital.com/services/post-acquisition-strategy/"",
+  ""provider"": {
+    ""@type"": ""Organization"",
+    ""@id"": ""https://capraecapital.com/#organization"",
+    ""name"": ""Caprae Capital"",
+    ""url"": ""https://capraecapital.com/""
+  }
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/branding/,Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""Service"",
+  ""@id"": ""https://capraecapital.com/services/branding/#service"",
+  ""name"": ""Branding as a Service"",
+  ""serviceType"": ""Branding"",
+  ""url"": ""https://capraecapital.com/services/branding/"",
+  ""provider"": {
+    ""@type"": ""Organization"",
+    ""@id"": ""https://capraecapital.com/#organization"",
+    ""name"": ""Caprae Capital"",
+    ""url"": ""https://capraecapital.com/""
+  }
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/,BreadcrumbList + Person,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""CollectionPage"",
+      ""@id"": ""https://capraecapital.com/team/#webpage"",
+      ""url"": ""https://capraecapital.com/team/"",
+      ""name"": ""Our Team | Caprae Capital"",
+      ""description"": ""Meet the Caprae Capital team of operators and advisers with expertise across private equity, startups, transaction management, deal structuring, and capital advisory."",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/#team""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        }
+      ]
+    },
+    {
+      ""@type"": ""ItemList"",
+      ""@id"": ""https://capraecapital.com/team/#team"",
+      ""name"": ""Caprae Capital Team"",
+      ""description"": ""Leadership, advisers, capital advisors, and transaction professionals at Caprae Capital."",
+      ""numberOfItems"": 7,
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/kevin-hong/#person""
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/hereford-johnson/#person""
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 4,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#person""
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 5,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#person""
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 6,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/richard-consul/#person""
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 7,
+          ""item"": {
+            ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#person""
+          }
+        }
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""jobTitle"": ""Founder"",
+      ""image"": ""https://capraecapital.com/assets/team/kevin-hong.jpg"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/hereford-johnson/#person"",
+      ""name"": ""Hereford Johnson"",
+      ""jobTitle"": ""Principal Adviser"",
+      ""image"": ""https://capraecapital.com/assets/team/hereford-johnson.jpg"",
+      ""url"": ""https://capraecapital.com/team/hereford-johnson/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""jobTitle"": ""Founder"",
+      ""image"": ""https://capraecapital.com/assets/team/zackary-beckham.jpg"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#person"",
+      ""name"": ""Jeff Blacklock"",
+      ""jobTitle"": ""Deal Adviser"",
+      ""image"": ""https://capraecapital.com/assets/team/jeff-blacklock.png"",
+      ""url"": ""https://capraecapital.com/team/jeff-blacklock/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#person"",
+      ""name"": ""Mitchell Vermet"",
+      ""honorificSuffix"": ""CFA, CAIA"",
+      ""jobTitle"": ""Capital Advisor"",
+      ""image"": ""https://capraecapital.com/assets/team/mitch-vermet.jpg"",
+      ""url"": ""https://capraecapital.com/team/mitchell-vermet/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/richard-consul/#person"",
+      ""name"": ""Richard Consul"",
+      ""honorificSuffix"": ""CFA"",
+      ""jobTitle"": ""Capital Advisor"",
+      ""image"": ""https://capraecapital.com/assets/team/richard-consul.png"",
+      ""url"": ""https://capraecapital.com/team/richard-consul/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#person"",
+      ""name"": ""Eric Nehrlich"",
+      ""jobTitle"": ""Chief of Staff"",
+      ""image"": ""https://capraecapital.com/assets/team/eric-nehrlich.jpeg"",
+      ""url"": ""https://capraecapital.com/team/eric-nehrlich/"",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/kevin-hong/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#webpage"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/"",
+      ""name"": ""Kevin Hong | Founder | Caprae Capital"",
+      ""description"": ""Kevin Hong, Founder of Caprae Capital, scaled two startups to $31M and $7M ARR, raised $8M+ VC, and is a Chicago Booth MBA and Amazon bestselling author."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": { ""@id"": ""https://capraecapital.com/#website"" },
+      ""breadcrumb"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#breadcrumb"" },
+      ""mainEntity"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"" },
+      ""about"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"" },
+      ""primaryImageOfPage"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#primaryimage"" }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/kevin-hong.jpg"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/kevin-hong.jpg"",
+      ""caption"": ""Kevin Hong, Founder of Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/"",
+      ""image"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#primaryimage"" },
+      ""jobTitle"": ""Founder"",
+      ""description"": ""Kevin Hong is the Founder of Caprae Capital. Before founding the firm, he spent seven years as a business journalist, then scaled two startups to $31M and $7M in annual recurring revenue and raised more than $8M in venture capital."",
+      ""worksFor"": { ""@id"": ""https://capraecapital.com/#organization"" },
+      ""alumniOf"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#chicago-booth"" },
+      ""hasCredential"": {
+        ""@type"": ""EducationalOccupationalCredential"",
+        ""name"": ""Master of Business Administration (MBA)"",
+        ""credentialCategory"": ""degree"",
+        ""recognizedBy"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#chicago-booth"" }
+      },
+      ""knowsAbout"": [
+        ""Entrepreneurship through acquisition"",
+        ""Search funds"",
+        ""Off-market deal sourcing"",
+        ""Private equity"",
+        ""Mergers and acquisitions"",
+        ""Scaling startups"",
+        ""Venture capital"",
+        ""Business journalism""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/kevinhshong/"",
+        ""https://searchfunder.com/profile/kevin-hong""
+      ]
+    },
+    {
+      ""@type"": ""CollegeOrUniversity"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#chicago-booth"",
+      ""name"": ""University of Chicago Booth School of Business"",
+      ""alternateName"": ""Chicago Booth"",
+      ""url"": ""https://www.chicagobooth.edu/"",
+      ""sameAs"": ""https://en.wikipedia.org/wiki/University_of_Chicago_Booth_School_of_Business""
+    },
+    {
+      ""@type"": ""Book"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#book-the-outlier-approach"",
+      ""name"": ""The Outlier Approach"",
+      ""author"": { ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"" }
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png"",
+        ""width"": 400,
+        ""height"": 410
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""address"": {
+        ""@type"": ""PostalAddress"",
+        ""streetAddress"": ""611 N Brand Blvd"",
+        ""addressLocality"": ""Glendale"",
+        ""addressRegion"": ""CA"",
+        ""postalCode"": ""91203"",
+        ""addressCountry"": ""US""
+      },
+      ""founder"": [
+        { ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"" },
+        { ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"" }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital""
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/""
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": { ""@id"": ""https://capraecapital.com/#organization"" }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#breadcrumb"",
+      ""itemListElement"": [
+        { ""@type"": ""ListItem"", ""position"": 1, ""name"": ""Home"", ""item"": ""https://capraecapital.com/"" },
+        { ""@type"": ""ListItem"", ""position"": 2, ""name"": ""Our Team"", ""item"": ""https://capraecapital.com/team/"" },
+        { ""@type"": ""ListItem"", ""position"": 3, ""name"": ""Kevin Hong"" }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/hereford-johnson/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/hereford-johnson/#webpage"",
+      ""url"": ""https://capraecapital.com/team/hereford-johnson/"",
+      ""name"": ""Hereford Johnson | Principal | Caprae Capital"",
+      ""description"": ""Hereford Johnson, Principal at Caprae Capital, closed acquisitions in 11 and 6 months. Northwestern Kellogg MBA, former Deloitte Consulting."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/hereford-johnson/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/hereford-johnson/#person""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/team/hereford-johnson/#person""
+      },
+      ""primaryImageOfPage"": {
+        ""@id"": ""https://capraecapital.com/team/hereford-johnson/#primaryimage""
+      }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/hereford-johnson/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/hereford-johnson.jpg"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/hereford-johnson.jpg"",
+      ""caption"": ""Hereford Johnson, Principal Adviser at Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/hereford-johnson/#person"",
+      ""name"": ""Hereford Johnson"",
+      ""url"": ""https://capraecapital.com/team/hereford-johnson/"",
+      ""image"": {
+        ""@id"": ""https://capraecapital.com/team/hereford-johnson/#primaryimage""
+      },
+      ""jobTitle"": ""Principal Adviser"",
+      ""description"": ""Hereford Johnson is a Principal at Caprae Capital. As a buyer, he closed acquisitions in 11 and 6 months, so he advises clients from first-hand experience of getting deals to close."",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""alumniOf"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/hereford-johnson/#kellogg""
+        },
+        {
+          ""@type"": ""Organization"",
+          ""name"": ""Deloitte Consulting"",
+          ""parentOrganization"": {
+            ""@type"": ""Organization"",
+            ""name"": ""Deloitte"",
+            ""sameAs"": ""https://en.wikipedia.org/wiki/Deloitte""
+          }
+        }
+      ],
+      ""hasCredential"": {
+        ""@type"": ""EducationalOccupationalCredential"",
+        ""name"": ""Master of Business Administration (MBA)"",
+        ""credentialCategory"": ""degree"",
+        ""recognizedBy"": {
+          ""@id"": ""https://capraecapital.com/team/hereford-johnson/#kellogg""
+        }
+      },
+      ""knowsAbout"": [
+        ""Business acquisitions"",
+        ""Entrepreneurship through acquisition"",
+        ""Search funds"",
+        ""Closing acquisition deals"",
+        ""Post-acquisition strategy"",
+        ""Management consulting""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/hereford/""
+      ]
+    },
+    {
+      ""@type"": ""CollegeOrUniversity"",
+      ""@id"": ""https://capraecapital.com/team/hereford-johnson/#kellogg"",
+      ""name"": ""Kellogg School of Management, Northwestern University"",
+      ""alternateName"": ""Northwestern Kellogg"",
+      ""url"": ""https://www.kellogg.northwestern.edu/"",
+      ""sameAs"": ""https://en.wikipedia.org/wiki/Kellogg_School_of_Management""
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png"",
+        ""width"": 400,
+        ""height"": 410
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""address"": {
+        ""@type"": ""PostalAddress"",
+        ""streetAddress"": ""611 N Brand Blvd"",
+        ""addressLocality"": ""Glendale"",
+        ""addressRegion"": ""CA"",
+        ""postalCode"": ""91203"",
+        ""addressCountry"": ""US""
+      },
+      ""founder"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/kevin-hong/#person""
+        },
+        {
+          ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+        }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital""
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/""
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/hereford-johnson/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Our Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Hereford Johnson""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/tech-development/,BreadcrumbList + Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""Service"",
+      ""@id"": ""https://capraecapital.com/services/tech-development/#service"",
+      ""name"": ""Custom Software Development"",
+      ""serviceType"": ""Custom Software Development"",
+      ""description"": ""Custom software, SaaS products and websites developed from MVP to full-stack platforms for founders, small businesses and companies acquisition teams buy."",
+      ""url"": ""https://capraecapital.com/services/tech-development/"",
+      ""provider"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""areaServed"": {
+        ""@type"": ""Place"",
+        ""name"": ""Worldwide""
+      },
+      ""audience"": {
+        ""@type"": ""Audience"",
+        ""audienceType"": ""Founders, small businesses and acquisition teams""
+      },
+      ""category"": [
+        ""Custom Software Development"",
+        ""SaaS Development"",
+        ""Website Development"",
+        ""MVP Development"",
+        ""Full-Stack Development""
+      ]
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/services/tech-development/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Services"",
+          ""item"": ""https://capraecapital.com/services/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Tech Development"",
+          ""item"": ""https://capraecapital.com/services/tech-development/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/services/cold-mail-handwritten-letters/,BreadcrumbList + Service,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""Service"",
+      ""@id"": ""https://capraecapital.com/services/cold-mail-handwritten-letters/#service"",
+      ""name"": ""Cold Mail & Handwritten Letters"",
+      ""serviceType"": ""Direct Mail Marketing"",
+      ""description"": ""Done-for-you postcards and handwritten letters for business owners, including audience selection, design, printing, postage, QR tracking and follow-up calls."",
+      ""url"": ""https://capraecapital.com/services/cold-mail-handwritten-letters/"",
+      ""provider"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""areaServed"": {
+        ""@type"": ""Place"",
+        ""name"": ""Worldwide""
+      },
+      ""audience"": {
+        ""@type"": ""Audience"",
+        ""audienceType"": ""Business owners, founders and companies seeking direct mail outreach""
+      },
+      ""category"": [
+        ""Direct Mail Marketing"",
+        ""Cold Mail"",
+        ""Handwritten Letters"",
+        ""Postcard Marketing"",
+        ""Business Outreach"",
+        ""Lead Generation""
+      ]
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/services/cold-mail-handwritten-letters/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Services"",
+          ""item"": ""https://capraecapital.com/services/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Cold Mail & Handwritten Letters"",
+          ""item"": ""https://capraecapital.com/services/cold-mail-handwritten-letters/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/how-it-works/,BreadcrumbList + Service+Webpage,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""WebPage"",
+      ""@id"": ""https://capraecapital.com/how-it-works/#webpage"",
+      ""url"": ""https://capraecapital.com/how-it-works/"",
+      ""name"": ""A Proven Process"",
+      ""description"": ""Caprae Capital's seven-step methodology for sourcing, reviewing, presenting, refining and connecting buyers with off-market deals."",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/how-it-works/#process""
+      },
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/how-it-works/#breadcrumb""
+      }
+    },
+    {
+      ""@type"": ""HowTo"",
+      ""@id"": ""https://capraecapital.com/how-it-works/#process"",
+      ""name"": ""A Proven Process"",
+      ""description"": ""Seven-step methodology refined through hundreds of deals."",
+      ""url"": ""https://capraecapital.com/how-it-works/"",
+      ""provider"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""step"": [
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 1,
+          ""name"": ""Define"",
+          ""text"": ""You share industry criteria.""
+        },
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 2,
+          ""name"": ""Source"",
+          ""text"": ""We find off-market deals.""
+        },
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 3,
+          ""name"": ""Review"",
+          ""text"": ""Our team reviews prospects.""
+        },
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 4,
+          ""name"": ""Present"",
+          ""text"": ""Curated deals weekly.""
+        },
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 5,
+          ""name"": ""Refine"",
+          ""text"": ""Adjust criteria and approve.""
+        },
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 6,
+          ""name"": ""Outreach"",
+          ""text"": ""Multi-channel campaigns.""
+        },
+        {
+          ""@type"": ""HowToStep"",
+          ""position"": 7,
+          ""name"": ""Connect"",
+          ""text"": ""You join exploratory calls.""
+        }
+      ]
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/how-it-works/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""How It Works"",
+          ""item"": ""https://capraecapital.com/how-it-works/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/pricing/,BreadcrumbList + Service+Webpage,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Partners"",
+      ""url"": ""https://capraecapital.com/"",
+      ""slogan"": ""Rapid Growth, Simplified"",
+      ""email"": ""partners@capraecapital.com"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.substack.com""
+      ]
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""publisher"": { ""@id"": ""https://capraecapital.com/#organization"" }
+    },
+    {
+      ""@type"": ""WebPage"",
+      ""@id"": ""https://capraecapital.com/pricing/#webpage"",
+      ""url"": ""https://capraecapital.com/pricing/"",
+      ""name"": ""Pricing | Caprae Capital"",
+      ""description"": ""Transparent, value-driven pricing for deal sourcing and growth services, 30-60% less than traditional providers. Plans start at $1,000/month with no long-term contracts."",
+      ""inLanguage"": ""en"",
+      ""isPartOf"": { ""@id"": ""https://capraecapital.com/#website"" },
+      ""about"": { ""@id"": ""https://capraecapital.com/#organization"" },
+      ""breadcrumb"": { ""@id"": ""https://capraecapital.com/pricing/#breadcrumb"" },
+      ""mainEntity"": { ""@id"": ""https://capraecapital.com/pricing/#faq"" }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/pricing/#breadcrumb"",
+      ""itemListElement"": [
+        { ""@type"": ""ListItem"", ""position"": 1, ""name"": ""Home"", ""item"": ""https://capraecapital.com/"" },
+        { ""@type"": ""ListItem"", ""position"": 2, ""name"": ""Pricing"", ""item"": ""https://capraecapital.com/pricing/"" }
+      ]
+    },
+    {
+      ""@type"": ""Service"",
+      ""@id"": ""https://capraecapital.com/pricing/#search-as-a-service"",
+      ""name"": ""Search as a Service"",
+      ""serviceType"": ""Deal sourcing and lead generation"",
+      ""description"": ""Lead generation, email list cleansing, LeadGen QA software, financial modeling, market research, due diligence setup, cold calling, email automation, PR and branding, deal advisory, a team of associates and cold call analytics. Available in 8 countries."",
+      ""provider"": { ""@id"": ""https://capraecapital.com/#organization"" },
+      ""url"": ""https://capraecapital.com/pricing/"",
+      ""offers"": {
+        ""@type"": ""Offer"",
+        ""url"": ""https://capraecapital.com/pricing/"",
+        ""priceCurrency"": ""USD"",
+        ""description"": ""$1,250 per month plus a 2% success fee"",
+        ""priceSpecification"": {
+          ""@type"": ""UnitPriceSpecification"",
+          ""price"": ""1250.00"",
+          ""priceCurrency"": ""USD"",
+          ""unitCode"": ""MON"",
+          ""unitText"": ""month""
+        }
+      }
+    },
+    {
+      ""@type"": ""Service"",
+      ""@id"": ""https://capraecapital.com/pricing/#entrepreneurship-as-a-service"",
+      ""name"": ""Entrepreneurship as a Service"",
+      ""serviceType"": ""Outsourced growth and outreach services"",
+      ""description"": ""40 hours per month of dedicated work covering cold calling, LinkedIn outreach, social media management, newsletters, email campaigns, handwritten letters, software development, and press releases and PR."",
+      ""provider"": { ""@id"": ""https://capraecapital.com/#organization"" },
+      ""url"": ""https://capraecapital.com/pricing/"",
+      ""offers"": {
+        ""@type"": ""Offer"",
+        ""url"": ""https://capraecapital.com/pricing/"",
+        ""priceCurrency"": ""USD"",
+        ""description"": ""$1,000 per month for 40 hours of dedication"",
+        ""priceSpecification"": {
+          ""@type"": ""UnitPriceSpecification"",
+          ""price"": ""1000.00"",
+          ""priceCurrency"": ""USD"",
+          ""unitCode"": ""MON"",
+          ""unitText"": ""month""
+        }
+      }
+    },
+    {
+      ""@type"": ""Service"",
+      ""@id"": ""https://capraecapital.com/pricing/#custom-enterprise"",
+      ""name"": ""Custom / Enterprise"",
+      ""serviceType"": ""Custom deal sourcing and advisory"",
+      ""description"": ""Fully customizable, white-labeled service for PE firms, investment banks and larger teams, with a dedicated team, scalable hours, priority support, custom integrations, strategic advisory and post-acquisition support. Contact for pricing."",
+      ""provider"": { ""@id"": ""https://capraecapital.com/#organization"" },
+      ""audience"": {
+        ""@type"": ""BusinessAudience"",
+        ""name"": ""Private equity firms, investment banks and larger teams""
+      },
+      ""url"": ""https://capraecapital.com/pricing/""
+    },
+    {
+      ""@type"": ""FAQPage"",
+      ""@id"": ""https://capraecapital.com/pricing/#faq"",
+      ""mainEntity"": [
+        {
+          ""@type"": ""Question"",
+          ""name"": ""Is it cheaper to outsource deal sourcing than build an in-house team?"",
+          ""acceptedAnswer"": {
+            ""@type"": ""Answer"",
+            ""text"": ""Usually, yes. Hiring and training your own callers, analysts, and data tools costs more and takes longer to get running. Our services typically cost 30 to 60% less than building the same team in-house, and clients save $50K+ a year on data and software alone.""
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/case-study/,BreadcrumbList + Article,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""CollectionPage"",
+      ""@id"": ""https://capraecapital.com/case-study/#webpage"",
+      ""url"": ""https://capraecapital.com/case-study/"",
+      ""name"": ""Case Studies"",
+      ""description"": ""Case studies showing how searchers and sponsors have worked with Caprae Capital across sourcing, outreach, marketing, technology and due diligence."",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/case-study/#casestudies""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/case-study/#breadcrumb""
+      }
+    },
+    {
+      ""@type"": ""ItemList"",
+      ""@id"": ""https://capraecapital.com/case-study/#casestudies"",
+      ""name"": ""Caprae Capital Case Studies"",
+      ""numberOfItems"": 4,
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""item"": {
+            ""@type"": ""Article"",
+            ""@id"": ""https://capraecapital.com/case-study/#gondor-capital"",
+            ""headline"": ""A $20M+ first acquisition within six months"",
+            ""description"": ""Gondor Capital received end-to-end support from Caprae Capital including branding, marketing, website ideation, lead generation, cold calling, email campaigns and outbound strategy."",
+            ""author"": {
+              ""@type"": ""Organization"",
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""publisher"": {
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""image"": ""https://capraecapital.com/assets/testimonials/steve-schepman.jpg"",
+            ""about"": {
+              ""@type"": ""Organization"",
+              ""name"": ""Gondor Capital""
+            }
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""item"": {
+            ""@type"": ""Article"",
+            ""@id"": ""https://capraecapital.com/case-study/#valwell-technologies"",
+            ""headline"": ""Two advanced meetings in Houston within two months"",
+            ""description"": ""Valwell Technologies received lead generation and founder outreach support from Caprae Capital, along with strategic guidance for approaching founders and structuring conversations."",
+            ""author"": {
+              ""@type"": ""Organization"",
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""publisher"": {
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""image"": ""https://capraecapital.com/assets/testimonials/jeff-blacklock.jpg"",
+            ""about"": {
+              ""@type"": ""Organization"",
+              ""name"": ""Valwell Technologies""
+            }
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""item"": {
+            ""@type"": ""Article"",
+            ""@id"": ""https://capraecapital.com/case-study/#traditional-searcher-kellogg"",
+            ""headline"": ""10-20 engagements a month, then diligence under LOI"",
+            ""description"": ""A traditional searcher received sustained sourcing, outreach and diligence support from Caprae Capital, including support with NDR, churn and customer concentration."",
+            ""author"": {
+              ""@type"": ""Organization"",
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""publisher"": {
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""image"": ""https://capraecapital.com/assets/testimonials/kellogg-logo.jpg"",
+            ""about"": {
+              ""@type"": ""Organization"",
+              ""name"": ""Kellogg School of Management""
+            }
+          }
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 4,
+          ""item"": {
+            ""@type"": ""Article"",
+            ""@id"": ""https://capraecapital.com/case-study/#traditional-searcher-berkeley"",
+            ""headline"": ""Reaching owners who rarely respond to email"",
+            ""description"": ""A traditional searcher and top 10 MBA graduate from UC Berkeley used Caprae Capital for cold calling and due diligence support to reach business owners directly."",
+            ""author"": {
+              ""@type"": ""Organization"",
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""publisher"": {
+              ""@id"": ""https://capraecapital.com/#organization""
+            },
+            ""image"": ""https://capraecapital.com/assets/testimonials/berkeley.png"",
+            ""about"": {
+              ""@type"": ""Organization"",
+              ""name"": ""UC Berkeley""
+            }
+          }
+        }
+      ]
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/case-study/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Case Studies"",
+          ""item"": ""https://capraecapital.com/case-study/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/zackary-beckham/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#webpage"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/"",
+      ""name"": ""Zackary Beckham | Founder | Caprae Capital"",
+      ""description"": ""Zackary Beckham, Founder of Caprae Capital, is a self-funded searcher and technology and AI implementation specialist who leads AI-Readiness assessments and oversees Tech Development."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/zackary-beckham/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+      },
+      ""primaryImageOfPage"": {
+        ""@id"": ""https://capraecapital.com/team/zackary-beckham/#primaryimage""
+      }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/zackary-beckham.jpg"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/zackary-beckham.jpg"",
+      ""caption"": ""Zackary Beckham, Founder of Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/"",
+      ""image"": {
+        ""@id"": ""https://capraecapital.com/team/zackary-beckham/#primaryimage""
+      },
+      ""jobTitle"": ""Founder"",
+      ""description"": ""Zackary Beckham is a Founder of Caprae Capital and a self-funded searcher who acquired a managed IT services business, which he runs today. With more than 10 years of technology and AI implementation experience, he leads Caprae's AI-Readiness assessments and oversees Tech Development."",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""knowsAbout"": [
+        ""Technology"",
+        ""Artificial Intelligence"",
+        ""AI Implementation"",
+        ""AI-Readiness"",
+        ""Software Development"",
+        ""Tech Development"",
+        ""Managed IT Services"",
+        ""Business Acquisitions"",
+        ""Entrepreneurship Through Acquisition""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/zackarybeckham/"",
+        ""https://searchfunder.com/profile/zackary-beckham""
+      ]
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""founder"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+        }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Our Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Zackary Beckham"",
+          ""item"": ""https://capraecapital.com/team/zackary-beckham/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/jeff-blacklock/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#webpage"",
+      ""url"": ""https://capraecapital.com/team/jeff-blacklock/"",
+      ""name"": ""Jeff Blacklock | Deal Adviser | Caprae Capital"",
+      ""description"": ""Jeff Blacklock, Deal Adviser at Caprae Capital, is a former searcher and President of ValWell Technologies in the oil and gas industry."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#person""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#person""
+      },
+      ""primaryImageOfPage"": {
+        ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#primaryimage""
+      }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/jeff-blacklock.png"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/jeff-blacklock.png"",
+      ""caption"": ""Jeff Blacklock, Deal Adviser at Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#person"",
+      ""name"": ""Jeff Blacklock"",
+      ""url"": ""https://capraecapital.com/team/jeff-blacklock/"",
+      ""image"": {
+        ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#primaryimage""
+      },
+      ""jobTitle"": ""Deal Adviser"",
+      ""description"": ""Jeff Blacklock is a Deal Adviser at Caprae Capital. He is a former searcher and the President of ValWell Technologies, a company in the oil and gas industry. He first worked with Caprae as a client, when the program secured two advanced meetings in Houston within two months."",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""knowsAbout"": [
+        ""Business acquisitions"",
+        ""Entrepreneurship through acquisition"",
+        ""Search funds"",
+        ""Deal sourcing"",
+        ""Founder outreach"",
+        ""Oil and gas industry"",
+        ""Business development""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/jeffblacklock/""
+      ]
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""founder"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/kevin-hong/#person""
+        },
+        {
+          ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+        }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/""
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/jeff-blacklock/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Our Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Jeff Blacklock"",
+          ""item"": ""https://capraecapital.com/team/jeff-blacklock/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/mitchell-vermet/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#webpage"",
+      ""url"": ""https://capraecapital.com/team/mitchell-vermet/"",
+      ""name"": ""Mitchell Vermet, CFA, CAIA | Capital Adviser | Caprae Capital"",
+      ""description"": ""Mitchell Vermet, CFA, CAIA, is a Capital Adviser at Caprae Capital and Managing Partner at Bankers Edge. He has helped manage more than $30B in institutional capital."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#person""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#person""
+      },
+      ""primaryImageOfPage"": {
+        ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#primaryimage""
+      }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/mitch-vermet.jpg"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/mitch-vermet.jpg"",
+      ""caption"": ""Mitchell Vermet, CFA, CAIA, Capital Adviser at Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#person"",
+      ""name"": ""Mitchell Vermet"",
+      ""url"": ""https://capraecapital.com/team/mitchell-vermet/"",
+      ""image"": {
+        ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#primaryimage""
+      },
+      ""jobTitle"": ""Capital Adviser"",
+      ""description"": ""Mitch Vermet is a Capital Adviser at Caprae Capital. He is a Managing Partner at Bankers Edge and has helped manage more than $30B in institutional capital. He holds both the Chartered Financial Analyst (CFA) and Chartered Alternative Investment Analyst (CAIA) designations."",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""hasCredential"": [
+        {
+          ""@type"": ""EducationalOccupationalCredential"",
+          ""name"": ""Chartered Financial Analyst (CFA)"",
+          ""credentialCategory"": ""professional designation""
+        },
+        {
+          ""@type"": ""EducationalOccupationalCredential"",
+          ""name"": ""Chartered Alternative Investment Analyst (CAIA)"",
+          ""credentialCategory"": ""professional designation""
+        }
+      ],
+      ""knowsAbout"": [
+        ""Institutional capital"",
+        ""Capital advisory"",
+        ""Alternative investments"",
+        ""Investment analysis"",
+        ""Financial analysis"",
+        ""Business acquisitions"",
+        ""Investment management""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/mitch-vermet-cfa-caia-5472b880/""
+      ]
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""founder"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/kevin-hong/#person""
+        },
+        {
+          ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+        }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/""
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/mitchell-vermet/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Our Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Mitchell Vermet"",
+          ""item"": ""https://capraecapital.com/team/mitchell-vermet/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/richard-consul/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/richard-consul/#webpage"",
+      ""url"": ""https://capraecapital.com/team/richard-consul/"",
+      ""name"": ""Richard Consul, CFA | Capital Adviser | Caprae Capital"",
+      ""description"": ""Richard Consul, CFA, is a Capital Adviser at Caprae Capital, Founder and Managing Partner of Bankers Edge, with more than 20 years of buy-side experience."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/richard-consul/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/richard-consul/#person""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/team/richard-consul/#person""
+      },
+      ""primaryImageOfPage"": {
+        ""@id"": ""https://capraecapital.com/team/richard-consul/#primaryimage""
+      }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/richard-consul/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/richard-consul.png"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/richard-consul.png"",
+      ""caption"": ""Richard Consul, CFA, Capital Adviser at Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/richard-consul/#person"",
+      ""name"": ""Richard Consul"",
+      ""url"": ""https://capraecapital.com/team/richard-consul/"",
+      ""image"": {
+        ""@id"": ""https://capraecapital.com/team/richard-consul/#primaryimage""
+      },
+      ""jobTitle"": ""Capital Adviser"",
+      ""description"": ""Richard Consul is a Capital Adviser at Caprae Capital. He is the Founder and Managing Partner of Bankers Edge and brings more than 20 years of buy-side experience. He is a Chartered Financial Analyst (CFA) charterholder."",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""hasCredential"": {
+        ""@type"": ""EducationalOccupationalCredential"",
+        ""name"": ""Chartered Financial Analyst (CFA)"",
+        ""credentialCategory"": ""professional designation""
+      },
+      ""knowsAbout"": [
+        ""Buy-side investing"",
+        ""Institutional capital"",
+        ""Capital advisory"",
+        ""Investment management"",
+        ""Financial analysis"",
+        ""Business acquisitions"",
+        ""Alternative investments""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/richard-consul-cfa/""
+      ]
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""founder"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/kevin-hong/#person""
+        },
+        {
+          ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+        }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/""
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/richard-consul/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Our Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Richard Consul"",
+          ""item"": ""https://capraecapital.com/team/richard-consul/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review
+,,,,
+,https://capraecapital.com/team/eric-nehrlich/,BreadcrumbList + Person + Organization,"<script type=""application/ld+json"">
+{
+  ""@context"": ""https://schema.org"",
+  ""@graph"": [
+    {
+      ""@type"": ""ProfilePage"",
+      ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#webpage"",
+      ""url"": ""https://capraecapital.com/team/eric-nehrlich/"",
+      ""name"": ""Eric Nehrlich | Chief of Staff | Caprae Capital"",
+      ""description"": ""Eric Nehrlich is an Executive Coach at Caprae Capital and former Chief of Staff at Google who prepares operators for the CEO seat and provides search fund CEO coaching."",
+      ""inLanguage"": ""en-US"",
+      ""isPartOf"": {
+        ""@id"": ""https://capraecapital.com/#website""
+      },
+      ""breadcrumb"": {
+        ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#breadcrumb""
+      },
+      ""mainEntity"": {
+        ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#person""
+      },
+      ""about"": {
+        ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#person""
+      },
+      ""primaryImageOfPage"": {
+        ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#primaryimage""
+      }
+    },
+    {
+      ""@type"": ""ImageObject"",
+      ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#primaryimage"",
+      ""url"": ""https://capraecapital.com/assets/team/eric-nehrlich.jpeg"",
+      ""contentUrl"": ""https://capraecapital.com/assets/team/eric-nehrlich.jpeg"",
+      ""caption"": ""Eric Nehrlich, Executive Coach at Caprae Capital""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#person"",
+      ""name"": ""Eric Nehrlich"",
+      ""url"": ""https://capraecapital.com/team/eric-nehrlich/"",
+      ""image"": {
+        ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#primaryimage""
+      },
+      ""jobTitle"": ""Chief of Staff"",
+      ""description"": ""Eric Nehrlich is an Executive Coach at Caprae Capital. He is a former Chief of Staff at Google and now prepares operators for the CEO seat. He studied at MIT, Columbia and Stanford, and provides search fund CEO coaching as part of Caprae's Post-Acquisition Strategy service."",
+      ""worksFor"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      },
+      ""alumniOf"": [
+        {
+          ""@type"": ""CollegeOrUniversity"",
+          ""name"": ""Massachusetts Institute of Technology"",
+          ""alternateName"": ""MIT""
+        },
+        {
+          ""@type"": ""CollegeOrUniversity"",
+          ""name"": ""Columbia University""
+        },
+        {
+          ""@type"": ""CollegeOrUniversity"",
+          ""name"": ""Stanford University""
+        }
+      ],
+      ""knowsAbout"": [
+        ""Executive coaching"",
+        ""CEO coaching"",
+        ""Search fund CEO coaching"",
+        ""Leadership"",
+        ""Chief of Staff"",
+        ""Post-acquisition strategy"",
+        ""Business operations""
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/in/nehrlich/""
+      ]
+    },
+    {
+      ""@type"": ""Organization"",
+      ""@id"": ""https://capraecapital.com/#organization"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""url"": ""https://capraecapital.com/"",
+      ""logo"": {
+        ""@type"": ""ImageObject"",
+        ""url"": ""https://capraecapital.com/assets/logo/caprae-logo.png""
+      },
+      ""email"": ""partners@capraecapital.com"",
+      ""founder"": [
+        {
+          ""@id"": ""https://capraecapital.com/team/kevin-hong/#person""
+        },
+        {
+          ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person""
+        }
+      ],
+      ""sameAs"": [
+        ""https://www.linkedin.com/company/caprae-capital"",
+        ""https://capraecapitalpartners.com/""
+      ]
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/kevin-hong/#person"",
+      ""name"": ""Kevin Hong"",
+      ""url"": ""https://capraecapital.com/team/kevin-hong/""
+    },
+    {
+      ""@type"": ""Person"",
+      ""@id"": ""https://capraecapital.com/team/zackary-beckham/#person"",
+      ""name"": ""Zackary Beckham"",
+      ""url"": ""https://capraecapital.com/team/zackary-beckham/""
+    },
+    {
+      ""@type"": ""WebSite"",
+      ""@id"": ""https://capraecapital.com/#website"",
+      ""url"": ""https://capraecapital.com/"",
+      ""name"": ""Caprae Capital"",
+      ""alternateName"": ""Caprae Capital Services"",
+      ""inLanguage"": ""en-US"",
+      ""publisher"": {
+        ""@id"": ""https://capraecapital.com/#organization""
+      }
+    },
+    {
+      ""@type"": ""BreadcrumbList"",
+      ""@id"": ""https://capraecapital.com/team/eric-nehrlich/#breadcrumb"",
+      ""itemListElement"": [
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 1,
+          ""name"": ""Home"",
+          ""item"": ""https://capraecapital.com/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 2,
+          ""name"": ""Our Team"",
+          ""item"": ""https://capraecapital.com/team/""
+        },
+        {
+          ""@type"": ""ListItem"",
+          ""position"": 3,
+          ""name"": ""Eric Nehrlich"",
+          ""item"": ""https://capraecapital.com/team/eric-nehrlich/""
+        }
+      ]
+    }
+  ]
+}
+</script>",Ready for Review

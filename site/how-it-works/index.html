@@ -125,26 +125,6 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://capraecapital.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "How It Works",
-          "item": "https://capraecapital.com/how-it-works/"
-        }
-      ]
-    }
-    </script>
 
     <style>
         * {
@@ -2943,5 +2923,117 @@
             });
         })();
     </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://capraecapital.com/#organization",
+      "name": "Caprae Capital",
+      "url": "https://capraecapital.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://capraecapital.com/assets/logo/caprae-logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/caprae-capital",
+        "https://capraecapitalpartners.com/"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://capraecapital.com/how-it-works/#webpage",
+      "url": "https://capraecapital.com/how-it-works/",
+      "name": "A Proven Process",
+      "description": "Caprae Capital's seven-step methodology for sourcing, reviewing, presenting, refining and connecting buyers with off-market deals.",
+      "isPartOf": {
+        "@id": "https://capraecapital.com/#website"
+      },
+      "about": {
+        "@id": "https://capraecapital.com/how-it-works/#process"
+      },
+      "publisher": {
+        "@id": "https://capraecapital.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://capraecapital.com/how-it-works/#breadcrumb"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://capraecapital.com/how-it-works/#process",
+      "name": "A Proven Process",
+      "description": "Seven-step methodology refined through hundreds of deals.",
+      "url": "https://capraecapital.com/how-it-works/",
+      "provider": {
+        "@id": "https://capraecapital.com/#organization"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Define",
+          "text": "You share industry criteria."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Source",
+          "text": "We find off-market deals."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Review",
+          "text": "Our team reviews prospects."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Present",
+          "text": "Curated deals weekly."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Refine",
+          "text": "Adjust criteria and approve."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Outreach",
+          "text": "Multi-channel campaigns."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Connect",
+          "text": "You join exploratory calls."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://capraecapital.com/how-it-works/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://capraecapital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How It Works",
+          "item": "https://capraecapital.com/how-it-works/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>
