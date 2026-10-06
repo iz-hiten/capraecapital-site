@@ -12,7 +12,7 @@ and crawlers see only that page's content.
 Edit src/template.html (layout, copy, styles, scripts) and the PAGES table
 below (URLs and meta), then re-run. Never edit the generated
 site/**/index.html files by hand — the next build overwrites them.
-Also regenerates site/sitemap.xml.
+site/sitemap.xml is not generated; edit it by hand when pages change.
 
 Team member pages (/team/<name>/) are generated from the team block on the
 home page: add, remove or rename someone there and their page follows.
@@ -22,7 +22,6 @@ import csv
 import html
 import json
 import re
-from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -320,8 +319,6 @@ KEYWORDS = {
     ],
 }
 
-# Legal pages are built by site/scripts/build_legal_pages.py; listed here for the sitemap.
-EXTRA_SITEMAP = [("/privacy/", "yearly", "0.3"), ("/terms/", "yearly", "0.3")]
 
 SECTION_RE = re.compile(r'    <!-- [A-Z ]+ SECTION -->\n    <section id="([\w-]+)">\n(.*?)\n    </section>\n', re.S)
 TEAM_RE = re.compile(r'        <!--@team-->\n(.*?)        <!--@/team-->\n', re.S)
@@ -539,16 +536,8 @@ def main():
         out_file.write_text(build(p, sections, prefix, suffix, schema), encoding="utf-8", newline="\n")
         print(f"wrote {out_file.relative_to(ROOT)}")
 
-    today = date.today().isoformat()
-    urls = [(p["path"], "weekly" if p["path"] == "/" else "monthly", p["priority"]) for p in pages] + EXTRA_SITEMAP
-    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
-               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path, freq, prio in urls:
-        sitemap += ["  <url>", f"    <loc>{SITE_URL}{path}</loc>", f"    <lastmod>{today}</lastmod>",
-                    f"    <changefreq>{freq}</changefreq>", f"    <priority>{prio}</priority>", "  </url>"]
-    sitemap.append("</urlset>")
-    (SITE / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8", newline="\n")
-    print("wrote site/sitemap.xml")
+    # site/sitemap.xml is maintained by hand (the SEO team's version);
+    # add new pages to it there.
 
 
 if __name__ == "__main__":
