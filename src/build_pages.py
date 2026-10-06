@@ -168,7 +168,7 @@ TEAM_PROFILES = {
     "kevin-hong": {
         "bio": [
             "Kevin Hong is the Founder of Caprae Capital. Before founding the firm, he spent seven years as a business journalist, then scaled two startups to $31M and $7M in annual recurring revenue and raised more than $8M in venture capital.",
-            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <em>The Outlier Approach</em>. At Caprae he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work, and he ghostwrites the LinkedIn posts for <a href="/services/branding/">Branding as a Service</a>.',
+            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <em>The Outlier Approach</em>. At Caprae Capital he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work, and he ghostwrites the LinkedIn posts for <a href="/services/branding/">Branding as a Service</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/kevinhshong/"),
                   ("Searchfunder", "https://searchfunder.com/profile/kevin-hong")],
@@ -176,14 +176,14 @@ TEAM_PROFILES = {
     "hereford-johnson": {
         "bio": [
             "Hereford Johnson is a Principal at Caprae Capital. As a buyer, he closed acquisitions in 11 and 6 months, so he advises clients from first-hand experience of getting deals to close.",
-            'He holds an MBA from Northwestern\'s Kellogg School of Management and previously worked at Deloitte Consulting. He reviews Caprae\'s <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> work and brings a buyer\'s view to <a href="/services/search-as-a-service/">Search as a Service</a>.',
+            'He holds an MBA from Northwestern\'s Kellogg School of Management and previously worked at Deloitte Consulting. He reviews Caprae Capital\'s <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> work and brings a buyer\'s view to <a href="/services/search-as-a-service/">Search as a Service</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/hereford/")],
     },
     "zackary-beckham": {
         "bio": [
             "Zackary Beckham is a Founder of Caprae Capital. He is a self-funded searcher who acquired a managed IT services business (MSP), which he runs today.",
-            'With more than 10 years of technology and AI implementation experience, he leads Caprae\'s <a href="/services/ai-readiness/">AI-Readiness</a> assessments and oversees <a href="/services/tech-development/">Tech Development</a>.',
+            'With more than 10 years of technology and AI implementation experience, he leads Caprae Capital\'s <a href="/services/ai-readiness/">AI-Readiness</a> assessments and oversees <a href="/services/tech-development/">Tech Development</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/zackarybeckham/"),
                   ("Searchfunder", "https://searchfunder.com/profile/zackary-beckham")],
@@ -191,7 +191,7 @@ TEAM_PROFILES = {
     "jeff-blacklock": {
         "bio": [
             "Jeff Blacklock is a Deal Advisor at Caprae Capital. He is a former searcher and the President of ValWell Technologies, a company in the oil and gas industry.",
-            'Jeff first worked with Caprae as a client, when <a href="/services/entrepreneurship-as-a-service/">the program</a> secured two advanced meetings in Houston within two months. Read the <a href="/case-study/">Valwell case study</a>.',
+            'Jeff first worked with Caprae Capital as a client, when <a href="/services/entrepreneurship-as-a-service/">the program</a> secured two advanced meetings in Houston within two months. Read the <a href="/case-study/">Valwell case study</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/jeffblacklock/")],
     },
@@ -212,7 +212,7 @@ TEAM_PROFILES = {
     "eric-nehrlich": {
         "bio": [
             "Eric Nehrlich is an Executive Coach at Caprae Capital. He is a former Chief of Staff at Google and now prepares operators for the CEO seat.",
-            'He studied at MIT, Columbia and Stanford, and provides search fund CEO coaching as part of Caprae\'s <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> service.',
+            'He studied at MIT, Columbia and Stanford, and provides search fund CEO coaching as part of Caprae Capital\'s <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> service.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/nehrlich/")],
     },
@@ -517,7 +517,7 @@ def main():
     team_block = re.sub(r'<h2 class="(team-heading[^"]*)">.*?</h2>',
                         r'<h1 class="\1">Meet Our Team</h1>\n'
                         r'                <p class="team-subheading fade-in-element">Our operators and advisers lead '
-                        r'<a class="inline-link" href="/services/">every Caprae service</a>, '
+                        r'<a class="inline-link" href="/services/">every Caprae Capital service</a>, '
                         r'from deal sourcing to post-acquisition growth.</p>', block, count=1, flags=re.S)
     assert sections["team"].strip() == "<!--@TEAM_BLOCK-->", "team section should hold only the placeholder"
     sections["team"] = team_block.rstrip("\n")
