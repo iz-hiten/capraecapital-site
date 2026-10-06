@@ -1672,15 +1672,26 @@
 
         .page-reviewed a,
         .about-intro a,
-        .comparison-table a {
+        .comparison-table a,
+        a.inline-link {
             color: #F9D360;
             text-decoration: none;
         }
 
         .page-reviewed a:hover,
         .about-intro a:hover,
-        .comparison-table a:hover {
+        .comparison-table a:hover,
+        a.inline-link:hover {
             color: #FFFFFF;
+        }
+
+        a.heading-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.heading-link:hover {
+            color: #F9D360;
         }
 
         .section-heading + .comparison-section,
@@ -2562,6 +2573,7 @@
             <div class="container">
                 <span class="eyebrow fade-in-element">The Acquisition Lifecycle</span>
                 <h2 class="section-heading fade-in-element slide-left">How Caprae Supports the Full Process</h2>
+                <p class="section-subtitle fade-in-element slide-right">Want the week-by-week detail? <a class="inline-link" href="/how-it-works/">See each step of an engagement</a>.</p>
                 <div class="timeline timeline-5">
                     <div class="timeline-item fade-in-element">
                         <div class="timeline-number">1</div>
@@ -2586,7 +2598,7 @@
                     <div class="timeline-item fade-in-element">
                         <div class="timeline-number">5</div>
                         <h4>Grow</h4>
-                        <p>Run the 100-day plan and value creation plan after close.</p>
+                        <p>Run the <a class="inline-link" href="/services/post-acquisition-strategy/">100-day plan</a> and value creation plan after close.</p>
                     </div>
                 </div>
             </div>

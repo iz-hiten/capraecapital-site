@@ -1691,15 +1691,26 @@
 
         .page-reviewed a,
         .about-intro a,
-        .comparison-table a {
+        .comparison-table a,
+        a.inline-link {
             color: #F9D360;
             text-decoration: none;
         }
 
         .page-reviewed a:hover,
         .about-intro a:hover,
-        .comparison-table a:hover {
+        .comparison-table a:hover,
+        a.inline-link:hover {
             color: #FFFFFF;
+        }
+
+        a.heading-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.heading-link:hover {
+            color: #F9D360;
         }
 
         .section-heading + .comparison-section,

@@ -1672,15 +1672,26 @@
 
         .page-reviewed a,
         .about-intro a,
-        .comparison-table a {
+        .comparison-table a,
+        a.inline-link {
             color: #F9D360;
             text-decoration: none;
         }
 
         .page-reviewed a:hover,
         .about-intro a:hover,
-        .comparison-table a:hover {
+        .comparison-table a:hover,
+        a.inline-link:hover {
             color: #FFFFFF;
+        }
+
+        a.heading-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.heading-link:hover {
+            color: #F9D360;
         }
 
         .section-heading + .comparison-section,
@@ -2436,7 +2447,7 @@
 
             <div class="about-intro fade-in-element">
                 <p><strong>Caprae Capital's Tech Development team provides custom software development, from startup MVPs to full-stack SaaS platforms, CRMs and websites.</strong> Projects run in agile sprints with built-in QA and are priced per project after scoping.</p>
-                <p>Because Caprae also sources and grows acquired companies, we build with an owner's priorities in mind: speed to value, maintainable code and tools a small team can run.</p>
+                <p>Because Caprae also <a class="inline-link" href="/services/">sources and grows acquired companies</a>, we build with an owner's priorities in mind: speed to value, maintainable code and tools a small team can run.</p>
             </div>
         </div>
 
@@ -2561,7 +2572,7 @@
                     <tr>
                         <td>Growth support</td>
                         <td>Ends at launch</td>
-                        <td class="caprae">Marketing, AI and growth services available</td>
+                        <td class="caprae"><a class="inline-link" href="/services/entrepreneurship-as-a-service/">Marketing, AI and growth services</a> available</td>
                     </tr>
                 </table>
             </div>
@@ -2596,11 +2607,11 @@
             <div class="faq-list fade-in-element">
                 <details open>
                     <summary>What does Caprae build?</summary>
-                    <p>Software for businesses that don't have a tech team. That means first versions of new products, dashboards that put your numbers on one screen, internal tools that replace spreadsheets, and AI automations that take repetitive work off your team. We add AI only where it saves real time.</p>
+                    <p>Software for businesses that don't have a tech team. That means first versions of new products, dashboards that put your numbers on one screen, internal tools that replace spreadsheets, and <a class="inline-link" href="/services/ai-readiness/">AI automations</a> that take repetitive work off your team. We add AI only where it saves real time.</p>
                 </details>
                 <details>
                     <summary>Can you build tools for search funds, PE firms and acquirers?</summary>
-                    <p>Yes. We build deal screeners that score targets against your criteria, valuation models you can reuse across deals, dashboards across the companies you own, and tools for the businesses you buy after the deal closes.</p>
+                    <p>Yes. We build deal screeners that score targets against your criteria, valuation models you can reuse across deals, dashboards across the companies you own, and tools for <a class="inline-link" href="/services/post-acquisition-strategy/">the businesses you buy after the deal closes</a>.</p>
                 </details>
                 <details>
                     <summary>How is this different from hiring a dev shop?</summary>

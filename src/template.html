@@ -1664,15 +1664,26 @@
 
         .page-reviewed a,
         .about-intro a,
-        .comparison-table a {
+        .comparison-table a,
+        a.inline-link {
             color: #F9D360;
             text-decoration: none;
         }
 
         .page-reviewed a:hover,
         .about-intro a:hover,
-        .comparison-table a:hover {
+        .comparison-table a:hover,
+        a.inline-link:hover {
             color: #FFFFFF;
+        }
+
+        a.heading-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.heading-link:hover {
+            color: #F9D360;
         }
 
         .section-heading + .comparison-section,
@@ -2442,21 +2453,21 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         </div>
                         <h3>Searchers & Acquisition Teams</h3>
-                        <p>Scale your deal pipeline with professional sourcing, outreach, and due diligence support.</p>
+                        <p><a class="inline-link" href="/services/search-as-a-service/">Scale your deal pipeline</a> with professional sourcing, outreach, and due diligence support.</p>
                     </div>
                     <div class="serve-card fade-in-element">
                         <div class="serve-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
                         <h3>Entrepreneurs</h3>
-                        <p>Grow your business with fractional operations, marketing, and strategic advising.</p>
+                        <p>Grow your business with <a class="inline-link" href="/services/entrepreneurship-as-a-service/">fractional operations, marketing</a>, and strategic advising.</p>
                     </div>
                     <div class="serve-card fade-in-element">
                         <div class="serve-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                         </div>
                         <h3>PE & Investment Banks</h3>
-                        <p>Supplement your team with dedicated resources for sourcing, diligence, and execution.</p>
+                        <p>Supplement your team with <a class="inline-link" href="/services/">dedicated resources for sourcing, diligence, and execution</a>.</p>
                     </div>
                 </div>
             </div>
@@ -2467,7 +2478,7 @@
         <div class="team-section">
             <div class="container">
                 <h2 class="team-heading fade-in-element slide-left">Led By Operators Who've Been In Your Shoes</h2>
-                <p class="team-subheading fade-in-element">Deep expertise across PE, startups, and transaction management</p>
+                <p class="team-subheading fade-in-element"><a class="inline-link" href="/about/">Deep expertise across PE, startups, and transaction management</a></p>
                 <div class="team-grid">
                     <div class="team-member fade-in-element">
                         <a class="team-member-link" href="/team/kevin-hong/">
@@ -2521,7 +2532,7 @@
                         <a class="team-member-link" href="/team/eric-nehrlich/">
                             <img src="/assets/team/eric-nehrlich.jpeg" alt="Eric Nehrlich" class="member-photo">
                             <h4>Eric Nehrlich</h4>
-                            <p>Chief of Staff</p>
+                            <p>Executive Coach</p>
                         </a>
                     </div>
                 </div>
@@ -2542,6 +2553,11 @@
                 </div>
                 <button class="t-nav" id="tNext" aria-label="Next">&#8594;</button>
             </div>
+            <div class="container">
+                <div class="testimonials-cta fade-in-element">
+                    <p>Want the detail? <a href="/case-study/">Read the full client case studies</a>.</p>
+                </div>
+            </div>
         </div>
 
         <!-- HOME FAQ -->
@@ -2555,7 +2571,7 @@
                 </details>
                 <details>
                     <summary>What is entrepreneurship through acquisition (ETA)?</summary>
-                    <p>Entrepreneurship through acquisition (ETA) means buying and running an existing business instead of starting one from scratch. Caprae Capital supports ETA buyers with deal sourcing, owner outreach, due diligence support, and post-acquisition growth.</p>
+                    <p>Entrepreneurship through acquisition (ETA) means buying and running an existing business instead of starting one from scratch. Caprae Capital supports ETA buyers with deal sourcing, owner outreach, due diligence support, and <a class="inline-link" href="/services/post-acquisition-strategy/">post-acquisition growth</a>.</p>
                 </details>
                 <details>
                     <summary>Who does Caprae Capital work with?</summary>
@@ -2567,7 +2583,7 @@
                 </details>
                 <details>
                     <summary>How does Caprae Capital find off-market businesses for sale?</summary>
-                    <p>We reach business owners directly through cold calling, email, LinkedIn, and handwritten letters, based on your acquisition criteria. Clients see 10–20 owner engagements per month, and we've helped close $110M+ in deals.</p>
+                    <p>We <a class="inline-link" href="/services/search-as-a-service/">reach business owners directly</a> through cold calling, email, LinkedIn, and <a class="inline-link" href="/services/cold-mail-handwritten-letters/">handwritten letters</a>, based on your acquisition criteria. Clients see 10–20 owner engagements per month, and we've helped close $110M+ in deals.</p>
                 </details>
             </div>
         </div>
@@ -2739,6 +2755,7 @@
             <div class="container">
                 <span class="eyebrow fade-in-element">The Acquisition Lifecycle</span>
                 <h2 class="section-heading fade-in-element slide-left">How Caprae Supports the Full Process</h2>
+                <p class="section-subtitle fade-in-element slide-right">Want the week-by-week detail? <a class="inline-link" href="/how-it-works/">See each step of an engagement</a>.</p>
                 <div class="timeline timeline-5">
                     <div class="timeline-item fade-in-element">
                         <div class="timeline-number">1</div>
@@ -2763,7 +2780,7 @@
                     <div class="timeline-item fade-in-element">
                         <div class="timeline-number">5</div>
                         <h4>Grow</h4>
-                        <p>Run the 100-day plan and value creation plan after close.</p>
+                        <p>Run the <a class="inline-link" href="/services/post-acquisition-strategy/">100-day plan</a> and value creation plan after close.</p>
                     </div>
                 </div>
             </div>
@@ -2903,7 +2920,7 @@
                 <p><strong>Search as a Service is Caprae Capital's outsourced deal sourcing program.</strong> We build target lists from your buy box, reach business owners by phone, email, LinkedIn and handwritten mail, and pass you qualified owner conversations. Plans start at <strong>$1,250 per month plus a success fee</strong>, and clients typically see 10 to 20 owner engagements a month.</p>
                 <p>You decide which deals to pursue. We run the sourcing behind it, under your firm's name.</p>
                 <div class="definition-note">
-                    <p><strong>Proprietary deal sourcing</strong> means finding acquisitions by contacting owners directly, not through brokers or auctions. The result is <strong>proprietary deal flow</strong>: conversations where you are often the only buyer at the table.</p>
+                    <p><strong>Proprietary deal sourcing</strong> means finding acquisitions by contacting owners directly, <a class="inline-link" href="/faq/">not through brokers or auctions</a>. The result is <strong>proprietary deal flow</strong>: conversations where you are often the only buyer at the table.</p>
                 </div>
             </div>
         </div>
@@ -2955,7 +2972,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
                         </div>
                         <h3>Handwritten Letters</h3>
-                        <p>Direct mail for owners who ignore calls and email.</p>
+                        <p><a class="inline-link" href="/services/cold-mail-handwritten-letters/">Direct mail for owners who ignore calls and email</a>.</p>
                     </div>
                     <div class="service-card fade-in-element">
                         <div class="service-icon">
@@ -2969,7 +2986,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <h3>Deal Advisory Support</h3>
-                        <p>Modeling, research and diligence setup once a deal is live.</p>
+                        <p>Modeling, research and diligence setup once a deal is live. After close, the same team can run your first 100 days through <a class="inline-link" href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a>.</p>
                     </div>
                 </div>
             </div>
@@ -3072,8 +3089,8 @@
                 <span class="eyebrow fade-in-element">Why Trust Caprae With Your Sourcing</span>
                 <h2 class="section-heading fade-in-element slide-left">Run by Operators, Not an Anonymous Call Center</h2>
                 <div class="about-intro fade-in-element">
-                    <p>Search as a Service is led by people who have closed acquisitions themselves. <strong>Hereford Johnson</strong> closed deals in 11 and 6 months as a buyer, backed by advisers in capital markets, SBA lending and coaching.</p>
-                    <p>Gondor Capital closed a $20M+ first acquisition within six months of working with Caprae.</p>
+                    <p>Search as a Service is led by people who have closed acquisitions themselves. <strong>Hereford Johnson</strong> closed deals in 11 and 6 months as a buyer, backed by <a class="inline-link" href="/team/">advisers in capital markets</a>, SBA lending and coaching.</p>
+                    <p>Gondor Capital closed <a class="inline-link" href="/case-study/">a $20M+ first acquisition within six months</a> of working with Caprae.</p>
                 </div>
 
                 <div class="team-grid-2col">
@@ -3124,7 +3141,7 @@
                     </div>
                 </div>
                 <div class="testimonial-quote">&ldquo;Caprae saved us a significant amount of time and money and played a critical role in helping us break into the private equity space.&rdquo;</div>
-                <a class="service-link" href="/case-study/">Read the case study <span aria-hidden="true">&rarr;</span></a>
+                <a class="service-link" href="/case-study/">Read the Gondor Capital case study <span aria-hidden="true">&rarr;</span></a>
             </div>
         </div>
 
@@ -3241,7 +3258,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <h3>Social Media Management</h3>
-                        <p>Consistent posting and engagement on the platforms your customers use.</p>
+                        <p>Consistent posting and engagement on the platforms your customers use. For ghostwritten LinkedIn posts in your own voice, see <a class="inline-link" href="/services/branding/">Branding as a Service</a>.</p>
                     </div>
                     <div class="service-card fade-in-element">
                         <div class="service-icon">
@@ -3255,7 +3272,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
                         </div>
                         <h3>Handwritten Letter Campaigns</h3>
-                        <p>Personal direct mail for high-value prospects who ignore digital outreach.</p>
+                        <p><a class="inline-link" href="/services/cold-mail-handwritten-letters/">Personal direct mail</a> for high-value prospects who ignore digital outreach.</p>
                     </div>
                     <div class="service-card fade-in-element">
                         <div class="service-icon">
@@ -3359,7 +3376,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/></svg>
                     </div>
                     <h3>New Business Acquirers</h3>
-                    <p>Owners in their first year after close who need marketing running from day one.</p>
+                    <p><a class="inline-link" href="/services/post-acquisition-strategy/">Owners in their first year after close</a> who need marketing running from day one.</p>
                 </div>
                 <div class="serve-card fade-in-element">
                     <div class="serve-icon">
@@ -3404,8 +3421,8 @@
                     </div>
                 </div>
                 <div class="testimonial-quote">&ldquo;Within two months of launching the program, Caprae had already secured two advanced meetings in Houston and opened doors I didn't think were reachable this early.&rdquo;</div>
-                <p class="testimonial-note">Disclosure: Jeff Blacklock later joined Caprae Capital as a Deal Adviser.</p>
-                <a class="service-link" href="/case-study/">Read the case study <span aria-hidden="true">&rarr;</span></a>
+                <p class="testimonial-note">Disclosure: Jeff Blacklock later <a class="inline-link" href="/team/jeff-blacklock/">joined Caprae Capital as a Deal Adviser</a>.</p>
+                <a class="service-link" href="/case-study/">Read the Valwell Technologies case study <span aria-hidden="true">&rarr;</span></a>
             </div>
         </div>
 
@@ -3428,7 +3445,7 @@
                     </details>
                     <details>
                         <summary>Is this a good fit if I just bought a business?</summary>
-                        <p>Yes. One of our acquisition entrepreneurs closed a deal using Search as a Service, then switched to Entrepreneurship as a Service to keep growing after close. It's a good fit when you aren't ready to hire a full team yet, but still need outreach and marketing support.</p>
+                        <p>Yes. One of our acquisition entrepreneurs closed a deal using <a href="/services/search-as-a-service/">Search as a Service</a>, then switched to Entrepreneurship as a Service to keep growing after close. It's a good fit when you aren't ready to hire a full team yet, but still need outreach and marketing support.</p>
                     </details>
                 </div>
 
@@ -3576,7 +3593,7 @@
             <div class="container">
                 <span class="eyebrow fade-in-element">Beyond the Assessment</span>
                 <h2 class="section-heading fade-in-element slide-left">AI Enablement Services</h2>
-                <p class="section-subtitle fade-in-element slide-right">When you're ready to act, the same team implements the roadmap.</p>
+                <p class="section-subtitle fade-in-element slide-right">When you're ready to act, the same team <a class="inline-link" href="/services/tech-development/">implements the roadmap</a>.</p>
                 <div class="services-grid">
                     <div class="service-card fade-in-element">
                         <div class="service-icon">
@@ -3606,8 +3623,8 @@
         <div class="container services-section">
             <h2 class="section-heading fade-in-element slide-left">AI Due Diligence for M&amp;A</h2>
             <div class="about-intro fade-in-element">
-                <p><strong>Buying a business? Technology risk affects value.</strong> Caprae's AI due diligence for M&amp;A reviews a target's systems, data and AI exposure before you sign, so you can price in upgrade costs and plan the first year after close.</p>
-                <p>It covers outdated or unsupported software, key-person dependency on one IT contractor, data that can't be migrated, and AI opportunities that could support your value creation plan. It complements, and does not replace, your formal legal and financial diligence.</p>
+                <p><strong>Buying a business? Technology risk affects value.</strong> Caprae's AI due diligence for M&amp;A reviews a target's systems, data and AI exposure before you sign, so you can price in upgrade costs and <a class="inline-link" href="/services/post-acquisition-strategy/">plan the first year after close</a>.</p>
+                <p>It covers outdated or unsupported software, key-person dependency on one IT contractor, data that can't be migrated, and AI opportunities that could support your value creation plan. It complements, and does not replace, your <a class="inline-link" href="/services/">formal legal and financial diligence</a>.</p>
             </div>
         </div>
 
@@ -3635,7 +3652,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                         </div>
                         <h3>PE Portfolio Companies</h3>
-                        <p>AI for private equity portfolio companies, tied to the value creation plan.</p>
+                        <p>AI for private equity portfolio companies, tied to the <a class="inline-link" href="/services/post-acquisition-strategy/">value creation plan</a>.</p>
                     </div>
                 </div>
             </div>
@@ -3718,7 +3735,7 @@
 
             <div class="about-intro fade-in-element">
                 <p><strong>Caprae Capital's Tech Development team provides custom software development, from startup MVPs to full-stack SaaS platforms, CRMs and websites.</strong> Projects run in agile sprints with built-in QA and are priced per project after scoping.</p>
-                <p>Because Caprae also sources and grows acquired companies, we build with an owner's priorities in mind: speed to value, maintainable code and tools a small team can run.</p>
+                <p>Because Caprae also <a class="inline-link" href="/services/">sources and grows acquired companies</a>, we build with an owner's priorities in mind: speed to value, maintainable code and tools a small team can run.</p>
             </div>
         </div>
 
@@ -3843,7 +3860,7 @@
                     <tr>
                         <td>Growth support</td>
                         <td>Ends at launch</td>
-                        <td class="caprae">Marketing, AI and growth services available</td>
+                        <td class="caprae"><a class="inline-link" href="/services/entrepreneurship-as-a-service/">Marketing, AI and growth services</a> available</td>
                     </tr>
                 </table>
             </div>
@@ -3878,11 +3895,11 @@
             <div class="faq-list fade-in-element">
                 <details open>
                     <summary>What does Caprae build?</summary>
-                    <p>Software for businesses that don't have a tech team. That means first versions of new products, dashboards that put your numbers on one screen, internal tools that replace spreadsheets, and AI automations that take repetitive work off your team. We add AI only where it saves real time.</p>
+                    <p>Software for businesses that don't have a tech team. That means first versions of new products, dashboards that put your numbers on one screen, internal tools that replace spreadsheets, and <a class="inline-link" href="/services/ai-readiness/">AI automations</a> that take repetitive work off your team. We add AI only where it saves real time.</p>
                 </details>
                 <details>
                     <summary>Can you build tools for search funds, PE firms and acquirers?</summary>
-                    <p>Yes. We build deal screeners that score targets against your criteria, valuation models you can reuse across deals, dashboards across the companies you own, and tools for the businesses you buy after the deal closes.</p>
+                    <p>Yes. We build deal screeners that score targets against your criteria, valuation models you can reuse across deals, dashboards across the companies you own, and tools for <a class="inline-link" href="/services/post-acquisition-strategy/">the businesses you buy after the deal closes</a>.</p>
                 </details>
                 <details>
                     <summary>How is this different from hiring a dev shop?</summary>
@@ -3996,7 +4013,7 @@
                     <h3>Integration checklist</h3>
                     <div class="beyond-list single-col">
                         <div class="beyond-item">People: retention, roles, communication</div>
-                        <div class="beyond-item">Systems: accounting, CRM, IT access</div>
+                        <div class="beyond-item"><a class="inline-link" href="/services/tech-development/">Systems: accounting, CRM, IT access</a></div>
                         <div class="beyond-item">Finance: banking, reporting, lender covenants</div>
                         <div class="beyond-item">Customers: introductions, contracts, pricing</div>
                         <div class="beyond-item">Brand: what changes and when</div>
@@ -4008,7 +4025,7 @@
                         <div class="beyond-item">Pricing and packaging</div>
                         <div class="beyond-item">Sales capacity and pipeline</div>
                         <div class="beyond-item">Cost and process efficiency</div>
-                        <div class="beyond-item">Technology and AI</div>
+                        <div class="beyond-item"><a class="inline-link" href="/services/ai-readiness/">Technology and AI</a></div>
                         <div class="beyond-item">Add-on acquisitions</div>
                     </div>
                 </div>
@@ -4040,7 +4057,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="#F9D360" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
                         </div>
                         <h3>Fractional CMO</h3>
-                        <p>Marketing and outreach strategy, run through Entrepreneurship as a Service.</p>
+                        <p>Marketing and outreach strategy, run through <a class="inline-link" href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>.</p>
                     </div>
                 </div>
             </div>
@@ -4092,7 +4109,7 @@
             <h2 class="section-heading fade-in-element slide-left">Advisers Who Have Taken the CEO Seat Themselves</h2>
             <div class="about-intro fade-in-element">
                 <p><strong>Hereford Johnson</strong> closed acquisitions in 11 and 6 months as a buyer. <strong>Eric Nehrlich</strong>, a former Chief of Staff at Google, provides search fund CEO coaching to prepare operators for the CEO seat.</p>
-                <p>Co-founder <strong>Zackary Beckham</strong> acquired and runs a managed IT services business, so the team has lived the first 100 days, not just advised on them.</p>
+                <p>Co-founder <a class="inline-link" href="/team/zackary-beckham/"><strong>Zackary Beckham</strong></a> acquired and runs a managed IT services business, so the team has lived the first 100 days, not just advised on them.</p>
             </div>
 
             <div class="team-grid-2col" style="margin-top: 60px;">
@@ -4347,7 +4364,7 @@
             <div class="faq-list fade-in-element">
                 <details open>
                     <summary>Do handwritten letters work for buying a business?</summary>
-                    <p>Yes. A handwritten letter stands out from the inbox and the phone. It works best as part of a full outreach campaign, reaching the owners who haven't responded yet to a call or email.</p>
+                    <p>Yes. A handwritten letter stands out from the inbox and the phone. It works best as part of <a href="/services/search-as-a-service/">a full outreach campaign</a>, reaching the owners who haven't responded yet to a call or email.</p>
                 </details>
                 <details>
                     <summary>How do you write a letter to a business owner about buying their business?</summary>
@@ -4359,7 +4376,7 @@
                 </details>
                 <details>
                     <summary>Does direct mail work for reaching business owners?</summary>
-                    <p>Yes, especially owners who don't answer cold calls or emails. We use personalized direct mail as one channel in a campaign that also includes calls, email, and LinkedIn.</p>
+                    <p>Yes, especially owners who don't answer cold calls or emails. We use personalized direct mail as <a href="/services/entrepreneurship-as-a-service/">one channel in a campaign that also includes calls, email, and LinkedIn</a>.</p>
                 </details>
             </div>
             </div>
@@ -4390,19 +4407,19 @@
     <!-- BRANDING SECTION -->
     <section id="branding">
         <div class="branding-section">
-            <div class="branding-hero"><div class="branding-wrap-narrow"><span class="branding-eyebrow">Branding as a service</span><h2 class="branding-h1">Your voice is the only moat left in finance.</h2><p class="lede">In an AI-saturated feed, generic content is invisible. We turn finance professionals into category-defining voices on LinkedIn. Ghostwritten by an award-winning journalist who built an 8K following critiquing the industry he came from.</p><div class="branding-cta-row"><button class="branding-btn branding-btn-primary" onclick="goToPage('contact')">Book a discovery call <span aria-hidden="true">-&gt;</span></button><a href="#branding-pricing" class="branding-btn branding-btn-ghost">See pricing</a></div></div></div>
+            <div class="branding-hero"><div class="branding-wrap-narrow"><span class="branding-eyebrow">Branding as a service</span><h2 class="branding-h1">Your voice is the only moat left in finance.</h2><p class="lede">In an AI-saturated feed, generic content is invisible. We turn finance professionals into category-defining voices on LinkedIn. Ghostwritten by an award-winning journalist who built an 8K following critiquing the industry he came from.</p><div class="branding-cta-row"><a class="branding-btn branding-btn-primary" href="/contact/">Book a discovery call <span aria-hidden="true">-&gt;</span></a><a href="#branding-pricing" class="branding-btn branding-btn-ghost">See pricing</a></div></div></div>
             <div class="branding-press"><div class="branding-wrap"><div class="branding-press-label">Written by the founder featured in</div><div class="branding-press-logos"><div>CNBC</div><div>Forbes</div><div>Inc.</div><div>HuffPost</div><div>Bestseller</div></div></div></div>
             <div class="branding-content-section"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><h2>Why voice beats volume</h2><p>LinkedIn algorithm rewards saves, dwell time, and comment depth over likes and tags. Generic AI content fails this test. Distinct voices with a real perspective wins.</p></div><div class="branding-cards-3"><div class="branding-card fade-in-element"><span class="branding-num">1</span><h3>The interest graph rules</h3><p>LinkedIn no longer rewards tags and connections. It rewards content people save and screenshot. Generic posts die.</p></div><div class="branding-card fade-in-element"><span class="branding-num">2</span><h3>AI made everyone average</h3><p>Every finance professional now posts identical AI-generated takes. The result: identical feeds, zero differentiation, no inbound.</p></div><div class="branding-card fade-in-element"><span class="branding-num">3</span><h3>Voice is unfakeable</h3><p>A distinct point of view, sharpened by a journalist who knows the industry, cannot be replicated by a content agency or ChatGPT.</p></div></div></div></div>
-            <div class="branding-content-section"><div class="branding-wrap"><div class="branding-award-grid"><div class="fade-in-element"><span class="branding-eyebrow">The Story</span><h2>An award-winning journalist who built 8K followers attacking the asset class he came from.</h2><p class="branding-story-copy">Kevin Hong spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital. His critique of the traditional search fund model has reshaped how MBA graduates and LPs evaluate the asset class.</p><ul class="branding-credit-list">
+            <div class="branding-content-section"><div class="branding-wrap"><div class="branding-award-grid"><div class="fade-in-element"><span class="branding-eyebrow">The Story</span><h2>An award-winning journalist who built 8K followers attacking the asset class he came from.</h2><p class="branding-story-copy"><a class="inline-link" href="/team/kevin-hong/">Kevin Hong</a> spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital. His critique of the traditional search fund model has reshaped how MBA graduates and LPs evaluate the asset class.</p><ul class="branding-credit-list">
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.amazon.com/stores/author/B0785DGHY7','_blank')">The Outlier Approach (Amazon #1 Bestseller)</button></li>
                     <li><button class="branding-credit-btn" onclick="window.open('https://muckrack.com/kevin-hong','_blank')">Read Kevin's Forbes column</button></li>
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.inc.com/author/kevin-hong','_blank')">Read Kevin's Inc. contributors</button></li>
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.cnbc.com/2017/11/09/what-kevin-hong-learned-living-and-working-out-of-a-van.html','_blank')">CNBC and HuffPost coverage</button></li>
                 </ul></div><aside class="branding-stats-card fade-in-element"><div class="branding-stats-label">Results that compound</div><div class="branding-stat"><span class="branding-stat-num">8,000+</span><div class="branding-stat-desc">LinkedIn followers built in 18 months</div></div><div class="branding-stat"><span class="branding-stat-num">250K+</span><div class="branding-stat-desc">Monthly impressions on a finance niche</div></div><div class="branding-stat"><span class="branding-stat-num">$70K+</span><div class="branding-stat-desc">MRR generated through inbound from content</div></div></aside></div></div></div>
             <div class="branding-benefits"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><h2>What you get every month</h2></div><div class="branding-benefits-grid"><div class="branding-benefit fade-in-element"><h4>10 ghostwritten LinkedIn posts</h4><p>Written in your voice, on your terms, against the algorithm's actual rules.</p></div><div class="branding-benefit fade-in-element"><h4>Personal brand strategy</h4><p>Positioning, narrative arc, and content calendar built around what makes you uncopyable.</p></div><div class="branding-benefit fade-in-element"><h4>Cross-platform support</h4><p>Repurposing for Twitter, Substack, podcasts notes, and conference taking points.</p></div><div class="branding-benefit fade-in-element"><h4>Monthly voice intake call</h4><p>30 minutes recorded interviews that tasks a month of authentic content.</p></div><div class="branding-benefit fade-in-element"><h4>Engagement playbook</h4><p>Comment templates, DM scripts, and inbound handling guidance to convert reach into pipeline.</p></div><div class="branding-benefit fade-in-element"><h4>Performance reporting</h4><p>Monthly analytics, content scoring, and adjustment recommendations based on what's working.</p></div></div></div></div>
-            <div class="branding-pricing" id="branding-pricing"><div class="branding-wrap-narrow"><div class="branding-price-card fade-in-element"><span class="branding-eyebrow">Branding as a service</span><h3>One tier. No upsells.</h3><div class="branding-price-amount"><sup>$</sup>1,250<small>/month</small></div><p class="note">No long-term contract. Cancel any time.</p><ul class="branding-price-list"><li>10 ghostwritten LinkedIn posts</li><li>Personal brand strategy</li><li>Cross-platform repurposing</li><li>Monthly voice intake</li><li>Engagement playbook</li><li>Monthly performance reports</li></ul><button class="branding-btn branding-btn-primary" onclick="goToPage('contact')">Start with a discovery call <span aria-hidden="true">-&gt;</span></button><p class="fine">Limited to 15 active clients. Currently 6 of 15 seats filled.</p></div></div></div>
+            <div class="branding-pricing" id="branding-pricing"><div class="branding-wrap-narrow"><div class="branding-price-card fade-in-element"><span class="branding-eyebrow">Branding as a service</span><h3>One tier. No upsells.</h3><div class="branding-price-amount"><sup>$</sup>1,250<small>/month</small></div><p class="note">No long-term contract. Cancel any time.</p><ul class="branding-price-list"><li>10 ghostwritten LinkedIn posts</li><li>Personal brand strategy</li><li>Cross-platform repurposing</li><li>Monthly voice intake</li><li>Engagement playbook</li><li>Monthly performance reports</li></ul><a class="branding-btn branding-btn-primary" href="/contact/">Start with a discovery call <span aria-hidden="true">-&gt;</span></a><p class="fine">Limited to 15 active clients. Currently 6 of 15 seats filled.</p></div></div></div>
 
-            <div class="branding-audience"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><span class="branding-eyebrow">Built for the people LinkedIn doesn't reach</span><h2>Built for the people LinkedIn doesn't reach</h2></div><div class="branding-audience-grid"><div class="branding-audience-card fade-in-element"><h4>Search Fund CEOs</h4><p>Build LP and exit readiness</p></div><div class="branding-audience-card fade-in-element"><h4>PE professionals</h4><p>Source deals and limited partners</p></div><div class="branding-audience-card fade-in-element"><h4>M&amp;A advisors</h4><p>Generate inbound mindsets</p></div><div class="branding-audience-card fade-in-element"><h4>Independent sponsors</h4><p>Attract Capital Partners</p></div></div></div></div>
+            <div class="branding-audience"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><span class="branding-eyebrow">Built for the people LinkedIn doesn't reach</span><h2>Built for the people LinkedIn doesn't reach</h2></div><div class="branding-audience-grid"><div class="branding-audience-card fade-in-element"><h4>Search Fund CEOs</h4><p>Build LP and exit readiness</p></div><div class="branding-audience-card fade-in-element"><h4>PE professionals</h4><p><a class="inline-link" href="/services/search-as-a-service/">Source deals</a> and limited partners</p></div><div class="branding-audience-card fade-in-element"><h4>M&amp;A advisors</h4><p>Generate inbound mindsets</p></div><div class="branding-audience-card fade-in-element"><h4>Independent sponsors</h4><p>Attract Capital Partners</p></div></div></div></div>
             <div class="branding-content-section">
                 <div class="branding-wrap-narrow">
                     <div class="branding-section-head fade-in-element"><span class="branding-eyebrow">FAQ</span><h2>Common Questions</h2></div>
@@ -4422,7 +4439,7 @@
                     </div>
                 </div>
             </div>
-            <div class="branding-final-cta"><div class="branding-wrap-narrow"><h2>In 12 months, you either own your category or you don't.</h2><p>Discovery calls take 20 minutes. We'll know if it's a fit.</p><button class="branding-btn branding-btn-primary" onclick="goToPage('contact')">Book a discovery call</button></div></div>
+            <div class="branding-final-cta"><div class="branding-wrap-narrow"><h2>In 12 months, you either own your category or you don't.</h2><p>Discovery calls take 20 minutes. We'll know if it's a fit.</p><a class="branding-btn branding-btn-primary" href="/contact/">Book a discovery call</a></div></div>
         </div>
     </section>
 
@@ -4442,7 +4459,7 @@
                 <div class="timeline-item fade-in-element">
                     <div class="timeline-number">2</div>
                     <h4>Source</h4>
-                    <p>We find off-market deals</p>
+                    <p><a class="inline-link" href="/services/search-as-a-service/">We find off-market deals</a></p>
                 </div>
                 <div class="timeline-item fade-in-element">
                     <div class="timeline-number">3</div>
@@ -4492,14 +4509,16 @@
                 </div>
             </div>
 
+            <p class="section-subtitle fade-in-element"><a class="inline-link" href="/case-study/">See results from real engagements</a>, or <a class="inline-link" href="/contact/">talk to us about your buy box</a>.</p>
+
             <div class="beyond-sourcing fade-in-element">
                 <h3>Beyond Deal Sourcing</h3>
                 <div class="beyond-list">
                     <div class="beyond-item">Deal Structuring</div>
                     <div class="beyond-item">Advisorship</div>
-                    <div class="beyond-item">Intros to Bankers & Investors</div>
-                    <div class="beyond-item">Post-Acquisition Support</div>
-                    <div class="beyond-item">Preliminary Due Diligence</div>
+                    <div class="beyond-item"><a class="inline-link" href="/team/">Intros to Bankers & Investors</a></div>
+                    <div class="beyond-item"><a class="inline-link" href="/services/post-acquisition-strategy/">Post-Acquisition Support</a></div>
+                    <div class="beyond-item"><a class="inline-link" href="/services/">Preliminary Due Diligence</a></div>
                     <div class="beyond-item">Research & Financial Modeling</div>
                 </div>
             </div>
@@ -4515,7 +4534,7 @@
 
             <div class="pricing-grid">
                 <div class="pricing-card fade-in-element">
-                    <div class="pricing-name">Search as a Service</div>
+                    <div class="pricing-name"><a class="heading-link" href="/services/search-as-a-service/">Search as a Service</a></div>
                     <div class="pricing-price">$1,250</div>
                     <div class="pricing-price-note">/month + 2% success fee</div>
                     <div class="pricing-hours">8 Countries Serviced</div>
@@ -4533,11 +4552,11 @@
                         <li>Team of associates</li>
                         <li>Cold call analytics</li>
                     </ul>
-                    <a href="mailto:partners@capraecapital.com" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Get Started</a>
+                    <a href="/contact/" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Get Started</a>
                 </div>
 
                 <div class="pricing-card featured fade-in-element">
-                    <div class="pricing-name">Entrepreneurship as a Service</div>
+                    <div class="pricing-name"><a class="heading-link" href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a></div>
                     <div class="pricing-price">$1,000</div>
                     <div class="pricing-price-note">/month</div>
                     <div class="pricing-hours">40 hours/month dedication</div>
@@ -4551,7 +4570,7 @@
                         <li>Software development</li>
                         <li>Press releases & PR</li>
                     </ul>
-                    <a href="mailto:partners@capraecapital.com" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Get Started</a>
+                    <a href="/contact/" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Get Started</a>
                 </div>
 
                 <div class="pricing-card fade-in-element">
@@ -4569,7 +4588,7 @@
                         <li>Strategic advisory</li>
                         <li>Post-acq support</li>
                     </ul>
-                    <a href="mailto:partners@capraecapital.com" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Contact Us</a>
+                    <a href="/contact/" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Contact Us</a>
                 </div>
             </div>
 
@@ -4659,7 +4678,7 @@
                 </details>
                 <details>
                     <summary>Can I combine Search as a Service with Entrepreneurship as a Service?</summary>
-                    <p>Yes. Many clients start with Search as a Service to source deals, then add Entrepreneurship as a Service or Post-Acquisition Strategy once they've closed. Combining services is common, and we adjust pricing based on your full scope.</p>
+                    <p>Yes. Many clients start with Search as a Service to source deals, then add Entrepreneurship as a Service or <a href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> once they've closed. Combining services is common, and we adjust pricing based on your full scope.</p>
                 </details>
                 <details>
                     <summary>How does your pricing compare to other deal sourcing services?</summary>
@@ -4667,7 +4686,11 @@
                 </details>
                 <details>
                     <summary>Why are some services custom priced?</summary>
-                    <p>AI-Readiness, Post-Acquisition Strategy, and Tech Development depend heavily on the size of the business and the scope of work. We price them after a short call so you only pay for what you need.</p>
+                    <p><a href="/services/ai-readiness/">AI-Readiness</a>, Post-Acquisition Strategy, and <a href="/services/tech-development/">Tech Development</a> depend heavily on the size of the business and the scope of work. We price them after a short call so you only pay for what you need.</p>
+                </details>
+                <details>
+                    <summary>What do Branding as a Service and Cold Mail cost?</summary>
+                    <p><a href="/services/branding/">Branding as a Service</a> is $1,250/month; <a href="/services/cold-mail-handwritten-letters/">Cold Mail &amp; Handwritten Letters</a> start at $0.89 per postcard.</p>
                 </details>
             </div>
         </div>
@@ -4709,15 +4732,15 @@
             <p class="section-subtitle fade-in-element slide-right">Operators who've been in your shoes</p>
 
             <div class="about-intro fade-in-element">
-                <p>Caprae Capital is an end-to-end private equity services firm. We give searchers, acquisition entrepreneurs, founders, and PE firms a completely white-labeled, fully outsourced team for deal sourcing, diligence, and execution, at 30-60% less than traditional providers.</p>
-                <p>Our team brings deep expertise across private equity, startups, and transaction management. Founder Kevin Hong spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital.</p>
-                <p>We don't stop at the introduction. Beyond sourcing, we support deal structuring, preliminary due diligence, research and financial modeling, introductions to bankers and investors, and post-acquisition growth.</p>
+                <p>Caprae Capital is an end-to-end private equity services firm. We give searchers, acquisition entrepreneurs, founders, and PE firms a completely white-labeled, <a class="inline-link" href="/services/">fully outsourced team for deal sourcing, diligence, and execution</a>, at <a class="inline-link" href="/pricing/">30-60% less than traditional providers</a>.</p>
+                <p>Our team brings deep expertise across private equity, startups, and transaction management. <a class="inline-link" href="/team/kevin-hong/">Founder Kevin Hong</a> spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital.</p>
+                <p>We don't stop at the introduction. Beyond sourcing, we support deal structuring, preliminary due diligence, research and financial modeling, introductions to bankers and investors, and <a class="inline-link" href="/services/post-acquisition-strategy/">post-acquisition growth</a>.</p>
             </div>
 
             <div class="metrics-grid about-metrics">
                 <div class="metric-item fade-in-element">
                     <div class="value">$110M+</div>
-                    <div class="label">Deals Closed (2026 YTD)</div>
+                    <div class="label"><a class="inline-link" href="/case-study/">Deals Closed (2026 YTD)</a></div>
                 </div>
                 <div class="metric-item fade-in-element">
                     <div class="value">$50M+</div>
@@ -4738,11 +4761,11 @@
                 <div class="serve-grid about-serve-grid">
                     <div class="serve-card fade-in-element">
                         <h3>Searchers &amp; Acquisition Teams</h3>
-                        <p>Scale your deal pipeline with professional sourcing, outreach, and due diligence support.</p>
+                        <p>Scale your deal pipeline with <a class="inline-link" href="/services/search-as-a-service/">professional sourcing, outreach, and due diligence support</a>.</p>
                     </div>
                     <div class="serve-card fade-in-element">
                         <h3>Entrepreneurs</h3>
-                        <p>Grow your business with fractional operations, marketing, and strategic advising.</p>
+                        <p><a class="inline-link" href="/services/entrepreneurship-as-a-service/">Grow your business</a> with fractional operations, marketing, and strategic advising.</p>
                     </div>
                     <div class="serve-card fade-in-element">
                         <h3>PE &amp; Investment Banks</h3>
@@ -4796,11 +4819,11 @@
                 </details>
                 <details>
                     <summary>Who founded Caprae Capital?</summary>
-                    <p>Caprae Capital was founded by Kevin Hong and Zackary Beckham. Kevin is a serial tech entrepreneur who scaled two startups to $31M and $7M ARR and holds an MBA from Chicago Booth.</p>
+                    <p>Caprae Capital was founded by <a class="inline-link" href="/team/kevin-hong/">Kevin Hong</a> and <a class="inline-link" href="/team/zackary-beckham/">Zackary Beckham</a>. Kevin is a serial tech entrepreneur who scaled two startups to $31M and $7M ARR and holds an MBA from Chicago Booth.</p>
                 </details>
                 <details>
                     <summary>Who is on the Caprae Capital team?</summary>
-                    <p>The team includes Hereford Johnson (Principal Adviser), Jeff Blacklock (Deal Adviser), capital advisors Mitchell Vermet, CFA, CAIA, and Richard Consul, CFA, and Eric Nehrlich (Chief of Staff).</p>
+                    <p><a class="inline-link" href="/team/">The team</a> includes Hereford Johnson (Principal Adviser), Jeff Blacklock (Deal Adviser), capital advisors Mitchell Vermet, CFA, CAIA, and Richard Consul, CFA, and Eric Nehrlich (Chief of Staff).</p>
                 </details>
                 <details>
                     <summary>How is Caprae Capital different from other private equity consulting firms?</summary>
@@ -4808,7 +4831,7 @@
                 </details>
                 <details>
                     <summary>What is proprietary deal flow?</summary>
-                    <p>Proprietary deal flow means deals you find by contacting owners directly, not through brokers or auctions. You face less competition, can build a relationship with the owner, and often get better terms.</p>
+                    <p>Proprietary deal flow means deals you find by <a class="inline-link" href="/services/search-as-a-service/">contacting owners directly</a>, not through brokers or auctions. You face less competition, can build a relationship with the owner, and often get better terms.</p>
                 </details>
                 <details>
                     <summary>What's the difference between off-market and broker-listed deals?</summary>
@@ -4816,7 +4839,7 @@
                 </details>
                 <details>
                     <summary>What is a buy box?</summary>
-                    <p>A buy box is your acquisition criteria: industry, revenue or EBITDA range, location, and the type of owner or business you want. We use your buy box to build every target list and outreach campaign.</p>
+                    <p>A buy box is your acquisition criteria: industry, revenue or EBITDA range, location, and the type of owner or business you want. We use your buy box to <a class="inline-link" href="/how-it-works/">build every target list and outreach campaign</a>.</p>
                 </details>
                 <details>
                     <summary>Do you source deals in the lower middle market?</summary>
@@ -4824,11 +4847,11 @@
                 </details>
                 <details>
                     <summary>Can I use your team for appointment setting or LinkedIn outreach?</summary>
-                    <p>Yes. Our team can act as your outsourced SDR, booking calls with business owners through phone, email, and LinkedIn outreach.</p>
+                    <p>Yes. Our team can act as your <a class="inline-link" href="/services/entrepreneurship-as-a-service/">outsourced SDR</a>, booking calls with business owners through phone, email, and LinkedIn outreach.</p>
                 </details>
                 <details>
                     <summary>How quickly can I get started?</summary>
-                    <p>Onboarding is fast. In one client case, we went from onboarding to the client's first IOI in less than a week.</p>
+                    <p><a class="inline-link" href="/how-it-works/">Onboarding is fast</a>. In one client case, we went from onboarding to the client's first IOI in less than a week.</p>
                 </details>
                 <details>
                     <summary>Do you work with clients outside the US?</summary>
@@ -4836,7 +4859,7 @@
                 </details>
                 <details>
                     <summary>Can Caprae support my existing PE or investment banking team?</summary>
-                    <p>Yes. PE firms and investment banks use Caprae to add dedicated resources for sourcing, diligence, and execution without hiring full-time staff.</p>
+                    <p>Yes. PE firms and investment banks use Caprae to <a class="inline-link" href="/pricing/">add dedicated resources for sourcing, diligence, and execution</a> without hiring full-time staff.</p>
                 </details>
                 <details>
                     <summary>How do I contact Caprae Capital?</summary>
@@ -4844,23 +4867,23 @@
                 </details>
                 <details>
                     <summary>Do you offer PR and press release services?</summary>
-                    <p>Yes. Press releases and PR are part of Entrepreneurship as a Service, and we help firms get their deals, launches, and news in front of the right audience.</p>
+                    <p>Yes. Press releases and PR are part of <a class="inline-link" href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a>, and we help firms get their deals, launches, and news in front of the right audience.</p>
                 </details>
                 <details>
                     <summary>Can you manage social media for a financial services firm?</summary>
-                    <p>Yes. Social media management is included in Entrepreneurship as a Service. For LinkedIn-focused personal branding, Branding as a Service gives you ghostwritten posts in your own voice.</p>
+                    <p>Yes. Social media management is included in Entrepreneurship as a Service. For LinkedIn-focused personal branding, <a class="inline-link" href="/services/branding/">Branding as a Service</a> gives you ghostwritten posts in your own voice.</p>
                 </details>
                 <details>
                     <summary>Can you help with add-on acquisitions for a buy-and-build strategy?</summary>
-                    <p>Yes. Search as a Service can source add-on targets that fit your platform company, and Post-Acquisition Strategy helps plan how to grow and integrate them.</p>
+                    <p>Yes. Search as a Service can source add-on targets that fit your platform company, and <a class="inline-link" href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> helps plan how to grow and integrate them.</p>
                 </details>
                 <details>
                     <summary>Can you help automate my business with AI?</summary>
-                    <p>Yes. AI-driven automation is part of our AI-Readiness service. We find repetitive tasks that AI can handle, set up the tools, and train your team to use them.</p>
+                    <p>Yes. AI-driven automation is part of our <a class="inline-link" href="/services/ai-readiness/">AI-Readiness service</a>. We find repetitive tasks that AI can handle, set up the tools, and train your team to use them.</p>
                 </details>
                 <details>
                     <summary>Can you build custom tools like a CRM or client portal?</summary>
-                    <p>Yes. Our Tech Development team builds full-stack platforms and digital marketing tools to your specifications, priced per project.</p>
+                    <p>Yes. Our <a class="inline-link" href="/services/tech-development/">Tech Development team</a> builds full-stack platforms and digital marketing tools to your specifications, priced per project.</p>
                 </details>
                 <details>
                     <summary>Where can I follow Caprae's deal insights?</summary>
@@ -4921,7 +4944,7 @@
                     <div class="case-grid">
                         <div>
                             <h3>The engagement</h3>
-                            <p>One of Caprae's first three clients. End-to-end support: branding, marketing, website ideation, lead generation, cold calling, email campaigns, and outbound strategy.</p>
+                            <p>One of Caprae's first three clients. End-to-end support: branding, marketing, website ideation, <a class="inline-link" href="/services/search-as-a-service/">lead generation, cold calling, email campaigns</a>, and outbound strategy.</p>
                         </div>
                         <div>
                             <h3>The outcome</h3>
@@ -4947,7 +4970,7 @@
                         </div>
                         <div>
                             <h3>The outcome</h3>
-                            <p>Two advanced meetings in Houston within two months of launch. The early traction led Valwell to expand the engagement to sales and marketing for its core team.</p>
+                            <p>Two advanced meetings in Houston within two months of launch. The early traction led Valwell to expand the engagement to <a class="inline-link" href="/services/entrepreneurship-as-a-service/">sales and marketing for its core team</a>.</p>
                         </div>
                     </div>
                     <blockquote class="case-quote">"It's rare to find a partner that delivers both execution and judgment at this level."</blockquote>
@@ -4965,14 +4988,14 @@
                     <div class="case-grid">
                         <div>
                             <h3>The engagement</h3>
-                            <p>Sustained sourcing and outreach over several months. Once a deal moved under LOI, diligence support on NDR, churn, customer concentration, and other areas.</p>
+                            <p>Sustained sourcing and outreach over several months. Once a deal moved under LOI, <a class="inline-link" href="/services/">diligence support on NDR, churn, customer concentration</a>, and other areas.</p>
                         </div>
                         <div>
                             <h3>The outcome</h3>
                             <p>A consistent 10-20 engagements a month and a large volume of qualified leads, saving significant time and money, and more confidence progressing toward close.</p>
                         </div>
                     </div>
-                    <blockquote class="case-quote">"Kevin also brings a candid, experience-driven perspective on the search process that I found valuable."</blockquote>
+                    <blockquote class="case-quote">"<a class="inline-link" href="/team/kevin-hong/">Kevin also brings a candid</a>, experience-driven perspective on the search process that I found valuable."</blockquote>
                 </article>
 
                 <article class="case-card fade-in-element">
@@ -4987,7 +5010,7 @@
                     <div class="case-grid">
                         <div>
                             <h3>The engagement</h3>
-                            <p>A cold calling program to reach business owners directly, then Caprae's team working as an extension of the searcher's own in due diligence once the deal moved into LOI.</p>
+                            <p>A <a class="inline-link" href="/services/search-as-a-service/">cold calling program</a> to reach business owners directly, then Caprae's team working as an extension of the searcher's own in due diligence once the deal moved into LOI.</p>
                         </div>
                         <div>
                             <h3>The outcome</h3>
@@ -5009,7 +5032,7 @@
                         <div class="testimonial-header">
                             <img src="/assets/testimonials/jeff-blacklock.jpg" alt="Jeff Blacklock" class="testimonial-photo">
                             <div class="testimonial-meta">
-                                <div class="testimonial-author">Jeff Blacklock</div>
+                                <div class="testimonial-author"><a class="heading-link" href="/team/jeff-blacklock/">Jeff Blacklock</a></div>
                                 <div class="testimonial-title">Valwell Technologies</div>
                             </div>
                         </div>

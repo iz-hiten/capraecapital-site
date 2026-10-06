@@ -1672,15 +1672,26 @@
 
         .page-reviewed a,
         .about-intro a,
-        .comparison-table a {
+        .comparison-table a,
+        a.inline-link {
             color: #F9D360;
             text-decoration: none;
         }
 
         .page-reviewed a:hover,
         .about-intro a:hover,
-        .comparison-table a:hover {
+        .comparison-table a:hover,
+        a.inline-link:hover {
             color: #FFFFFF;
+        }
+
+        a.heading-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.heading-link:hover {
+            color: #F9D360;
         }
 
         .section-heading + .comparison-section,
@@ -2409,19 +2420,19 @@
 
     <section id="branding" class="active">
         <div class="branding-section">
-            <div class="branding-hero"><div class="branding-wrap-narrow"><span class="branding-eyebrow">Branding as a service</span><h1 class="branding-h1">Your voice is the only moat left in finance.</h1><p class="lede">In an AI-saturated feed, generic content is invisible. We turn finance professionals into category-defining voices on LinkedIn. Ghostwritten by an award-winning journalist who built an 8K following critiquing the industry he came from.</p><div class="branding-cta-row"><button class="branding-btn branding-btn-primary" onclick="goToPage('contact')">Book a discovery call <span aria-hidden="true">-&gt;</span></button><a href="#branding-pricing" class="branding-btn branding-btn-ghost">See pricing</a></div></div></div>
+            <div class="branding-hero"><div class="branding-wrap-narrow"><span class="branding-eyebrow">Branding as a service</span><h1 class="branding-h1">Your voice is the only moat left in finance.</h1><p class="lede">In an AI-saturated feed, generic content is invisible. We turn finance professionals into category-defining voices on LinkedIn. Ghostwritten by an award-winning journalist who built an 8K following critiquing the industry he came from.</p><div class="branding-cta-row"><a class="branding-btn branding-btn-primary" href="/contact/">Book a discovery call <span aria-hidden="true">-&gt;</span></a><a href="#branding-pricing" class="branding-btn branding-btn-ghost">See pricing</a></div></div></div>
             <div class="branding-press"><div class="branding-wrap"><div class="branding-press-label">Written by the founder featured in</div><div class="branding-press-logos"><div>CNBC</div><div>Forbes</div><div>Inc.</div><div>HuffPost</div><div>Bestseller</div></div></div></div>
             <div class="branding-content-section"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><h2>Why voice beats volume</h2><p>LinkedIn algorithm rewards saves, dwell time, and comment depth over likes and tags. Generic AI content fails this test. Distinct voices with a real perspective wins.</p></div><div class="branding-cards-3"><div class="branding-card fade-in-element"><span class="branding-num">1</span><h3>The interest graph rules</h3><p>LinkedIn no longer rewards tags and connections. It rewards content people save and screenshot. Generic posts die.</p></div><div class="branding-card fade-in-element"><span class="branding-num">2</span><h3>AI made everyone average</h3><p>Every finance professional now posts identical AI-generated takes. The result: identical feeds, zero differentiation, no inbound.</p></div><div class="branding-card fade-in-element"><span class="branding-num">3</span><h3>Voice is unfakeable</h3><p>A distinct point of view, sharpened by a journalist who knows the industry, cannot be replicated by a content agency or ChatGPT.</p></div></div></div></div>
-            <div class="branding-content-section"><div class="branding-wrap"><div class="branding-award-grid"><div class="fade-in-element"><span class="branding-eyebrow">The Story</span><h2>An award-winning journalist who built 8K followers attacking the asset class he came from.</h2><p class="branding-story-copy">Kevin Hong spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital. His critique of the traditional search fund model has reshaped how MBA graduates and LPs evaluate the asset class.</p><ul class="branding-credit-list">
+            <div class="branding-content-section"><div class="branding-wrap"><div class="branding-award-grid"><div class="fade-in-element"><span class="branding-eyebrow">The Story</span><h2>An award-winning journalist who built 8K followers attacking the asset class he came from.</h2><p class="branding-story-copy"><a class="inline-link" href="/team/kevin-hong/">Kevin Hong</a> spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital. His critique of the traditional search fund model has reshaped how MBA graduates and LPs evaluate the asset class.</p><ul class="branding-credit-list">
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.amazon.com/stores/author/B0785DGHY7','_blank')">The Outlier Approach (Amazon #1 Bestseller)</button></li>
                     <li><button class="branding-credit-btn" onclick="window.open('https://muckrack.com/kevin-hong','_blank')">Read Kevin's Forbes column</button></li>
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.inc.com/author/kevin-hong','_blank')">Read Kevin's Inc. contributors</button></li>
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.cnbc.com/2017/11/09/what-kevin-hong-learned-living-and-working-out-of-a-van.html','_blank')">CNBC and HuffPost coverage</button></li>
                 </ul></div><aside class="branding-stats-card fade-in-element"><div class="branding-stats-label">Results that compound</div><div class="branding-stat"><span class="branding-stat-num">8,000+</span><div class="branding-stat-desc">LinkedIn followers built in 18 months</div></div><div class="branding-stat"><span class="branding-stat-num">250K+</span><div class="branding-stat-desc">Monthly impressions on a finance niche</div></div><div class="branding-stat"><span class="branding-stat-num">$70K+</span><div class="branding-stat-desc">MRR generated through inbound from content</div></div></aside></div></div></div>
             <div class="branding-benefits"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><h2>What you get every month</h2></div><div class="branding-benefits-grid"><div class="branding-benefit fade-in-element"><h4>10 ghostwritten LinkedIn posts</h4><p>Written in your voice, on your terms, against the algorithm's actual rules.</p></div><div class="branding-benefit fade-in-element"><h4>Personal brand strategy</h4><p>Positioning, narrative arc, and content calendar built around what makes you uncopyable.</p></div><div class="branding-benefit fade-in-element"><h4>Cross-platform support</h4><p>Repurposing for Twitter, Substack, podcasts notes, and conference taking points.</p></div><div class="branding-benefit fade-in-element"><h4>Monthly voice intake call</h4><p>30 minutes recorded interviews that tasks a month of authentic content.</p></div><div class="branding-benefit fade-in-element"><h4>Engagement playbook</h4><p>Comment templates, DM scripts, and inbound handling guidance to convert reach into pipeline.</p></div><div class="branding-benefit fade-in-element"><h4>Performance reporting</h4><p>Monthly analytics, content scoring, and adjustment recommendations based on what's working.</p></div></div></div></div>
-            <div class="branding-pricing" id="branding-pricing"><div class="branding-wrap-narrow"><div class="branding-price-card fade-in-element"><span class="branding-eyebrow">Branding as a service</span><h3>One tier. No upsells.</h3><div class="branding-price-amount"><sup>$</sup>1,250<small>/month</small></div><p class="note">No long-term contract. Cancel any time.</p><ul class="branding-price-list"><li>10 ghostwritten LinkedIn posts</li><li>Personal brand strategy</li><li>Cross-platform repurposing</li><li>Monthly voice intake</li><li>Engagement playbook</li><li>Monthly performance reports</li></ul><button class="branding-btn branding-btn-primary" onclick="goToPage('contact')">Start with a discovery call <span aria-hidden="true">-&gt;</span></button><p class="fine">Limited to 15 active clients. Currently 6 of 15 seats filled.</p></div></div></div>
+            <div class="branding-pricing" id="branding-pricing"><div class="branding-wrap-narrow"><div class="branding-price-card fade-in-element"><span class="branding-eyebrow">Branding as a service</span><h3>One tier. No upsells.</h3><div class="branding-price-amount"><sup>$</sup>1,250<small>/month</small></div><p class="note">No long-term contract. Cancel any time.</p><ul class="branding-price-list"><li>10 ghostwritten LinkedIn posts</li><li>Personal brand strategy</li><li>Cross-platform repurposing</li><li>Monthly voice intake</li><li>Engagement playbook</li><li>Monthly performance reports</li></ul><a class="branding-btn branding-btn-primary" href="/contact/">Start with a discovery call <span aria-hidden="true">-&gt;</span></a><p class="fine">Limited to 15 active clients. Currently 6 of 15 seats filled.</p></div></div></div>
 
-            <div class="branding-audience"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><span class="branding-eyebrow">Built for the people LinkedIn doesn't reach</span><h2>Built for the people LinkedIn doesn't reach</h2></div><div class="branding-audience-grid"><div class="branding-audience-card fade-in-element"><h4>Search Fund CEOs</h4><p>Build LP and exit readiness</p></div><div class="branding-audience-card fade-in-element"><h4>PE professionals</h4><p>Source deals and limited partners</p></div><div class="branding-audience-card fade-in-element"><h4>M&amp;A advisors</h4><p>Generate inbound mindsets</p></div><div class="branding-audience-card fade-in-element"><h4>Independent sponsors</h4><p>Attract Capital Partners</p></div></div></div></div>
+            <div class="branding-audience"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><span class="branding-eyebrow">Built for the people LinkedIn doesn't reach</span><h2>Built for the people LinkedIn doesn't reach</h2></div><div class="branding-audience-grid"><div class="branding-audience-card fade-in-element"><h4>Search Fund CEOs</h4><p>Build LP and exit readiness</p></div><div class="branding-audience-card fade-in-element"><h4>PE professionals</h4><p><a class="inline-link" href="/services/search-as-a-service/">Source deals</a> and limited partners</p></div><div class="branding-audience-card fade-in-element"><h4>M&amp;A advisors</h4><p>Generate inbound mindsets</p></div><div class="branding-audience-card fade-in-element"><h4>Independent sponsors</h4><p>Attract Capital Partners</p></div></div></div></div>
             <div class="branding-content-section">
                 <div class="branding-wrap-narrow">
                     <div class="branding-section-head fade-in-element"><span class="branding-eyebrow">FAQ</span><h2>Common Questions</h2></div>
@@ -2441,7 +2452,7 @@
                     </div>
                 </div>
             </div>
-            <div class="branding-final-cta"><div class="branding-wrap-narrow"><h2>In 12 months, you either own your category or you don't.</h2><p>Discovery calls take 20 minutes. We'll know if it's a fit.</p><button class="branding-btn branding-btn-primary" onclick="goToPage('contact')">Book a discovery call</button></div></div>
+            <div class="branding-final-cta"><div class="branding-wrap-narrow"><h2>In 12 months, you either own your category or you don't.</h2><p>Discovery calls take 20 minutes. We'll know if it's a fit.</p><a class="branding-btn branding-btn-primary" href="/contact/">Book a discovery call</a></div></div>
         </div>
     </section>
 

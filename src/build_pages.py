@@ -168,7 +168,7 @@ TEAM_PROFILES = {
     "kevin-hong": {
         "bio": [
             "Kevin Hong is the Founder of Caprae Capital. Before founding the firm, he spent seven years as a business journalist, then scaled two startups to $31M and $7M in annual recurring revenue and raised more than $8M in venture capital.",
-            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <em>The Outlier Approach</em>. At Caprae he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work.',
+            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <em>The Outlier Approach</em>. At Caprae he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work, and he ghostwrites the LinkedIn posts for <a href="/services/branding/">Branding as a Service</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/kevinhshong/"),
                   ("Searchfunder", "https://searchfunder.com/profile/kevin-hong")],
@@ -191,7 +191,7 @@ TEAM_PROFILES = {
     "jeff-blacklock": {
         "bio": [
             "Jeff Blacklock is a Deal Advisor at Caprae Capital. He is a former searcher and the President of ValWell Technologies, a company in the oil and gas industry.",
-            'Jeff first worked with Caprae as a client, when the program secured two advanced meetings in Houston within two months. Read the <a href="/case-study/">Valwell case study</a>.',
+            'Jeff first worked with Caprae as a client, when <a href="/services/entrepreneurship-as-a-service/">the program</a> secured two advanced meetings in Houston within two months. Read the <a href="/case-study/">Valwell case study</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/jeffblacklock/")],
     },
@@ -515,7 +515,10 @@ def main():
     block = team.group(1)
     sections["home"] = TEAM_RE.sub(lambda m: m.group(1), sections["home"])
     team_block = re.sub(r'<h2 class="(team-heading[^"]*)">.*?</h2>',
-                        r'<h1 class="\1">Meet Our Team</h1>', block, count=1, flags=re.S)
+                        r'<h1 class="\1">Meet Our Team</h1>\n'
+                        r'                <p class="team-subheading fade-in-element">Our operators and advisers lead '
+                        r'<a class="inline-link" href="/services/">every Caprae service</a>, '
+                        r'from deal sourcing to post-acquisition growth.</p>', block, count=1, flags=re.S)
     assert sections["team"].strip() == "<!--@TEAM_BLOCK-->", "team section should hold only the placeholder"
     sections["team"] = team_block.rstrip("\n")
 

@@ -1671,15 +1671,26 @@
 
         .page-reviewed a,
         .about-intro a,
-        .comparison-table a {
+        .comparison-table a,
+        a.inline-link {
             color: #F9D360;
             text-decoration: none;
         }
 
         .page-reviewed a:hover,
         .about-intro a:hover,
-        .comparison-table a:hover {
+        .comparison-table a:hover,
+        a.inline-link:hover {
             color: #FFFFFF;
+        }
+
+        a.heading-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.heading-link:hover {
+            color: #F9D360;
         }
 
         .section-heading + .comparison-section,
@@ -2421,7 +2432,7 @@
                 <div class="timeline-item fade-in-element">
                     <div class="timeline-number">2</div>
                     <h4>Source</h4>
-                    <p>We find off-market deals</p>
+                    <p><a class="inline-link" href="/services/search-as-a-service/">We find off-market deals</a></p>
                 </div>
                 <div class="timeline-item fade-in-element">
                     <div class="timeline-number">3</div>
@@ -2471,14 +2482,16 @@
                 </div>
             </div>
 
+            <p class="section-subtitle fade-in-element"><a class="inline-link" href="/case-study/">See results from real engagements</a>, or <a class="inline-link" href="/contact/">talk to us about your buy box</a>.</p>
+
             <div class="beyond-sourcing fade-in-element">
                 <h3>Beyond Deal Sourcing</h3>
                 <div class="beyond-list">
                     <div class="beyond-item">Deal Structuring</div>
                     <div class="beyond-item">Advisorship</div>
-                    <div class="beyond-item">Intros to Bankers & Investors</div>
-                    <div class="beyond-item">Post-Acquisition Support</div>
-                    <div class="beyond-item">Preliminary Due Diligence</div>
+                    <div class="beyond-item"><a class="inline-link" href="/team/">Intros to Bankers & Investors</a></div>
+                    <div class="beyond-item"><a class="inline-link" href="/services/post-acquisition-strategy/">Post-Acquisition Support</a></div>
+                    <div class="beyond-item"><a class="inline-link" href="/services/">Preliminary Due Diligence</a></div>
                     <div class="beyond-item">Research & Financial Modeling</div>
                 </div>
             </div>
