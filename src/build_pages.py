@@ -325,7 +325,7 @@ TEAM_RE = re.compile(r'        <!--@team-->\n(.*?)        <!--@/team-->\n', re.S
 MEMBER_RE = re.compile(
     r'<h3 class="team-subgroup-heading[^"]*">(?P<group>.*?)</h3>'
     r'|<a class="team-member-link" href="/team/(?P<slug>[a-z-]+)/">\s*'
-    r'<img src="(?P<img>[^"]+)" alt="(?P<alt>[^"]+)" class="member-photo">\s*'
+    r'<img src="(?P<img>[^"]+)" alt="(?P<alt>[^"]+)" class="member-photo"[^>]*>\s*'
     r'<h4>(?P<name>.*?)</h4>(?:\s*<p>(?P<role>.*?)</p>)?', re.S)
 
 
