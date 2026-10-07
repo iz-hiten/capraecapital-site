@@ -88,7 +88,7 @@ TEMPLATE = """<!DOCTYPE html>
     <nav class="site-nav">
         <div class="nav-container">
             <a href="/" class="logo">
-                <img src="/assets/logo/caprae-logo.png" alt="Caprae Capital" class="logo-img">
+                <img src="/assets/logo/caprae-logo-sm.webp" alt="Caprae Capital" class="logo-img">
                 CAPRAE CAPITAL
             </a>
             <ul class="nav-links">{navlinks}
