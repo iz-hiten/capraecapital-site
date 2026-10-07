@@ -198,14 +198,14 @@ TEAM_PROFILES = {
     "mitchell-vermet": {
         "bio": [
             "Mitch Vermet is a Capital Adviser at Caprae Capital. He is a Managing Partner at Bankers Edge and has helped manage more than $30B in institutional capital.",
-            "He holds both the Chartered Financial Analyst (CFA) and Chartered Alternative Investment Analyst (CAIA) designations.",
+            'He holds both the <a href="https://www.cfainstitute.org/programs/cfa-program" target="_blank" rel="noopener">Chartered Financial Analyst (CFA)</a> and <a href="https://caia.org/" target="_blank" rel="noopener">Chartered Alternative Investment Analyst (CAIA)</a> designations.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/mitch-vermet-cfa-caia-5472b880/")],
     },
     "richard-consul": {
         "bio": [
             "Richard Consul is a Capital Adviser at Caprae Capital. He is the Founder and Managing Partner of Bankers Edge and brings more than 20 years of buy-side experience.",
-            "He is a Chartered Financial Analyst (CFA) charterholder.",
+            'He is a <a href="https://www.cfainstitute.org/programs/cfa-program" target="_blank" rel="noopener">Chartered Financial Analyst (CFA)</a> charterholder.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/richard-consul-cfa/")],
     },
