@@ -89,6 +89,7 @@ TEMPLATE = """<!DOCTYPE html>
               font-size: 13px; font-weight: 700; letter-spacing: .4px; white-space: nowrap; }}
         .cta-button:hover {{ background: #FFFFFF; }}
         @media (max-width: 900px) {{ .nav-links {{ display: none; }} }}
+        @media (max-width: 600px) {{ .nav-container {{ padding: 14px 18px; gap: 12px; }} .logo {{ font-size: 16px; white-space: nowrap; }} .cta-button {{ padding: 9px 14px; }} }}
     </style>
 </head>
 <body>

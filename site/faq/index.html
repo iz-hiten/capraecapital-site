@@ -2395,6 +2395,669 @@
                 width: 100%;
             }
         }
+
+        /* ===== Mobile polish (phones only: 768px and below; desktop is untouched) ===== */
+        @media (max-width: 768px) {
+            /* nothing may push the page sideways (slide-in animations start off-screen).
+               body only: it propagates to the viewport, so the sticky nav and the
+               menu-open scroll lock keep working */
+            body {
+                overflow-x: clip;
+            }
+
+            /* section rhythm: desktop's 120px bands leave screens of empty space */
+            .services-section,
+            .who-serve,
+            .team-section,
+            .how-section,
+            .results-section,
+            .pricing-section,
+            .about-section,
+            .faq-section,
+            .case-section {
+                /* top/bottom only: several of these share an element with .container */
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+
+            .who-serve {
+                margin-top: 0;
+            }
+
+            .hero {
+                padding-top: 48px;
+                padding-bottom: 56px;
+                gap: 40px;
+            }
+
+            .home-faq-cta {
+                padding-top: 56px;
+                padding-bottom: 64px;
+            }
+
+            .profile-section {
+                padding-top: 40px;
+                padding-bottom: 64px;
+            }
+
+            .profile-back {
+                margin-bottom: 28px;
+            }
+
+            /* headings: one consistent scale instead of desktop's 56px */
+            .section-heading,
+            .team-heading,
+            .testimonials-section h1,
+            .testimonials-section h2,
+            .comparison-section h2,
+            .why-caprae h2,
+            .t-section-header h2 {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 34px;
+                font-weight: 400;
+                line-height: 1.15;
+                letter-spacing: 0.5px;
+                color: #FFFFFF;
+                text-align: center;
+                margin-bottom: 14px;
+            }
+
+            .team-subgroup-heading,
+            .about-block-heading,
+            .home-faq-cta h2 {
+                font-size: 28px;
+                line-height: 1.2;
+                letter-spacing: 0.5px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .services-grid,
+            .serve-grid,
+            .team-grid {
+                margin-top: 36px;
+            }
+
+            .section-heading + .comparison-section,
+            .section-heading + .about-intro,
+            .section-heading + .faq-list {
+                margin-top: 32px;
+            }
+
+            .about-intro {
+                margin-bottom: 48px;
+            }
+
+            .about-intro p {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+
+            .about-metrics,
+            .about-block,
+            .testimonials-section,
+            .comparison-section,
+            .why-caprae {
+                margin-bottom: 56px;
+            }
+
+            .team-subheading {
+                margin-bottom: 0;
+            }
+
+            .profile-name {
+                font-size: 36px;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+                margin-bottom: 24px;
+            }
+
+            /* hero: buttons stacked full width, stats as a 2x2 grid */
+            .hero-content h1 {
+                margin-bottom: 18px;
+            }
+
+            .hero-content p {
+                margin-bottom: 28px;
+                line-height: 1.7;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-buttons .button-primary,
+            .hero-buttons .button-secondary {
+                width: 100%;
+                padding: 15px 24px;
+            }
+
+            .hero-illustration {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .stat-card {
+                padding: 22px 10px;
+            }
+
+            .stat-card .number {
+                font-size: 30px;
+                line-height: 1.1;
+                margin-bottom: 6px;
+            }
+
+            .stat-card .label {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            /* cards: same look, phone-sized padding */
+            .serve-grid,
+            .services-grid {
+                gap: 16px;
+            }
+
+            .serve-card {
+                padding: 28px 22px;
+            }
+
+            .serve-icon {
+                width: 48px;
+                height: 48px;
+                margin-bottom: 14px;
+            }
+
+            .serve-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .serve-card h3 {
+                font-size: 22px;
+                line-height: 1.25;
+                margin-bottom: 8px;
+            }
+
+            .service-card {
+                padding: 30px 22px;
+            }
+
+            .service-card:hover {
+                transform: none;
+            }
+
+            .service-icon {
+                width: 44px;
+                height: 44px;
+                margin-bottom: 16px;
+            }
+
+            .service-card h3 {
+                font-size: 24px;
+                line-height: 1.25;
+                margin-bottom: 10px;
+            }
+
+            .service-card p {
+                margin-bottom: 14px;
+            }
+
+            .service-link {
+                margin-top: 14px;
+                padding: 4px 0;
+            }
+
+            .service-page-ctas {
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 36px;
+            }
+
+            .service-page-ctas a {
+                text-align: center;
+                padding: 15px 24px;
+            }
+
+            /* team: two people per row */
+            .team-grid,
+            .team-grid-2col {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px 16px;
+                max-width: none;
+            }
+
+            .team-subgroup-heading {
+                margin-top: 56px;
+                margin-bottom: 28px;
+            }
+
+            .member-photo {
+                width: 104px;
+                height: 104px;
+                margin-bottom: 14px;
+            }
+
+            .team-member h4 {
+                font-size: 18px;
+                line-height: 1.25;
+            }
+
+            .team-member p {
+                font-size: 11.5px;
+                letter-spacing: 0.8px;
+            }
+
+            /* testimonials: full-width card, arrows underneath as proper tap targets.
+               Prefixed with section so these beat the carousel's own later <style> block. */
+            section .client-testimonials-section {
+                padding: 64px 0 24px;
+            }
+
+            section .t-section-header {
+                padding: 0 20px;
+                margin-bottom: 32px;
+                text-align: center;
+            }
+
+            section .t-section-header .section-subtitle {
+                margin-bottom: 0;
+            }
+
+            section .t-carousel-wrap {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px 12px;
+                padding: 0 20px;
+            }
+
+            section .t-viewport {
+                flex: 0 0 100%;
+                order: -1;
+            }
+
+            section .t-nav {
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+                margin-top: 0;
+            }
+
+            section .t-card {
+                padding: 24px 22px;
+            }
+
+            section .t-text {
+                font-size: 14px;
+            }
+
+            section .t-toggle {
+                padding: 10px 0 0;
+                font-size: 13px;
+            }
+
+            .testimonials-cta {
+                margin-top: 36px;
+                padding-top: 28px;
+            }
+
+            .testimonials-cta p {
+                font-size: 16px;
+            }
+
+            .team-heading + .team-subheading,
+            .team-subheading {
+                text-align: center;
+            }
+
+            .team-subheading + .team-subheading {
+                margin-top: 10px;
+            }
+
+            /* process timelines: a vertical step list joined by a gold line */
+            .timeline,
+            .timeline.timeline-4,
+            .timeline.timeline-5 {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 36px;
+                margin-bottom: 48px;
+            }
+
+            .timeline-item {
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                column-gap: 16px;
+                text-align: left;
+                padding-bottom: 24px;
+            }
+
+            .timeline .timeline-item::after {
+                display: block;
+                top: 46px;
+                bottom: 4px;
+                left: 19px;
+                height: auto;
+                transform: none;
+                opacity: 0.35;
+            }
+
+            .timeline .timeline-item:last-child {
+                padding-bottom: 0;
+            }
+
+            .timeline .timeline-item:last-child::after {
+                display: none;
+            }
+
+            .timeline-number {
+                grid-row: span 2;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                margin: 0;
+            }
+
+            .timeline-item h4 {
+                font-size: 20px;
+                line-height: 1.2;
+                margin: 8px 0 4px;
+            }
+
+            .timeline-item p {
+                font-size: 14.5px;
+                line-height: 1.6;
+            }
+
+            /* engagement weeks: stacked list */
+            .engagement-timeline,
+            .beyond-sourcing {
+                padding: 28px 20px;
+            }
+
+            .engagement-timeline {
+                margin-bottom: 40px;
+            }
+
+            .engagement-timeline h3,
+            .beyond-sourcing h3 {
+                margin-bottom: 20px;
+            }
+
+            .engagement-items {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .engagement-item {
+                text-align: left;
+                padding: 14px 16px;
+            }
+
+            .beyond-item {
+                padding: 13px 0;
+            }
+
+            /* stat boxes: two across, sized to fit */
+            .metrics-grid {
+                gap: 12px;
+                margin-bottom: 56px;
+            }
+
+            .metric-item,
+            .metrics-grid.metrics-compact .metric-item {
+                padding: 24px 12px;
+            }
+
+            .metric-item .value,
+            .metrics-grid.metrics-compact .value {
+                font-size: 30px;
+                line-height: 1.1;
+                margin-bottom: 8px;
+            }
+
+            .metric-item .label {
+                font-size: 13px;
+                line-height: 1.4;
+            }
+
+            .metrics-grid.metrics-3 {
+                margin-top: 48px;
+            }
+
+            /* comparison tables: scroll sideways inside their box, first column stays put */
+            .comparison-section {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                min-width: 104px;
+                padding: 12px 10px;
+                font-size: 13px;
+                line-height: 1.45;
+                vertical-align: top;
+            }
+
+            .comparison-table th:first-child,
+            .comparison-table td:first-child {
+                position: sticky;
+                left: 0;
+                z-index: 1;
+                background: #1A1A1A;
+            }
+
+            .comparison-section + .table-note {
+                margin-top: -40px;
+            }
+
+            .table-note {
+                padding: 0 4px;
+                line-height: 1.6;
+            }
+
+            /* pricing cards */
+            .pricing-grid {
+                gap: 28px;
+                margin-bottom: 56px;
+            }
+
+            .pricing-card {
+                padding: 34px 24px 28px;
+            }
+
+            .pricing-card:hover {
+                box-shadow: none;
+            }
+
+            .pricing-name {
+                font-size: 26px;
+                line-height: 1.2;
+            }
+
+            .pricing-price {
+                font-size: 30px;
+            }
+
+            .pricing-price-note,
+            .pricing-hours {
+                margin-bottom: 20px;
+            }
+
+            .pricing-hours {
+                padding-bottom: 20px;
+            }
+
+            .pricing-features {
+                margin-bottom: 28px;
+            }
+
+            .pricing-features li {
+                padding: 10px 0;
+                font-size: 14.5px;
+            }
+
+            /* why-us boxes */
+            .why-grid {
+                gap: 14px;
+            }
+
+            .why-item {
+                padding: 26px 20px;
+            }
+
+            .why-item h3 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .two-col-boxes {
+                gap: 16px;
+            }
+
+            /* header + menu */
+            nav {
+                padding: 16px 0;
+            }
+
+            nav.scrolled {
+                padding: 12px 0;
+            }
+
+            .hamburger {
+                width: 44px;
+                height: 44px;
+                margin-right: -8px;
+            }
+
+            .hamburger span {
+                left: 9px;
+            }
+
+            .hamburger span:nth-child(1) { top: 12px; }
+            .hamburger span:nth-child(2) { top: 21px; }
+            .hamburger span:nth-child(3) { top: 30px; }
+
+            .hamburger.active span:nth-child(1),
+            .hamburger.active span:nth-child(3) {
+                top: 21px;
+            }
+
+            .nav-links.open {
+                max-height: calc(100vh - 76px);
+                max-height: calc(100dvh - 76px);
+                padding: 4px 20px 0;
+            }
+
+            .nav-links a {
+                padding: 15px 0;
+            }
+
+            .nav-links a.active {
+                color: #F9D360;
+            }
+
+            .nav-dropdown-menu {
+                margin: 0 0 10px 2px;
+                padding: 0 0 0 14px;
+                border-left: 1px solid #2A2A2A;
+            }
+
+            .nav-dropdown-menu a {
+                padding: 9px 0;
+                font-size: 14.5px;
+                color: #B0B0B0;
+            }
+
+            /* Contact button stays in reach at the bottom of a long menu */
+            .mobile-cta-item {
+                position: sticky;
+                bottom: 0;
+                background: #1A1A1A;
+                padding: 12px 0 20px;
+                margin-top: 4px;
+            }
+
+            .mobile-cta-item a,
+            .mobile-cta-item a.active {
+                padding: 15px 0;
+                color: #0A0A0A;
+            }
+
+            /* footer: brand, then Services, then Company + Resources side by side */
+            footer {
+                padding: 48px 0 32px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 36px 20px;
+                margin-bottom: 36px;
+            }
+
+            .footer-brand,
+            .footer-content > .footer-section:nth-child(2) {
+                grid-column: 1 / -1;
+            }
+
+            .footer-brand-header h2 {
+                font-size: 24px;
+            }
+
+            .footer-tagline {
+                margin-bottom: 18px;
+            }
+
+            .footer-social-links {
+                flex-wrap: wrap;
+                gap: 8px 18px;
+                margin-top: 14px;
+            }
+
+            .footer-section h4 {
+                margin-bottom: 14px;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 10px;
+            }
+
+            .footer-section ul li a {
+                font-size: 14.5px;
+            }
+
+            .footer-bottom {
+                padding-top: 24px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-heading,
+            .team-heading,
+            .testimonials-section h1,
+            .testimonials-section h2,
+            .comparison-section h2,
+            .why-caprae h2,
+            .t-section-header h2 {
+                font-size: 30px;
+                letter-spacing: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+                letter-spacing: 1px;
+            }
+        }
     </style>
 </head>
 <body>
