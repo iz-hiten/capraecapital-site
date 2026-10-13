@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# chatbot secrets, logs and local env
+chatbot/.env
+chatbot/*.log*
+chatbot/.venv/
+.pytest_cache/

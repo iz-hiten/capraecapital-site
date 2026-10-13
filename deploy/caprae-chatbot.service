@@ -1,0 +1,24 @@
+# Site assistant API for capraecapital.com (chatbot/app.py), behind nginx at /api/chat.
+# Install: sudo cp deploy/caprae-chatbot.service /etc/systemd/system/ && sudo systemctl daemon-reload
+#          sudo systemctl enable --now caprae-chatbot
+[Unit]
+Description=Caprae Capital site assistant (FastAPI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/dev-caprae-site/chatbot
+EnvironmentFile=/home/ubuntu/dev-caprae-site/chatbot/.env
+# One worker: sessions and rate limits live in memory.
+ExecStart=/home/ubuntu/dev-caprae-site/chatbot/.venv/bin/uvicorn app:app --host 127.0.0.1 --port 8090 --workers 1 --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/dev-caprae-site/chatbot
+
+[Install]
+WantedBy=multi-user.target
