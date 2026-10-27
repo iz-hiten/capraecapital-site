@@ -85,3 +85,18 @@ def test_thought_parts_ignored():
         return httpx.Response(200, json={"candidates": [{"finishReason": "STOP", "content": {"parts": [
             {"text": "thinking...", "thought": True}, {"text": json.dumps({"category": "GREETING"})}]}}]})
     assert asyncio.run(make(handler).classify("SYS", "hi")) == "GREETING"
+
+
+def test_usage_is_recorded(tmp_path, monkeypatch):
+    import usage
+    monkeypatch.setattr(usage, "USAGE_DIR", tmp_path)
+
+    def handler(req):
+        return httpx.Response(200, json={"usageMetadata": {"promptTokenCount": 6492, "candidatesTokenCount": 153,
+                                                           "thoughtsTokenCount": 7},
+                                         "candidates": [{"finishReason": "STOP", "content": {"parts": [
+                                             {"text": json.dumps({"in_scope": True, "answer": "Hi", "source_urls": []})}]}}]})
+    asyncio.run(make(handler).answer("SYSTEM", [], "q"))
+    rec = json.loads(next(tmp_path.glob("*.jsonl")).read_text().splitlines()[0])
+    assert rec["provider"] == "gemini" and rec["step"] == "answer"
+    assert (rec["input"], rec["output"]) == (6492, 160)          # thinking tokens billed as output

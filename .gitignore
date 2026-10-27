@@ -6,3 +6,7 @@ chatbot/.env
 chatbot/*.log*
 chatbot/.venv/
 .pytest_cache/
+
+# chatbot usage records and cost-alert dependencies
+chatbot/usage/
+chatbot/cost-alert/node_modules/

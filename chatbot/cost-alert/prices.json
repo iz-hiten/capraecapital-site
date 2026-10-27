@@ -1,0 +1,9 @@
+{
+  "_comment": "USD per 1 million tokens. Update when providers change prices. Checked October 2026: https://ai.google.dev/gemini-api/docs/pricing and https://api-docs.deepseek.com/quick_start/pricing (DeepSeek peak rates used, so estimates err on the high side).",
+  "gemini-3.5-flash-lite": { "input": 0.30, "cached": 0.03, "output": 2.50 },
+  "gemini-3.1-flash-lite": { "input": 0.25, "cached": 0.025, "output": 1.50 },
+  "gemini-3.8-flash":      { "input": 1.50, "cached": 0.15, "output": 7.50 },
+  "deepseek-flash":        { "input": 0.30, "cached": 0.006, "output": 1.20 },
+  "deepseek-v4-flash":     { "input": 0.30, "cached": 0.006, "output": 1.20 },
+  "_default":              { "input": 1.50, "cached": 0.15, "output": 7.50 }
+}

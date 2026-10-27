@@ -1,7 +1,8 @@
 /* Caprae Capital site assistant widget.
    Include once per page:  <script src="/assets/chat/chat.js" defer></script>
    Optional attributes: data-api="/api/chat"  data-turnstile-sitekey="..."
-   Replies are always inserted as text; only our own links are made clickable. */
+   Replies are always inserted as plain text. Long ones are shortened with a "Know more" toggle, and
+   the one matching page (our own pages only) gets an "Open … page" link under the answer. */
 (function () {
   'use strict';
   if (window.__ccChat) return;
@@ -12,6 +13,7 @@
   var SITEKEY = script && script.getAttribute('data-turnstile-sitekey');
   var BASE = script ? script.src.replace(/chat\.js(\?.*)?$/, '') : '/assets/chat/';
   var MAX = 600;
+  var SHORT_WORDS = 60;                                   // longer answers show this many words, then "Know more"
   var STORE = 'cc-chat-v1';
   var SITE = 'https://capraecapital.com';
   var ALLOWED = [SITE + '/', 'https://post.saasquatchleads.com', 'https://www.linkedin.com/company/caprae-capital',
@@ -53,24 +55,15 @@
     return null;
   }
 
-  // Turn plain text into text nodes + safe links (our pages, approved profiles, our email).
-  function richText(node, text) {
-    var re = /(https?:\/\/[^\s<>"')\]]+|partners@capraecapital\.com)/g, last = 0, m;
-    while ((m = re.exec(text))) {
-      var raw = m[0].replace(/[.,;:!?]+$/, '');
-      node.appendChild(document.createTextNode(text.slice(last, m.index)));
-      var href = raw.indexOf('@') > 0 ? 'mailto:' + raw : allowedHref(raw);
-      if (href) {
-        var internal = href.charAt(0) === '/' || href.indexOf('mailto:') === 0;
-        var a = el('a', { href: href, text: raw.replace(SITE, '').replace(/^https?:\/\//, '') || '/' });
-        if (!internal) { a.target = '_blank'; a.rel = 'noopener'; }
-        node.appendChild(a);
-      } else {
-        node.appendChild(document.createTextNode(raw));
-      }
-      last = m.index + raw.length;
-    }
-    node.appendChild(document.createTextNode(text.slice(last)));
+  // The first ~SHORT_WORDS words, ending on a sentence where possible, or null if the text is short.
+  function shortVersion(text) {
+    var re = /\S+/g, n = 0, m, endAt = -1;
+    while ((m = re.exec(text))) { if (++n === SHORT_WORDS) endAt = m.index + m[0].length; }
+    if (n <= SHORT_WORDS + 15) return null;               // not worth hiding just a few words
+    var cut = text.slice(0, endAt);
+    var stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('\n'));
+    if (stop > cut.length / 2) cut = cut.slice(0, stop + 1);
+    return cut.replace(/[\s,;:.]+$/, '') + '…';
   }
 
   var launch, panel, log, input, send, tsBox;
@@ -120,14 +113,25 @@
 
   function render(m, persist) {
     var node = el('div', { class: 'cc-msg ' + (m.role === 'user' ? 'cc-user' : 'cc-bot') });
-    if (m.role === 'user') node.textContent = m.text; else richText(node, m.text);
-    if (m.sources && m.sources.length) {
-      var s = el('div', { class: 'cc-sources' });
-      m.sources.forEach(function (src) {
-        var href = allowedHref(src.url || '');
-        if (href) s.appendChild(el('a', { href: href, text: src.title || 'Read more' }));
-      });
-      if (s.childNodes.length) node.appendChild(s);
+    if (m.role === 'user') node.textContent = m.text;
+    else {
+      var body = el('div', { class: 'cc-text' }), short = shortVersion(m.text);
+      body.textContent = short || m.text;
+      node.appendChild(body);
+      var actions = el('div', { class: 'cc-actions' });
+      if (short) {
+        var more = el('button', { type: 'button', class: 'cc-more', text: 'Know more', 'aria-expanded': 'false',
+          on: { click: function () {
+            var full = more.getAttribute('aria-expanded') === 'false';
+            body.textContent = full ? m.text : short;
+            more.textContent = full ? 'Show less' : 'Know more';
+            more.setAttribute('aria-expanded', String(full));
+          } } });
+        actions.appendChild(more);
+      }
+      var src = (m.sources || [])[0], href = src && allowedHref(src.url || '');
+      if (href) actions.appendChild(el('a', { class: 'cc-page', href: href, text: 'Open ' + (src.title || 'this') + ' page →' }));
+      if (actions.childNodes.length) node.appendChild(actions);
     }
     log.appendChild(node);
     log.scrollTop = log.scrollHeight;

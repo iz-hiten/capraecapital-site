@@ -35,9 +35,11 @@
 .cc-user { align-self:flex-end; background:#2A2410; border:1px solid #4a3f1a; color:#fff; }
 .cc-msg a { color:var(--cc-gold); text-decoration:underline; text-underline-offset:3px; }
 .cc-msg a:hover { color:#fff; }
-.cc-sources { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
-.cc-sources a { font-size:12px; text-decoration:none; padding:4px 9px; border:1px solid #4a3f1a; color:var(--cc-gold); }
-.cc-sources a:hover { border-color:var(--cc-gold); color:#fff; }
+.cc-actions { display:flex; flex-wrap:wrap; gap:4px 14px; margin-top:8px; white-space:normal; }
+.cc-more { padding:0; border:0; background:none; color:var(--cc-gold); font:500 12px/1.4 'Inter',sans-serif;
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.cc-more:hover, .cc-page:hover { color:#fff; }
+.cc-msg a.cc-page { font-size:12px; }
 .cc-note { align-self:center; font-size:12px; color:var(--cc-muted); text-align:center; }
 
 .cc-chips { display:flex; flex-wrap:wrap; gap:6px; }

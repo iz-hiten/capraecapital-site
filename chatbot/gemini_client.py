@@ -9,6 +9,8 @@ import json
 
 import httpx
 
+import usage
+
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 SAFETY = [{"category": c, "threshold": "BLOCK_MEDIUM_AND_ABOVE"} for c in (
@@ -100,6 +102,7 @@ class Gemini(LoopSafeHTTP):
             if r.status_code != 200:
                 raise GeminiError(f"HTTP {r.status_code}: {r.text[:200]}")
             data = r.json()
+            usage.from_gemini(model, "classify" if schema is CLASSIFY_SCHEMA else "answer", data.get("usageMetadata"))
             if data.get("promptFeedback", {}).get("blockReason"):
                 raise GeminiBlocked(data["promptFeedback"]["blockReason"])
             cands = data.get("candidates") or []

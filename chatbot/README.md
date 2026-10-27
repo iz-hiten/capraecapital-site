@@ -19,6 +19,8 @@ Browser widget (site/assets/chat/chat.js) → nginx /api/chat → app.py (127.0.
 | `gemini_client.py` | Calls the Gemini REST API. No tools, so it can't use the web; safety filters are on. |
 | `llm.py` | Gemini first, DeepSeek as the backup. If Gemini fails, the same request goes to DeepSeek, and Gemini is skipped for 5 minutes. Safety blocks are never retried. |
 | `pages.py` | The only pages and links the bot may show. |
+| `usage.py` | Writes every AI call's token counts to `usage/YYYY-MM-DD.jsonl` (no visitor text). |
+| `cost-alert/` | Node.js script: emails once a day when AI spend passes $1. It never stops the bot. Run `node cost-alert.js --dry-run` to see today's cost. |
 
 **Security layers, in order** (any one of them can stop a message):
 1. Only our domains can call the API (Origin check).

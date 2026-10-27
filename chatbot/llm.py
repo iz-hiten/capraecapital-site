@@ -12,6 +12,8 @@ import time
 
 import httpx
 
+import usage
+
 from gemini_client import Gemini, GeminiBlocked, GeminiError, LoopSafeHTTP
 
 log = logging.getLogger("chatbot")
@@ -43,7 +45,8 @@ class DeepSeek(LoopSafeHTTP):
             raise GeminiError("DEEPSEEK_API_KEY is not set")
         body = {"model": self.model, "messages": [{"role": "system", "content": system}] + messages,
                 "response_format": {"type": "json_object"}, "max_tokens": max_tokens,
-                "temperature": temperature, "stream": False}
+                "temperature": temperature, "stream": False,
+                "thinking": {"type": "disabled"}}          # on (effort high) by default: slow, not needed here
         last = None
         server_tries, empty_tries = 0, 0
         while True:
@@ -62,7 +65,9 @@ class DeepSeek(LoopSafeHTTP):
             if r.status_code != 200:
                 raise GeminiError(f"DeepSeek HTTP {r.status_code}: {r.text[:200]}")
             try:
-                choice = r.json()["choices"][0]
+                data = r.json()
+                usage.from_deepseek(self.model, "classify" if max_tokens <= 256 else "answer", data.get("usage"))
+                choice = data["choices"][0]
                 if choice.get("finish_reason") == "content_filter":
                     raise GeminiBlocked("DeepSeek content_filter")
                 return json.loads(choice["message"]["content"] or "")

@@ -36,6 +36,7 @@ def test_deepseek_request_and_parse():
     assert [m["role"] for m in b["messages"]] == ["system", "user", "assistant", "user"]
     assert "<visitor_message>" in b["messages"][1]["content"] and "<visitor_message>" in b["messages"][3]["content"]
     assert "tools" not in b
+    assert b["thinking"] == {"type": "disabled"}          # thinking is on by default and only slows replies
 
 
 def test_deepseek_classify():

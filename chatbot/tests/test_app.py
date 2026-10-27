@@ -53,7 +53,7 @@ def test_good_answer(client):
     d = r.json()
     assert r.status_code == 200 and d["kind"] == "answer"
     assert "$1,250" in d["reply"]
-    assert d["sources"] == []                     # no page buttons under answers
+    assert "http" not in d["reply"]               # no links inside the answer text
 
 
 def test_wrong_origin_rejected(client):
@@ -111,7 +111,8 @@ def test_answers_have_no_links(client):
     assert d["kind"] == "answer"
     assert "http" not in d["reply"] and "/pricing/" not in d["reply"] and "evil" not in d["reply"]
     assert d["reply"].startswith("Entrepreneurship as a Service is $1,000 per month.")
-    assert d["sources"] == []
+    # one "Open page" link, our own pages only
+    assert d["sources"] == [{"title": "Contact", "url": "https://capraecapital.com/contact/"}]
 
 
 def test_link_only_answer_becomes_contact_line(client):
@@ -176,3 +177,30 @@ def test_bad_json(client):
 
 def test_health(client):
     assert client.get("/api/chat/health").json()["ok"] is True
+
+
+def test_check_and_answer_run_at_the_same_time(client, monkeypatch):
+    import asyncio
+    started = {}
+
+    class Concurrent(FakeGemini):
+        async def classify(self, system, message, previous=""):
+            started.setdefault("ev", asyncio.Event())
+            await asyncio.wait_for(started["ev"].wait(), 2)   # only finishes if the answer already started
+            return "ON_TOPIC"
+
+        async def answer(self, system, history, message):
+            started.setdefault("ev", asyncio.Event()).set()
+            return self.out
+
+    monkeypatch.setattr(chatapp, "gemini", Concurrent())
+    d = post(client, "How much is Search as a Service?").json()
+    assert d["kind"] == "answer" and "$1,250" in d["reply"]
+    assert d["sources"] == [{"title": "Pricing", "url": "https://capraecapital.com/pricing/"}]
+
+
+def test_refused_message_discards_the_answer(client):
+    client.fake.category = "OFF_TOPIC"
+    d = post(client, "What's the weather?").json()
+    assert d["kind"] == "refusal" and "$1,250" not in d["reply"] and d["sources"] == []
+    assert chatapp.sessions[d["session_id"]]["history"] == []

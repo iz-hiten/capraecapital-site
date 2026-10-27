@@ -7,6 +7,7 @@ Request flow (every step can stop the request with a safe, fixed reply):
 Run:  uvicorn app:app --host 127.0.0.1 --port 8090 --workers 1 --proxy-headers --forwarded-allow-ips=127.0.0.1
 (one worker: sessions and rate limits are kept in memory)
 """
+import asyncio
 import hashlib
 import logging
 import os
@@ -213,17 +214,24 @@ async def chat(request: Request):
         return _reply(sid, "limit", guard.REPLY_ERROR)
 
     previous = next((t for r, t in reversed(sess["history"]) if r == "model"), "")
+    # 2) AI classifier and 3) the answer run at the same time to save the classifier's wait. They are
+    # still separate calls, so one prompt can't fool both, and the answer is discarded unless the
+    # classifier passes the message.
+    answering = asyncio.ensure_future(gemini.answer(SYSTEM_ANSWER, sess["history"][-HISTORY_TURNS * 2:], message))
+    answering.add_done_callback(lambda t: t.cancelled() or t.exception())   # a discarded answer's error is not logged as unhandled
     try:
-        # 2) AI classifier, run separately from the answer so one prompt can't fool both.
-        category = await gemini.classify(prompts.CLASSIFIER, message, previous)
+        try:
+            category = await gemini.classify(prompts.CLASSIFIER, message, previous)
+        except BaseException:
+            answering.cancel()
+            raise
         if category not in ("ON_TOPIC", "GREETING"):
+            answering.cancel()
             text = {"ADVICE": guard.REPLY_ADVICE, "INJECTION": guard.REPLY_INJECTION,
                     "ABUSE": guard.REPLY_INJECTION}.get(category, guard.REPLY_OFF_TOPIC)
             _log(ip, sid, "refusal", f"class={category}", message)
             return _reply(sid, "refusal", text)
-
-        # 3) Answer from site content only.
-        out = await gemini.answer(SYSTEM_ANSWER, sess["history"][-HISTORY_TURNS * 2:], message)
+        out = await answering
     except GeminiBlocked as e:
         _log(ip, sid, "refusal", f"gemini-blocked={e}", message)
         return _reply(sid, "refusal", guard.REPLY_INJECTION)
@@ -254,7 +262,7 @@ async def chat(request: Request):
     answer = guard.trim(guard.strip_all_links(guard.strip_unknown_links(answer)), MAX_ANSWER_CHARS)
     if not answer:                                      # the reply was nothing but a link
         answer = guard.BOOK
-    sources = []                                        # answers are plain text: no links, no page buttons
+    sources = guard.clean_sources(out.get("source_urls"))[:1]   # one "Open page" link under the answer
     sess["history"] += [("user", message), ("model", answer)]
     _log(ip, sid, "answer", f"sources={len(sources)}", message)
     return _reply(sid, "answer", answer, sources)
