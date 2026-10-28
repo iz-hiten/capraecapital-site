@@ -357,45 +357,6 @@ def head_meta(p):
     return "\n".join(lines)
 
 
-def jsonld(obj):
-    body = json.dumps(obj, indent=2, ensure_ascii=False).replace("\n", "\n    ")
-    return f'    <script type="application/ld+json">\n    {body}\n    </script>'
-
-
-def page_jsonld(p):
-    blocks = []
-    if p["crumbs"]:
-        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL + "/"}]
-        for i, (name, path) in enumerate(p["crumbs"], start=2):
-            items.append({"@type": "ListItem", "position": i, "name": name,
-                          "item": SITE_URL + (path or p["path"])})
-        blocks.append(jsonld({"@context": "https://schema.org", "@type": "BreadcrumbList",
-                              "itemListElement": items}))
-    name = p.get("name") or p.get("service_name")
-    if name:
-        blocks.append(jsonld({
-            "@context": "https://schema.org", "@type": "Service",
-            "name": name, "description": p["description"], "url": SITE_URL + p["path"],
-            "areaServed": "Worldwide",
-            "provider": {"@type": "Organization", "name": "Caprae Capital", "url": SITE_URL + "/"},
-        }))
-    if p.get("person"):
-        m = p["person"]
-        person = {
-            "@context": "https://schema.org", "@type": "Person",
-            "name": m["alt"], "jobTitle": m["role"], "image": SITE_URL + m["img"],
-            "url": SITE_URL + p["path"],
-            "worksFor": {"@type": "Organization", "name": "Caprae Capital", "url": SITE_URL + "/"},
-        }
-        if p["description"]:
-            person["description"] = p["description"]
-        links = [url for _, url in TEAM_PROFILES.get(m["slug"], {}).get("links", [])]
-        if links:
-            person["sameAs"] = links
-        blocks.append(jsonld(person))
-    return "\n".join(blocks)
-
-
 def promote_h1(section, pattern):
     new, n = re.subn(pattern, r'<h1 class="\1"\2>\3</h1>', section, count=1, flags=re.S)
     assert n == 1, f"no heading matching {pattern!r}"
@@ -482,9 +443,7 @@ def build(p, sections, prefix, suffix, schema):
             section = promote_h1(section, p["h1"])
 
     head = prefix.replace("    <!--@PAGE_META-->", head_meta(p), 1)
-    # A page with schema in the sheet uses only that; others keep the generated blocks.
-    jl = "" if p["path"] in schema else page_jsonld(p)
-    head = head.replace("    <!--@PAGE_JSONLD-->\n", jl + "\n" if jl else "", 1)
+    # Structured data comes only from the SEO schema sheet; pages not in it have none.
     if p["path"] in schema:
         assert suffix.count("</body>") == 1
         suffix = suffix.replace("</body>", schema[p["path"]] + "\n</body>", 1)
