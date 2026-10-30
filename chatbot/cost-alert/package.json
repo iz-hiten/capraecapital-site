@@ -1,0 +1,20 @@
+{
+  "name": "caprae-chatbot-cost-alert",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emails an alert when the chatbot's AI spend for the day passes the limit (default $1). Never stops the chatbot.",
+  "main": "cost-alert.js",
+  "scripts": {
+    "check": "node cost-alert.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^10.1.0"
+  },
+  "devDependencies": {
+    "smtp-server": "^3.19.21"
+  }
+}
