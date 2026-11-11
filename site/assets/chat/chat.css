@@ -66,8 +66,13 @@
 
 @media (max-width:520px) {
   .cc-launch { right:16px; bottom:16px; width:48px; height:48px; }
-  .cc-panel { inset:0; right:0; bottom:0; width:100%; max-width:none; height:100%; max-height:none; z-index:1002;
-    border:0; border-top:2px solid var(--cc-gold); }
+  /* Bottom-right sheet: leaves a strip of page on the left and the header, CTA and headline visible above */
+  .cc-panel { right:12px; bottom:12px; width:calc(100vw - 64px); max-width:none; height:62vh; height:62dvh;
+    max-height:500px; z-index:1002; }
+  .cc-head { padding:14px 16px 12px; }
+  .cc-title { font-size:19px; }
+  .cc-log { padding:14px 16px; }
+  .cc-form { padding:10px 12px 12px; }
   .cc-msg { max-width:92%; }
 }
 @media (prefers-reduced-motion:reduce) {
