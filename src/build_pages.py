@@ -168,10 +168,13 @@ TEAM_PROFILES = {
     "kevin-hong": {
         "bio": [
             "Kevin Hong is the Founder of Caprae Capital. Before founding the firm, he spent seven years as a business journalist, then scaled two startups to $31M and $7M in annual recurring revenue and raised more than $8M in venture capital.",
-            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <em>The Outlier Approach</em>. At Caprae Capital he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work, and he ghostwrites the LinkedIn posts for <a href="/services/branding/">Branding as a Service</a>.',
+            'He holds an MBA from Chicago Booth and is the author of the Amazon bestseller <a href="https://www.amazon.com/stores/author/B0785DGHY7" target="_blank" rel="noopener"><em>The Outlier Approach</em></a>. At Caprae Capital he oversees <a href="/services/entrepreneurship-as-a-service/">Entrepreneurship as a Service</a> and reviews the firm\'s <a href="/services/search-as-a-service/">Search as a Service</a> work, and he ghostwrites the LinkedIn posts for <a href="/services/branding/">Branding as a Service</a>.',
         ],
         "links": [("LinkedIn", "https://www.linkedin.com/in/kevinhshong/"),
-                  ("Searchfunder", "https://searchfunder.com/profile/kevin-hong")],
+                  ("Searchfunder", "https://searchfunder.com/profile/kevin-hong"),
+                  ("Forbes", "https://muckrack.com/kevin-hong"),
+                  ("Inc.", "https://www.inc.com/author/kevin-hong"),
+                  ("CNBC", "https://www.cnbc.com/2017/11/09/what-kevin-hong-learned-living-and-working-out-of-a-van.html")],
     },
     "hereford-johnson": {
         "bio": [

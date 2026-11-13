@@ -130,7 +130,7 @@ TEMPLATE = """<!DOCTYPE html>
             </div>
 
             <div class="legal-foot">
-                <span>&copy; <span id="yr">2026</span> Caprae Capital LLC</span>
+                <span>&copy; <span id="yr">2026</span> Caprae Capital</span>
                 <a href="/privacy/">Privacy Policy</a>
                 <a href="/terms/">Terms &amp; Conditions</a>
                 <a href="mailto:partners@capraecapital.com">partners@capraecapital.com</a>

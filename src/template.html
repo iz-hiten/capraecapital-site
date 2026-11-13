@@ -1271,9 +1271,12 @@
         .branding-btn-ghost:hover { border-color: #FFFFFF; }
         .branding-press { background: #111111; color: #fff; padding: 36px 0 40px; }
         .branding-press-label { text-align: center; color: #F9D360; font-family: "JetBrains Mono", monospace; font-size: 12.5px; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 22px; opacity: .85; }
-        .branding-press-logos { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid rgba(255,255,255,.10); border-bottom: 1px solid rgba(255,255,255,.10); }
+        .branding-press-logos { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.10); border-bottom: 1px solid rgba(255,255,255,.10); }
         .branding-press-logos div { padding: 24px 16px; text-align: center; font-family: "Newsreader", serif; font-size: 22px; color: rgba(255,255,255,.78); border-right: 1px solid rgba(255,255,255,.10); }
         .branding-press-logos div:last-child { border-right: none; }
+        .branding-press-logos a { color: inherit; text-decoration: none; transition: color .2s ease; }
+        .branding-press-logos a span { font-size: .55em; vertical-align: super; color: #F9D360; }
+        .branding-press-logos a:hover { color: #F9D360; }
         .branding-content-section { padding: 110px 0; }
         .branding-section-head { text-align: center; margin-bottom: 56px; }
         .branding-section-head h2 { font-family: "Newsreader", "Cormorant Garamond", serif; font-weight: 500; font-size: clamp(30px, 3.8vw, 44px); line-height: 1.1; margin: 14px 0 18px; color: #FFFFFF; }
@@ -1699,6 +1702,21 @@
         .metrics-grid.metrics-3 {
             grid-template-columns: repeat(3, 1fr);
             margin: 80px 0 0;
+        }
+
+        .faq-group-title {
+            max-width: 800px;
+            margin: 56px auto 18px;
+            color: #F9D360;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .section-heading + .faq-group-title {
+            margin-top: 50px;
         }
 
         .faq-list {
@@ -2382,8 +2400,13 @@
 
             .section-heading + .comparison-section,
             .section-heading + .about-intro,
-            .section-heading + .faq-list {
+            .section-heading + .faq-list,
+            .section-heading + .faq-group-title {
                 margin-top: 32px;
+            }
+
+            .faq-group-title {
+                margin-top: 40px;
             }
 
             .about-intro {
@@ -5037,7 +5060,7 @@
     <section id="branding">
         <div class="branding-section">
             <div class="branding-hero"><div class="branding-wrap-narrow"><span class="branding-eyebrow">Branding as a service</span><h2 class="branding-h1">Your voice is the only moat left in finance.</h2><p class="lede">In an AI-saturated feed, generic content is invisible. We turn finance professionals into category-defining voices on LinkedIn. Ghostwritten by an award-winning journalist who built an 8K following critiquing the industry he came from.</p><div class="branding-cta-row"><a class="branding-btn branding-btn-primary" href="/contact/">Book a discovery call <span aria-hidden="true">-&gt;</span></a><a href="#branding-pricing" class="branding-btn branding-btn-ghost">See pricing</a></div></div></div>
-            <div class="branding-press"><div class="branding-wrap"><div class="branding-press-label">Written by the founder featured in</div><div class="branding-press-logos"><div>CNBC</div><div>Forbes</div><div>Inc.</div><div>HuffPost</div><div>Bestseller</div></div></div></div>
+            <div class="branding-press"><div class="branding-wrap"><div class="branding-press-label">Written by the founder featured in</div><div class="branding-press-logos"><div><a href="https://www.cnbc.com/2017/11/09/what-kevin-hong-learned-living-and-working-out-of-a-van.html" target="_blank" rel="noopener">CNBC <span aria-hidden="true">&#8599;</span></a></div><div><a href="https://muckrack.com/kevin-hong" target="_blank" rel="noopener">Forbes <span aria-hidden="true">&#8599;</span></a></div><div><a href="https://www.inc.com/author/kevin-hong" target="_blank" rel="noopener">Inc. <span aria-hidden="true">&#8599;</span></a></div><div>HuffPost</div></div></div></div>
             <div class="branding-content-section"><div class="branding-wrap"><div class="branding-section-head fade-in-element"><h2>Why voice beats volume</h2><p>LinkedIn algorithm rewards saves, dwell time, and comment depth over likes and tags. Generic AI content fails this test. Distinct voices with a real perspective wins.</p></div><div class="branding-cards-3"><div class="branding-card fade-in-element"><span class="branding-num">1</span><h3>The interest graph rules</h3><p>LinkedIn no longer rewards tags and connections. It rewards content people save and screenshot. Generic posts die.</p></div><div class="branding-card fade-in-element"><span class="branding-num">2</span><h3>AI made everyone average</h3><p>Every finance professional now posts identical AI-generated takes. The result: identical feeds, zero differentiation, no inbound.</p></div><div class="branding-card fade-in-element"><span class="branding-num">3</span><h3>Voice is unfakeable</h3><p>A distinct point of view, sharpened by a journalist who knows the industry, cannot be replicated by a content agency or ChatGPT.</p></div></div></div></div>
             <div class="branding-content-section"><div class="branding-wrap"><div class="branding-award-grid"><div class="fade-in-element"><span class="branding-eyebrow">The Story</span><h2>An award-winning journalist who built 8K followers attacking the asset class he came from.</h2><p class="branding-story-copy"><a class="inline-link" href="/team/kevin-hong/">Kevin Hong</a> spent 7 years as a business journalist before scaling two venture-backed startups and founding Caprae Capital. His critique of the traditional search fund model has reshaped how MBA graduates and LPs evaluate the asset class.</p><ul class="branding-credit-list">
                     <li><button class="branding-credit-btn" onclick="window.open('https://www.amazon.com/stores/author/B0785DGHY7','_blank')">The Outlier Approach (Amazon #1 Bestseller)</button></li>
@@ -5441,6 +5464,7 @@
     <section id="faq">
         <div class="container faq-section">
             <h2 class="section-heading fade-in-element slide-left">Frequently Asked Questions</h2>
+            <h3 class="faq-group-title fade-in-element">About</h3>
             <div class="faq-list fade-in-element">
                 <details open>
                     <summary>Where is Caprae Capital based?</summary>
@@ -5459,6 +5483,17 @@
                     <p>Caprae Capital is led by operators who have bought, built, and scaled companies themselves. We cover everything from sourcing to post-close growth, work under your brand, and cost 30-60% less than traditional providers.</p>
                 </details>
                 <details>
+                    <summary>How do I contact Caprae Capital?</summary>
+                    <p>Email <a href="mailto:partners@capraecapital.com">partners@capraecapital.com</a> or book a call through our <a href="/contact/">contact page</a>. We'll talk through your goals and recommend the right service.</p>
+                </details>
+                <details>
+                    <summary>Where can I follow Caprae Capital's deal insights?</summary>
+                    <p>Follow <a class="inline-link" href="https://www.linkedin.com/company/caprae-capital" target="_blank" rel="noopener">Caprae Capital</a> and <a class="inline-link" href="https://www.linkedin.com/in/kevinhshong/" target="_blank" rel="noopener">Kevin Hong</a> on LinkedIn, subscribe to our LinkedIn newsletter and <a class="inline-link" href="https://capraecapitalpartners.substack.com/" target="_blank" rel="noopener">Substack</a>, or follow us on <a class="inline-link" href="https://www.instagram.com/capraeofficial/" target="_blank" rel="noopener">Instagram</a> for insights on acquisitions and deal sourcing</p>
+                </details>
+            </div>
+            <h3 class="faq-group-title fade-in-element">Deal Sourcing</h3>
+            <div class="faq-list fade-in-element">
+                <details>
                     <summary>What is proprietary deal flow?</summary>
                     <p>Proprietary deal flow means deals you find by <a class="inline-link" href="/services/search-as-a-service/">contacting owners directly</a>, not through brokers or auctions. You face less competition, can build a relationship with the owner, and often get better terms.</p>
                 </details>
@@ -5475,24 +5510,19 @@
                     <p>Yes. We focus on small and mid-sized businesses, including lower middle market companies, for searchers, independent sponsors, and PE firms.</p>
                 </details>
                 <details>
+                    <summary>Can you help with add-on acquisitions for a buy-and-build strategy?</summary>
+                    <p>Yes. Search as a Service can source add-on targets that fit your platform company, and <a class="inline-link" href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> helps plan how to grow and integrate them.</p>
+                </details>
+            </div>
+            <h3 class="faq-group-title fade-in-element">Services</h3>
+            <div class="faq-list fade-in-element">
+                <details>
                     <summary>Can I use your team for appointment setting or LinkedIn outreach?</summary>
                     <p>Yes. Our team can act as your <a class="inline-link" href="/services/entrepreneurship-as-a-service/">outsourced SDR</a>, booking calls with business owners through phone, email, and LinkedIn outreach.</p>
                 </details>
                 <details>
-                    <summary>How quickly can I get started?</summary>
-                    <p><a class="inline-link" href="/how-it-works/">Onboarding is fast</a>. In one client case, we went from onboarding to the client's first IOI in less than a week.</p>
-                </details>
-                <details>
-                    <summary>Do you work with clients outside the US?</summary>
-                    <p>Yes. We're based in the US but work with clients across Europe and the Americas, and have served clients in 8 countries.</p>
-                </details>
-                <details>
                     <summary>Can Caprae Capital support my existing PE or investment banking team?</summary>
                     <p>Yes. PE firms and investment banks use Caprae Capital to <a class="inline-link" href="/pricing/">add dedicated resources for sourcing, diligence, and execution</a> without hiring full-time staff.</p>
-                </details>
-                <details>
-                    <summary>How do I contact Caprae Capital?</summary>
-                    <p>Email <a href="mailto:partners@capraecapital.com">partners@capraecapital.com</a> or book a call through our <a href="/contact/">contact page</a>. We'll talk through your goals and recommend the right service.</p>
                 </details>
                 <details>
                     <summary>Do you offer PR and press release services?</summary>
@@ -5503,10 +5533,6 @@
                     <p>Yes. Social media management is included in Entrepreneurship as a Service. For LinkedIn-focused personal branding, <a class="inline-link" href="/services/branding/">Branding as a Service</a> gives you ghostwritten posts in your own voice.</p>
                 </details>
                 <details>
-                    <summary>Can you help with add-on acquisitions for a buy-and-build strategy?</summary>
-                    <p>Yes. Search as a Service can source add-on targets that fit your platform company, and <a class="inline-link" href="/services/post-acquisition-strategy/">Post-Acquisition Strategy</a> helps plan how to grow and integrate them.</p>
-                </details>
-                <details>
                     <summary>Can you help automate my business with AI?</summary>
                     <p>Yes. AI-driven automation is part of our <a class="inline-link" href="/services/ai-readiness/">AI-Readiness service</a>. We find repetitive tasks that AI can handle, set up the tools, and train your team to use them.</p>
                 </details>
@@ -5514,9 +5540,16 @@
                     <summary>Can you build custom tools like a CRM or client portal?</summary>
                     <p>Yes. Our <a class="inline-link" href="/services/tech-development/">Tech Development team</a> builds full-stack platforms and digital marketing tools to your specifications, priced per project.</p>
                 </details>
+            </div>
+            <h3 class="faq-group-title fade-in-element">Getting Started</h3>
+            <div class="faq-list fade-in-element">
                 <details>
-                    <summary>Where can I follow Caprae Capital's deal insights?</summary>
-                    <p>Follow <a class="inline-link" href="https://www.linkedin.com/company/caprae-capital" target="_blank" rel="noopener">Caprae Capital</a> and <a class="inline-link" href="https://www.linkedin.com/in/kevinhshong/" target="_blank" rel="noopener">Kevin Hong</a> on LinkedIn, subscribe to our LinkedIn newsletter and <a class="inline-link" href="https://capraecapitalpartners.substack.com/" target="_blank" rel="noopener">Substack</a>, or follow us on <a class="inline-link" href="https://www.instagram.com/capraeofficial/" target="_blank" rel="noopener">Instagram</a> for insights on acquisitions and deal sourcing</p>
+                    <summary>How quickly can I get started?</summary>
+                    <p><a class="inline-link" href="/how-it-works/">Onboarding is fast</a>. In one client case, we went from onboarding to the client's first IOI in less than a week.</p>
+                </details>
+                <details>
+                    <summary>Do you work with clients outside the US?</summary>
+                    <p>Yes. We're based in the US but work with clients across Europe and the Americas, and have served clients in 8 countries.</p>
                 </details>
             </div>
 
@@ -5910,7 +5943,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="copyrightYear">2026</span> Caprae Capital Services. All rights reserved.</p>
+                <p>&copy; <span id="copyrightYear">2026</span> Caprae Capital. All rights reserved.</p>
             </div>
         </div>
     </footer>
