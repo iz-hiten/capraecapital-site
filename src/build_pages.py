@@ -105,7 +105,7 @@ PAGES = [
 
     {"path": "/pricing/", "section": "pricing", "nav": ["pricing"], "h1": H1_SECTION_HEADING,
      "title": "Pricing | Transparent, Value-Driven PE Services",
-     "description": "Search as a Service from $1,250/mo, Entrepreneurship as a Service from $1,000/mo — 30-60% less than traditional advisors. See full pricing.",
+     "description": "Search as a Service from $1,250/mo, Entrepreneurship as a Service from $1,000/mo, 30-60% less than traditional advisors. See full pricing.",
      "crumbs": [("Pricing", None)], "priority": "0.7"},
 
     {"path": "/contact/", "section": "contact", "nav": ["contact"], "h1": H1_SECTION_HEADING,
